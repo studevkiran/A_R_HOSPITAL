@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="LifeCare Hospital - Excellence in Healthcare with Compassionate Care and Advanced Treatment">
-    <title>LifeCare Hospital | Excellence in Healthcare</title>
+    <meta name="description" content="AR Hospital - Excellence in Healthcare with Compassionate Care and Advanced Treatment">
+    <title>AR Hospital | Excellence in Healthcare</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="hospitalData.js"></script>
 </head>
 <body>
     <!-- ============================================
@@ -14,7 +17,11 @@
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <h2>🏥 LifeCare Hospital</h2>
+                <img src="Screenshot_2025-12-14_at_19.24.32-removebg-preview.png" alt="AR Hospital Logo" class="logo-img">
+                <div class="logo-text">
+                    <h2>AR Hospital</h2>
+                    <p class="tagline">Healing Hands</p>
+                </div>
             </div>
             
             <div class="hamburger" id="hamburger">
@@ -39,6 +46,7 @@
          HERO SECTION
          ============================================ -->
     <section id="home" class="hero">
+        <canvas id="heroCanvas"></canvas>
         <div class="hero-content">
             <h1>Excellence in Healthcare</h1>
             <p>Compassionate Care, Advanced Treatment, Your Health is Our Priority</p>
@@ -46,24 +54,6 @@
             <div class="hero-buttons">
                 <button class="vibrant-button" id="heroBookBtn">📅 Book Appointment</button>
                 <a href="#services" class="btn-outline">🔍 Explore Services</a>
-            </div>
-
-            <div class="hero-stats">
-                <div class="stat-card">
-                    <div class="stat-icon">👨‍⚕️</div>
-                    <div class="stat-number">50+</div>
-                    <div class="stat-label">Expert Doctors</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">🏆</div>
-                    <div class="stat-number">25+</div>
-                    <div class="stat-label">Years Experience</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">⭐</div>
-                    <div class="stat-number">10K+</div>
-                    <div class="stat-label">Happy Patients</div>
-                </div>
             </div>
         </div>
     </section>
@@ -73,13 +63,13 @@
          ============================================ -->
     <section id="about" class="about-section">
         <div class="container">
-            <h2 class="section-title">About LifeCare Hospital</h2>
+            <h2 class="section-title">About AR Hospital</h2>
             
             <div class="about-content">
                 <div class="about-text">
                     <h3>Your Trusted Healthcare Partner</h3>
                     <p>
-                        LifeCare Hospital is a leading medical institution dedicated to providing exceptional healthcare services with compassion and excellence. With state-of-the-art facilities and a team of experienced medical professionals, we are committed to delivering the highest standard of care to our patients.
+                        AR Hospital is a leading medical institution dedicated to providing exceptional healthcare services with compassion and excellence. With state-of-the-art facilities and a team of 21 experienced specialist doctors, we are committed to delivering the highest standard of care to our patients.
                     </p>
                     <p>
                         Our mission is to improve the health and wellness of our community through advanced medical treatments, preventive care, and patient education. We believe in treating every patient with dignity and respect.
@@ -160,39 +150,157 @@
     </section>
 
     <!-- ============================================
+         DEPARTMENTS SECTION
+         ============================================ -->
+    <section id="departments" class="departments-section">
+        <div class="container">
+            <h2 class="section-title">Our Departments</h2>
+            <p class="section-subtitle">Comprehensive medical care across all specialties</p>
+            
+            <div class="departments-nav-wrapper">
+                <nav class="departments-nav">
+                    <ul class="dept-links">
+                        <li><a href="#cardiology" data-active="true">Cardiology</a></li>
+                        <li><a href="#orthopedics">Orthopedics</a></li>
+                        <li><a href="#neurology">Neurology</a></li>
+                        <li><a href="#pediatrics">Pediatrics</a></li>
+                        <li><a href="#gynecology">Gynecology</a></li>
+                        <li><a href="#surgery">General Surgery</a></li>
+                        <li><a href="#dermatology">Dermatology</a></li>
+                        <li><a href="#psychiatry">Psychiatry</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="department-content">
+                <div class="vibrant-card department-card" id="cardiology" data-dept="cardiology">
+                    <div class="dept-icon">❤️</div>
+                    <h3>Cardiology Department</h3>
+                    <p>Advanced cardiac care with state-of-the-art facilities for heart-related treatments and diagnostics.</p>
+                    <ul class="dept-features">
+                        <li>ECG & Echocardiography</li>
+                        <li>Cardiac Catheterization</li>
+                        <li>24/7 Emergency Cardiac Care</li>
+                        <li>Preventive Cardiology Programs</li>
+                    </ul>
+                    <button class="vibrant-button dept-book-btn">Book Consultation</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
          DOCTORS SECTION
          ============================================ -->
     <section id="doctors" class="doctors-section">
         <div class="container">
-            <h2 class="section-title">Our Expert Doctors</h2>
+            <h2 class="section-title">Our Expert Doctors (21)</h2>
             
             <div class="doctors-grid">
                 <div class="vibrant-card doctor-card">
                     <div class="doctor-image">👨‍⚕️</div>
-                    <h3>Dr. Rajesh Kumar</h3>
-                    <div class="specialty">Cardiology</div>
-                    <div class="experience">15 years experience</div>
+                    <h3>Dr. Madhuram Chowdary</h3>
+                    <div class="specialty">Orthopedic</div>
                 </div>
-
                 <div class="vibrant-card doctor-card">
                     <div class="doctor-image">👩‍⚕️</div>
-                    <h3>Dr. Priya Sharma</h3>
-                    <div class="specialty">Neurology</div>
-                    <div class="experience">12 years experience</div>
+                    <h3>Dr. Keerthi MS</h3>
+                    <div class="specialty">Gynaecologist</div>
                 </div>
-
                 <div class="vibrant-card doctor-card">
                     <div class="doctor-image">👨‍⚕️</div>
-                    <h3>Dr. Amit Patel</h3>
-                    <div class="specialty">Orthopedics</div>
-                    <div class="experience">10 years experience</div>
+                    <h3>Dr. Sachin HM</h3>
+                    <div class="specialty">General Surgeon</div>
                 </div>
-
+                <div class="vibrant-card doctor-card">
+                    <div class="doctor-image">👨‍⚕️</div>
+                    <h3>Dr. Lokesh</h3>
+                    <div class="specialty">General Surgeon</div>
+                </div>
                 <div class="vibrant-card doctor-card">
                     <div class="doctor-image">👩‍⚕️</div>
-                    <h3>Dr. Sneha Verma</h3>
-                    <div class="specialty">Pediatrics</div>
-                    <div class="experience">8 years experience</div>
+                    <h3>Dr. Geetha</h3>
+                    <div class="specialty">Gynaecologist</div>
+                </div>
+                <div class="vibrant-card doctor-card">
+                    <div class="doctor-image">👨‍⚕️</div>
+                    <h3>Dr. Vijay Kumar</h3>
+                    <div class="specialty">Plastic Surgeon</div>
+                </div>
+                <div class="vibrant-card doctor-card">
+                    <div class="doctor-image">👨‍⚕️</div>
+                    <h3>Dr. Chethan</h3>
+                    <div class="specialty">Plastic Surgeon</div>
+                </div>
+                <div class="vibrant-card doctor-card">
+                    <div class="doctor-image">👩‍⚕️</div>
+                    <h3>Dr. Ramya</h3>
+                    <div class="specialty">General Physician</div>
+                </div>
+                <div class="vibrant-card doctor-card">
+                    <div class="doctor-image">👨‍⚕️</div>
+                    <h3>Dr. Arun</h3>
+                    <div class="specialty">Physician</div>
+                </div>
+                <div class="vibrant-card doctor-card">
+                    <div class="doctor-image">👨‍⚕️</div>
+                    <h3>Dr. Chandan</h3>
+                    <div class="specialty">Vascular Surgeon</div>
+                </div>
+                <div class="vibrant-card doctor-card">
+                    <div class="doctor-image">👨‍⚕️</div>
+                    <h3>Dr. Harsha Huliappa</h3>
+                    <div class="specialty">Neurologist</div>
+                </div>
+                <div class="vibrant-card doctor-card">
+                    <div class="doctor-image">👨‍⚕️</div>
+                    <h3>Dr. Punith</h3>
+                    <div class="specialty">Neurologist</div>
+                </div>
+                <div class="vibrant-card doctor-card">
+                    <div class="doctor-image">👩‍⚕️</div>
+                    <h3>Dr. Madhuri</h3>
+                    <div class="specialty">Dermatologist</div>
+                </div>
+                <div class="vibrant-card doctor-card">
+                    <div class="doctor-image">👩‍⚕️</div>
+                    <h3>Dr. Manjushree</h3>
+                    <div class="specialty">Psychiatrist</div>
+                </div>
+                <div class="vibrant-card doctor-card">
+                    <div class="doctor-image">👨‍⚕️</div>
+                    <h3>Dr. Lakshmi Narayan</h3>
+                    <div class="specialty">Pulmonologist</div>
+                </div>
+                <div class="vibrant-card doctor-card">
+                    <div class="doctor-image">👨‍⚕️</div>
+                    <h3>Dr. Abhilash (1st)</h3>
+                    <div class="specialty">Physician</div>
+                </div>
+                <div class="vibrant-card doctor-card">
+                    <div class="doctor-image">👩‍⚕️</div>
+                    <h3>Dr. Pooja</h3>
+                    <div class="specialty">Ophthalmologist</div>
+                </div>
+                <div class="vibrant-card doctor-card">
+                    <div class="doctor-image">👨‍⚕️</div>
+                    <h3>Dr. Nitish</h3>
+                    <div class="specialty">Intensivist</div>
+                </div>
+                <div class="vibrant-card doctor-card">
+                    <div class="doctor-image">👨‍⚕️</div>
+                    <h3>Dr. Mohan</h3>
+                    <div class="specialty">Urologist</div>
+                </div>
+                <div class="vibrant-card doctor-card">
+                    <div class="doctor-image">👨‍⚕️</div>
+                    <h3>Dr. Abhilash (2nd)</h3>
+                    <div class="specialty">ENT Specialist</div>
+                </div>
+                <div class="vibrant-card doctor-card">
+                    <div class="doctor-image">👨‍⚕️</div>
+                    <h3>Dr. Yogesh</h3>
+                    <div class="specialty">Physician</div>
                 </div>
             </div>
         </div>
@@ -202,124 +310,144 @@
          PACKAGES SECTION
          ============================================ -->
     <section id="packages" class="packages-section">
-        <div class="container">
+        <div class="packages-header">
             <h2 class="section-title">Health Checkup Packages</h2>
-            
-            <div class="packages-grid">
-                <div class="vibrant-card package-card">
-                    <h3>Basic Health Checkup</h3>
-                    <div class="package-price">₹2,999</div>
-                    <ul class="package-features">
-                        <li>General Health Assessment</li>
-                        <li>Blood Pressure Check</li>
-                        <li>Blood Sugar Test</li>
-                        <li>Basic Blood Work</li>
-                        <li>Doctor Consultation</li>
-                    </ul>
-                    <button class="vibrant-button">Book Now</button>
-                </div>
+        </div>
+        
+        <div class="packages-carousel">
+            <ul class="packages-list">
+                <li class="package-item">
+                    <div class="vibrant-card package-card">
+                        <h3>Basic Health Checkup</h3>
+                        <div class="package-price">₹2,999</div>
+                        <ul class="package-features">
+                            <li>General Health Assessment</li>
+                            <li>Blood Pressure Check</li>
+                            <li>Blood Sugar Test</li>
+                            <li>Basic Blood Work</li>
+                            <li>Doctor Consultation</li>
+                        </ul>
+                        <button class="vibrant-button">Book Now</button>
+                    </div>
+                </li>
 
-                <div class="vibrant-card package-card featured">
-                    <div class="package-badge">Most Popular</div>
-                    <h3>Comprehensive Checkup</h3>
-                    <div class="package-price">₹5,999</div>
-                    <ul class="package-features">
-                        <li>Complete Physical Exam</li>
-                        <li>Advanced Blood Tests</li>
-                        <li>ECG & Chest X-ray</li>
-                        <li>Abdominal Ultrasound</li>
-                        <li>Specialist Consultation</li>
-                        <li>Health Report & Guidance</li>
-                    </ul>
-                    <button class="vibrant-button">Book Now</button>
-                </div>
+                <li class="package-item">
+                    <div class="vibrant-card package-card featured">
+                        <div class="package-badge">Most Popular</div>
+                        <h3>Comprehensive Checkup</h3>
+                        <div class="package-price">₹5,999</div>
+                        <ul class="package-features">
+                            <li>Complete Physical Exam</li>
+                            <li>Advanced Blood Tests</li>
+                            <li>ECG & Chest X-ray</li>
+                            <li>Abdominal Ultrasound</li>
+                            <li>Specialist Consultation</li>
+                            <li>Health Report & Guidance</li>
+                        </ul>
+                        <button class="vibrant-button">Book Now</button>
+                    </div>
+                </li>
 
-                <div class="vibrant-card package-card">
-                    <h3>Premium Health Checkup</h3>
-                    <div class="package-price">₹9,999</div>
-                    <ul class="package-features">
-                        <li>Full Body Examination</li>
-                        <li>Advanced Laboratory Tests</li>
-                        <li>Cardiac Assessment</li>
-                        <li>Multiple Imaging Tests</li>
-                        <li>Multi-Specialist Consultation</li>
-                        <li>Wellness Report & Diet Plan</li>
-                        <li>Follow-up Sessions</li>
-                    </ul>
-                    <button class="vibrant-button">Book Now</button>
-                </div>
-            </div>
+                <li class="package-item">
+                    <div class="vibrant-card package-card">
+                        <h3>Premium Health Checkup</h3>
+                        <div class="package-price">₹9,999</div>
+                        <ul class="package-features">
+                            <li>Full Body Examination</li>
+                            <li>Advanced Laboratory Tests</li>
+                            <li>Cardiac Assessment</li>
+                            <li>Multiple Imaging Tests</li>
+                            <li>Multi-Specialist Consultation</li>
+                            <li>Wellness Report & Diet Plan</li>
+                            <li>Follow-up Sessions</li>
+                        </ul>
+                        <button class="vibrant-button">Book Now</button>
+                    </div>
+                </li>
+            </ul>
         </div>
     </section>
 
     <!-- ============================================
-         CONTACT SECTION
+         CONNECT WITH US SECTION
          ============================================ -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title">Contact Us</h2>
+            <h2 class="section-title">Connect With Us</h2>
+            <p class="section-subtitle">Reach out through your preferred channel</p>
             
-            <div class="contact-content">
-                <div class="contact-form">
-                    <h3>Send us a Message</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-
-                        <button type="submit" class="vibrant-button">Send Message</button>
-                    </form>
-                </div>
-
-                <div class="contact-info">
-                    <div class="info-card">
-                        <div class="vibrant-icon-ring">📍</div>
-                        <div>
-                            <h4>Address</h4>
-                            <p>123 Medical Center Road<br>Healthcare City, HC 12345</p>
-                        </div>
+            <div class="connect-icons-grid">
+                <a href="tel:+919008994827" class="connect-icon-link" title="Call Us">
+                    <div class="icon-circle phone-icon">
+                        <svg viewBox="0 0 24 24" width="35" height="35" fill="currentColor">
+                            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                        </svg>
                     </div>
+                    <span class="icon-label">Call</span>
+                </a>
 
-                    <div class="info-card">
-                        <div class="vibrant-icon-ring">📞</div>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+91 1234567890<br>Emergency: 108</p>
-                        </div>
+                <a href="https://wa.me/919008994827?text=Hello%20AR%20Hospital" target="_blank" class="connect-icon-link" title="WhatsApp">
+                    <div class="icon-circle whatsapp-icon">
+                        <svg viewBox="0 0 24 24" width="35" height="35" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
                     </div>
+                    <span class="icon-label">WhatsApp</span>
+                </a>
 
-                    <div class="info-card">
-                        <div class="vibrant-icon-ring">✉️</div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>info@lifecarehospital.com</p>
-                        </div>
+                <a href="mailto:info@arhospital.com" class="connect-icon-link" title="Email">
+                    <div class="icon-circle email-icon">
+                        <svg viewBox="0 0 24 24" width="35" height="35" fill="currentColor">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
                     </div>
+                    <span class="icon-label">Email</span>
+                </a>
 
-                    <div class="info-card">
-                        <div class="vibrant-icon-ring">⏰</div>
-                        <div>
-                            <h4>Working Hours</h4>
-                            <p>Monday - Friday: 9 AM - 5 PM<br>Saturday: 10 AM - 3 PM<br>Sunday: Emergency Only</p>
-                        </div>
+                <a href="https://facebook.com/arhospital" target="_blank" class="connect-icon-link" title="Facebook">
+                    <div class="icon-circle facebook-icon">
+                        <svg viewBox="0 0 24 24" width="35" height="35" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
                     </div>
-                </div>
+                    <span class="icon-label">Facebook</span>
+                </a>
+
+                <a href="https://youtube.com/@arhospital" target="_blank" class="connect-icon-link" title="YouTube">
+                    <div class="icon-circle youtube-icon">
+                        <svg viewBox="0 0 24 24" width="35" height="35" fill="currentColor">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </div>
+                    <span class="icon-label">YouTube</span>
+                </a>
+
+                <a href="https://maps.google.com/?q=AR+Hospital+Mysuru" target="_blank" class="connect-icon-link" title="Location">
+                    <div class="icon-circle maps-icon">
+                        <svg viewBox="0 0 24 24" width="35" height="35" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </div>
+                    <span class="icon-label">Location</span>
+                </a>
+
+                <a href="https://www.justdial.com/Mysore/AR-Hospital" target="_blank" class="connect-icon-link" title="JustDial">
+                    <div class="icon-circle justdial-icon">
+                        <svg viewBox="0 0 24 24" width="35" height="35" fill="currentColor">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+                        </svg>
+                    </div>
+                    <span class="icon-label">JustDial</span>
+                </a>
+
+                <a href="https://arhospital.com" target="_blank" class="connect-icon-link" title="Website">
+                    <div class="icon-circle website-icon">
+                        <svg viewBox="0 0 24 24" width="35" height="35" fill="currentColor">
+                            <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/>
+                        </svg>
+                    </div>
+                    <span class="icon-label">Website</span>
+                </a>
             </div>
         </div>
     </section>
@@ -331,9 +459,9 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>LifeCare Hospital</h4>
+                    <h4>AR Hospital</h4>
                     <p>Dedicated to providing exceptional healthcare with compassion and excellence.</p>
-                    <p><strong>Emergency Contact:</strong> +91 1234567890</p>
+                    <p><strong>Emergency Contact:</strong> +91 9008994827</p>
                 </div>
 
                 <div class="footer-section">
@@ -358,113 +486,99 @@
 
                 <div class="footer-section">
                     <h4>Contact Info</h4>
-                    <p>📍 123 Medical Center Road</p>
-                    <p>📞 +91 1234567890</p>
-                    <p>✉️ info@lifecarehospital.com</p>
+                    <p>📍 123 Medical Road, Mysuru</p>
+                    <p>📞 +91 9008994827</p>
+                    <p>✉️ info@arhospital.com</p>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 LifeCare Hospital. All rights reserved. | Designed for Excellence in Healthcare</p>
+                <p>&copy; 2025 AR Hospital. All rights reserved. | Designed for Excellence in Healthcare</p>
             </div>
         </div>
     </footer>
 
     <!-- ============================================
-         BOOKING MODAL (3D Ledger Book)
+         BOOKING MODAL POPUP
          ============================================ -->
-    <div id="bookingModal" class="booking-modal">
-        <div class="booking-modal-content">
-            <button class="modal-close" id="modalClose">&times;</button>
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Book Your Appointment</h2>
+            <p class="booking-subtitle">Fill in your details to schedule an appointment with our specialists</p>
             
-            <div class="booking-ledger">
-                <!-- Left Page -->
-                <div class="ledger-page left-page">
-                    <div class="page-content">
-                        <h2>Welcome to LifeCare Hospital</h2>
-                        <p class="welcome-text">
-                            We're honored to serve you and your family with compassionate care and advanced medical treatment.
-                        </p>
-                        
-                        <div class="info-box">
-                            <h4>Emergency Contact</h4>
-                            <p class="large-text">📞 +91 1234567890</p>
-                        </div>
-
-                        <div class="info-box">
-                            <h4>Working Hours</h4>
-                            <p>📅 Monday - Friday: 9 AM - 5 PM</p>
-                            <p>📅 Saturday: 10 AM - 3 PM</p>
-                            <p>🚨 Sunday: Emergency Services Only</p>
-                        </div>
-
-                        <div class="info-box">
-                            <h4>Why Choose Us?</h4>
-                            <ul class="feature-list">
-                                <li>✓ 50+ Expert Doctors</li>
-                                <li>✓ 24/7 Emergency Services</li>
-                                <li>✓ Advanced Technology</li>
-                                <li>✓ Patient Care Excellence</li>
-                            </ul>
-                        </div>
-                    </div>
+            <form id="bookingForm" class="booking-form">
+                <div class="form-group">
+                    <label for="patientName">Patient Name *</label>
+                    <input type="text" id="patientName" name="patientName" required>
                 </div>
 
-                <!-- Right Page - Booking Form -->
-                <div class="ledger-page right-page">
-                    <div class="page-content">
-                        <h2>Book Your Appointment</h2>
-                        
-                        <form id="bookingForm" class="booking-form">
-                            <div class="form-group">
-                                <label for="patientName">Patient Name *</label>
-                                <input type="text" id="patientName" name="patientName" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="patientPhone">Phone Number *</label>
-                                <input type="tel" id="patientPhone" name="patientPhone" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="department">Department *</label>
-                                <select id="department" name="department" required>
-                                    <option value="">Select Department</option>
-                                    <option value="Cardiology">Cardiology</option>
-                                    <option value="Neurology">Neurology</option>
-                                    <option value="Orthopedics">Orthopedics</option>
-                                    <option value="Pediatrics">Pediatrics</option>
-                                    <option value="General">General Checkup</option>
-                                    <option value="Emergency">Emergency</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="doctor">Select Doctor *</label>
-                                <select id="doctor" name="doctor" required>
-                                    <option value="">Select Doctor</option>
-                                    <option value="Dr. Rajesh Kumar">Dr. Rajesh Kumar (Cardiology)</option>
-                                    <option value="Dr. Priya Sharma">Dr. Priya Sharma (Neurology)</option>
-                                    <option value="Dr. Amit Patel">Dr. Amit Patel (Orthopedics)</option>
-                                    <option value="Dr. Sneha Verma">Dr. Sneha Verma (Pediatrics)</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="appointmentDate">Preferred Date *</label>
-                                <input type="date" id="appointmentDate" name="appointmentDate" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="notes">Additional Notes</label>
-                                <textarea id="notes" name="notes" rows="3" placeholder="Any special requirements..."></textarea>
-                            </div>
-
-                            <button type="submit" class="vibrant-button full-width">📱 Send to WhatsApp</button>
-                        </form>
-                    </div>
+                <div class="form-group">
+                    <label for="patientPhone">Phone Number *</label>
+                    <input type="tel" id="patientPhone" name="patientPhone" required>
                 </div>
-            </div>
+
+                <div class="form-group">
+                    <label for="department">Department *</label>
+                    <select id="department" name="department" required>
+                        <option value="">Select Department</option>
+                        <option value="Orthopedic">Orthopedic</option>
+                        <option value="Gynaecology">Gynaecology</option>
+                        <option value="General Surgery">General Surgery</option>
+                        <option value="Plastic Surgery">Plastic Surgery</option>
+                        <option value="General Physician">General Physician</option>
+                        <option value="Vascular Surgery">Vascular Surgery</option>
+                        <option value="Neurology">Neurology</option>
+                        <option value="Dermatology">Dermatology</option>
+                        <option value="Psychiatry">Psychiatry</option>
+                        <option value="Pulmonology">Pulmonology</option>
+                        <option value="Ophthalmology">Ophthalmology</option>
+                        <option value="Intensive Care">Intensive Care</option>
+                        <option value="Urology">Urology</option>
+                        <option value="ENT">ENT</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="doctor">Select Doctor *</label>
+                    <select id="doctor" name="doctor" required>
+                        <option value="">Select Doctor</option>
+                        <option value="Dr. Madhuram Chowdary">Dr. Madhuram Chowdary (Orthopedic)</option>
+                        <option value="Dr. Keerthi MS">Dr. Keerthi MS (Gynaecologist)</option>
+                        <option value="Dr. Sachin HM">Dr. Sachin HM (General Surgeon)</option>
+                        <option value="Dr. Lokesh">Dr. Lokesh (General Surgeon)</option>
+                        <option value="Dr. Geetha">Dr. Geetha (Gynaecologist)</option>
+                        <option value="Dr. Vijay Kumar">Dr. Vijay Kumar (Plastic Surgeon)</option>
+                        <option value="Dr. Chethan">Dr. Chethan (Plastic Surgeon)</option>
+                        <option value="Dr. Ramya">Dr. Ramya (General Physician)</option>
+                        <option value="Dr. Arun">Dr. Arun (Physician)</option>
+                        <option value="Dr. Chandan">Dr. Chandan (Vascular Surgeon)</option>
+                        <option value="Dr. Harsha Huliappa">Dr. Harsha Huliappa (Neurologist)</option>
+                        <option value="Dr. Punith">Dr. Punith (Neurologist)</option>
+                        <option value="Dr. Madhuri">Dr. Madhuri (Dermatologist)</option>
+                        <option value="Dr. Manjushree">Dr. Manjushree (Psychiatrist)</option>
+                        <option value="Dr. Lakshmi Narayan">Dr. Lakshmi Narayan (Pulmonologist)</option>
+                        <option value="Dr. Abhilash (1st)">Dr. Abhilash (1st) (Physician)</option>
+                        <option value="Dr. Pooja">Dr. Pooja (Ophthalmologist)</option>
+                        <option value="Dr. Nitish">Dr. Nitish (Intensivist)</option>
+                        <option value="Dr. Mohan">Dr. Mohan (Urologist)</option>
+                        <option value="Dr. Abhilash (2nd)">Dr. Abhilash (2nd) (ENT Specialist)</option>
+                        <option value="Dr. Yogesh">Dr. Yogesh (Physician)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="appointmentDate">Preferred Date *</label>
+                    <input type="date" id="appointmentDate" name="appointmentDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Additional Notes</label>
+                    <textarea id="notes" name="notes" rows="2" placeholder="Any special requirements..."></textarea>
+                </div>
+
+                <button type="submit" class="vibrant-button full-width">💬 Request Appointment</button>
+            </form>
         </div>
     </div>
 
