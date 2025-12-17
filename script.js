@@ -213,6 +213,164 @@ if (closeDoctorModalBtn) {
 }
 
 
+const insuranceModal = document.getElementById('insuranceModal');
+const closeInsuranceModalBtn = document.getElementById('closeInsuranceModal');
+
+function openInsuranceModal() {
+    console.log('Opening Insurance Modal...');
+    if (insuranceModal) {
+        insuranceModal.classList.add('show');
+        insuranceModal.style.display = 'flex'; // Force display just in case CSS fails
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    } else {
+        console.error('Insurance modal element not found!');
+    }
+}
+
+function closeInsuranceModal() {
+    if (insuranceModal) {
+        insuranceModal.classList.remove('show');
+        insuranceModal.style.display = 'none'; // Reset display
+        document.body.style.overflow = '';
+    }
+}
+
+if (closeInsuranceModalBtn) {
+    closeInsuranceModalBtn.addEventListener('click', closeInsuranceModal);
+}
+
+if (insuranceModal) {
+    insuranceModal.addEventListener('click', (e) => {
+        if (e.target === insuranceModal) closeInsuranceModal();
+    });
+}
+
+// 3D CUBE DATA
+const insuranceData = [
+    { name: 'Tata AIG General', img: 'assets/tata_real.jpeg' },
+    { name: 'Star Health Insurance', img: 'assets/star_real.jpeg' },
+    { name: 'SBI General Insurance', img: 'assets/sbi_real.jpeg' },
+    { name: 'Universal Sompoo', img: 'assets/universal.jpeg' },
+    { name: 'Galaxy Health', img: 'assets/galaxy.jpeg' },
+    { name: 'ACKO General', img: 'assets/acko.jpeg' },
+    { name: 'Cholamandalam MS', img: 'assets/chola.jpeg' },
+    { name: 'Aditya Birla Health', img: 'assets/adityabirla.jpeg' },
+    { name: 'Iffco Tokio', img: 'assets/iffco.png' },
+    { name: 'Niva Bupa Health', img: 'assets/nivabupa.jpeg' }
+];
+
+const tpaData = [
+    { name: 'VOLO Health TPA', img: 'assets/volo.jpeg' },
+    { name: 'FHPL (ACKO)', img: 'assets/fhpl.jpeg' },
+    { name: 'Ericson TPA', img: 'assets/ericson.png' },
+    { name: 'HealthIndia TPA', img: 'assets/healthindia.jpeg' },
+    { name: 'Medsave Health TPA', img: 'assets/tpa_icon.png' }
+];
+
+const schemeData = [
+    { name: 'Yeshasvini Scheme', img: 'assets/yeshasvini.jpeg' },
+    { name: 'S.K.D.R.D.P', img: 'assets/skdrdp.jpeg' },
+    { name: 'State Govt Schemes', img: 'assets/govt_icon.png' },
+    { name: 'Cashless Facility', img: 'assets/govt_icon.png' }
+];
+
+function updateCubeFaceContent(cubeId, dataArray, rotationStep) {
+    const cube = document.getElementById(cubeId);
+    if (!cube) return;
+
+    // We act on the face that will be visible NEXT.
+    // Faces order in rotation: Front(0) -> Top(1) -> Back(2) -> Bottom(3) -> Loop
+    const faces = ['front', 'top', 'back', 'bottom'];
+
+    // The face index that corresponds to (rotationStep + 1)
+    const faceIndex = (rotationStep + 1) % 4;
+    const contentIndex = (rotationStep + 1) % dataArray.length;
+
+    const faceClass = `.cube-face-${faces[faceIndex]}`;
+    const faceEl = cube.querySelector(faceClass);
+
+    if (faceEl) {
+        const item = dataArray[contentIndex];
+        const img = faceEl.querySelector('img');
+        const txt = faceEl.querySelector('.cube-text');
+
+        if (img) img.src = item.img;
+        if (txt) txt.textContent = item.name;
+    }
+}
+
+let cubeInterval;
+let cubeRotationX = 0;
+
+function startCubeRotation() {
+    const insuranceCube = document.getElementById('insuranceCube');
+    const tpaCube = document.getElementById('tpaCube');
+    const schemeCube = document.getElementById('schemeCube');
+
+    // Initial Pre-fill for Face 0 (Front) is assumed to be done or static.
+    // Actually, we should probably pre-fill all 4 faces to start with.
+    // But since HTML has placeholders, let's just let the loop handle updates.
+
+    // Initialize all faces for all cubes to ensure they match data
+    [
+        { id: 'insuranceCube', data: insuranceData },
+        { id: 'tpaCube', data: tpaData },
+        { id: 'schemeCube', data: schemeData }
+    ].forEach(cubeSet => {
+        const cube = document.getElementById(cubeSet.id);
+        if (!cube) return;
+        const faces = ['front', 'top', 'back', 'bottom'];
+        faces.forEach((face, i) => {
+            const faceClass = `.cube-face-${face}`;
+            const faceEl = cube.querySelector(faceClass);
+            if (faceEl && cubeSet.data[i % cubeSet.data.length]) { // Protect against short arrays
+                const item = cubeSet.data[i % cubeSet.data.length];
+                const img = faceEl.querySelector('img');
+                const txt = faceEl.querySelector('.cube-text');
+                if (img) img.src = item.img;
+                if (txt) txt.textContent = item.name;
+            }
+        });
+    });
+
+    let step = 0;
+
+    // Clear any existing
+    if (cubeInterval) clearInterval(cubeInterval);
+
+    cubeInterval = setInterval(() => {
+        // 1. Prepare Next Content
+        updateCubeFaceContent('insuranceCube', insuranceData, step);
+        updateCubeFaceContent('tpaCube', tpaData, step);
+        updateCubeFaceContent('schemeCube', schemeData, step);
+
+        // 2. Rotate
+        step++;
+        cubeRotationX = -90 * step;
+
+        if (insuranceCube) insuranceCube.style.transform = `rotateX(${cubeRotationX}deg)`;
+        if (tpaCube) tpaCube.style.transform = `rotateX(${cubeRotationX}deg)`;
+        if (schemeCube) schemeCube.style.transform = `rotateX(${cubeRotationX}deg)`;
+
+    }, 2500);
+}
+
+function stopCubeRotation() {
+    if (cubeInterval) clearInterval(cubeInterval);
+}
+
+const insuranceCard = document.getElementById('insuranceCard');
+if (insuranceCard) {
+    insuranceCard.addEventListener('click', (e) => {
+        openInsuranceModal();
+    });
+}
+
+// Start immediately on load
+document.addEventListener('DOMContentLoaded', () => {
+    startCubeRotation();
+});
+
 if (doctorModal) {
     doctorModal.addEventListener('click', (e) => {
         if (e.target === doctorModal) closeDoctorModal();

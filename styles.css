@@ -624,46 +624,61 @@ section {
    SERVICES GRID - Mobile: 1 column
    ============================================ */
 
+/* ============================================
+   SERVICES GRID - DENSE CHIP STYLE
+   ============================================ */
+
 .services-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
 }
 
 .service-card {
     display: flex;
     align-items: center;
-    gap: var(--spacing-md);
-    text-align: left;
-    padding: var(--spacing-md);
+    gap: 8px;
+    padding: 10px 15px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
     min-height: auto;
-    /* Allow auto height */
 }
 
 .service-icon {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     margin-bottom: 0;
     color: var(--maroon-primary);
     flex-shrink: 0;
 }
 
 .service-card h3 {
-    font-size: var(--font-lg);
-    margin-bottom: 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 0;
     color: var(--text-main);
     line-height: 1.2;
 }
 
 .service-card p {
     display: none;
-    /* Hide description for compact list look */
 }
 
-/* Desktop: Compact Grid (3-4 columns) */
+/* Hover effects */
+.service-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: var(--maroon-light);
+}
+
+/* Remove Desktop Overrides that might conflict */
 @media (min-width: 640px) {
     .services-grid {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: var(--spacing-md);
+        /* Keep consistent with mobile */
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 10px;
     }
 }
 
@@ -1858,5 +1873,182 @@ section.contact-section {
     .vibrant-button,
     .btn-outline {
         display: none;
+    }
+}
+
+/* Insurance Modal Styles */
+#insuranceModal {
+    z-index: 9999;
+}
+
+.insurance-modal-content {
+    max-width: 800px !important;
+    width: 95%;
+    padding: 40px !important;
+}
+
+.insurance-lists-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.insurance-group h3 {
+    font-size: 1.2rem;
+    color: var(--maroon-primary);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.insurance-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.insurance-list li {
+    position: relative;
+    padding-left: 20px;
+    color: var(--text-main);
+    font-size: 0.95rem;
+}
+
+.insurance-list li::before {
+    content: "•";
+    color: var(--maroon-light);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.insurance-group-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .insurance-modal-content {
+        padding: 20px !important;
+    }
+
+    .insurance-list {
+        grid-template-columns: 1fr;
+    }
+
+    .insurance-group-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 3D CUBOID ROTATOR STYLES */
+.cube-scene {
+    width: 350px;
+    /* Horizontally Bigger */
+    height: 60px;
+    /* Vertically Smaller */
+    perspective: 1000px;
+    margin: 10px auto;
+}
+
+.cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.cube-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    border: 1px solid rgba(122, 18, 54, 0.1);
+    border-radius: 8px;
+    /* Slightly tighter radius for shorter height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 1rem;
+    /* Slightly smaller text */
+    font-weight: 600;
+    color: var(--maroon-primary);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    backface-visibility: hidden;
+    padding: 5px 15px;
+    /* Compact padding */
+    overflow: hidden;
+}
+
+/* 4 Faces for X-Rotation (Height=60px, so Z=30px) */
+.cube-face-front {
+    transform: rotateY(0deg) translateZ(30px);
+}
+
+.cube-face-top {
+    transform: rotateX(90deg) translateZ(30px);
+}
+
+.cube-face-bottom {
+    transform: rotateX(-90deg) translateZ(30px);
+}
+
+.cube-face-back {
+    transform: rotateX(180deg) translateZ(30px);
+}
+
+.cube-icon-box {
+    width: 32px;
+    /* Smaller icon to fit 60px height */
+    height: 32px;
+    flex-shrink: 0;
+    filter: drop-shadow(0 2px 4px rgba(122, 18, 54, 0.2));
+}
+
+.cube-icon-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.cube-text {
+    flex-grow: 1;
+    text-align: left;
+    line-height: 1.2;
+    white-space: nowrap;
+    /* Prevent wrapping if possible */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Responsive Cubes */
+@media (max-width: 1024px) {
+    .cube-scene {
+        width: 300px;
+        /* Slightly smaller for tablets */
+    }
+}
+
+@media (max-width: 640px) {
+    .cube-scene {
+        width: 100%;
+        /* Full width on mobile */
+        max-width: 360px;
+    }
+
+    .partners-section .cube-wrapper {
+        width: 100%;
+        /* Ensure wrappers allow full expansion */
+        padding: 0 20px;
     }
 }
