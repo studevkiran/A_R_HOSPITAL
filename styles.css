@@ -866,10 +866,14 @@ section.contact-section {
 }
 
 .connect-icons-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--spacing-md);
-    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Safety wrap */
+    gap: 10px;
+    /* Reduced gap */
+    max-width: 100%;
+    /* Use full container width */
     margin: 0 auto;
 }
 
@@ -877,9 +881,11 @@ section.contact-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--spacing-xs);
+    gap: 4px;
     text-decoration: none;
     transition: transform 0.3s ease;
+    min-width: 60px;
+    /* Ensure improved tap target */
 }
 
 .connect-icon-link:hover {
@@ -887,20 +893,20 @@ section.contact-section {
 }
 
 .icon-circle {
-    width: 60px;
-    height: 60px;
+    width: 35px;
+    /* Reduced from 40px */
+    height: 35px;
+    /* Reduced from 40px */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8rem;
-    border: 3px solid var(--maroon-dark);
-    /* Uniform Dark Maroon Border */
+    font-size: 1.1rem;
+    border: 2px solid var(--maroon-dark);
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     background: var(--maroon-bg);
-    /* Uniform Light Maroon Background */
-    padding: 8px;
+    padding: 6px;
 }
 
 .icon-circle svg {
@@ -921,7 +927,7 @@ section.contact-section {
 }
 
 .icon-label {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 600;
     color: var(--text-dark);
     text-align: center;
@@ -2050,5 +2056,70 @@ section.contact-section {
         width: 100%;
         /* Ensure wrappers allow full expansion */
         padding: 0 20px;
+    }
+}
+
+/* TESTIMONIALS SCROLLING */
+.testimonials-section {
+    overflow: hidden;
+    padding: 60px 0;
+    background: #fff;
+}
+
+.testimonials-scroll-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+.testimonials-track {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    /* Infinite Scroll Animation */
+    animation: scrollTestimonials 60s linear infinite;
+    padding: 20px 0;
+}
+
+.testimonials-track:hover {
+    animation-play-state: paused;
+}
+
+.testimonial-card {
+    width: 300px;
+    flex-shrink: 0;
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card.video-card {
+    padding: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-wrapper {
+    position: relative;
+    height: 500px;
+    background: #000;
+    overflow: hidden;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+
+@keyframes scrollTestimonials {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
     }
 }

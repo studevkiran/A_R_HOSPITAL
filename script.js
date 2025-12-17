@@ -264,14 +264,13 @@ const tpaData = [
     { name: 'FHPL (ACKO)', img: 'assets/fhpl.jpeg' },
     { name: 'Ericson TPA', img: 'assets/ericson.png' },
     { name: 'HealthIndia TPA', img: 'assets/healthindia.jpeg' },
-    { name: 'Medsave Health TPA', img: 'assets/tpa_icon.png' }
+    { name: 'Medsave Health TPA', img: 'assets/medsave.png' }
 ];
 
 const schemeData = [
     { name: 'Yeshasvini Scheme', img: 'assets/yeshasvini.jpeg' },
     { name: 'S.K.D.R.D.P', img: 'assets/skdrdp.jpeg' },
-    { name: 'State Govt Schemes', img: 'assets/govt_icon.png' },
-    { name: 'Cashless Facility', img: 'assets/govt_icon.png' }
+    { name: 'State Govt Schemes', img: 'assets/stategovt.jpeg' }
 ];
 
 function updateCubeFaceContent(cubeId, dataArray, rotationStep) {
