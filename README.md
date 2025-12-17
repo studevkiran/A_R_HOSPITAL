@@ -1,6 +1,6 @@
-# 🏥 LifeCare Hospital - Website
+# 🏥 AR Hospital - Website
 
-A modern, mobile-first hospital website built with HTML5, CSS3, and vanilla JavaScript. This project features a beautiful gold-themed design with responsive layouts, interactive booking system, and WhatsApp integration.
+A modern, mobile-first hospital website built with HTML5, CSS3, and vanilla JavaScript. This project features the Apollo Maroon Theme with clean light backgrounds, responsive layouts, interactive booking system, and multi-platform integration.
 
 ## 📋 Features
 
@@ -11,32 +11,34 @@ A modern, mobile-first hospital website built with HTML5, CSS3, and vanilla Java
 - **Touch-Optimized** - Minimum 44px touch targets for accessibility
 
 ### Sections
-1. **Hero Section** - Eye-catching landing with CTA buttons and statistics
+1. **Hero Section** - Clean landing with animated canvas background and CTA buttons
 2. **About Section** - Hospital information and key features
-3. **Services Section** - 6 medical service cards (Emergency, Pharmacy, Lab, etc.)
-4. **Doctors Section** - Featured doctors with specialties
-5. **Packages Section** - Health checkup packages with pricing
-6. **Contact Section** - Contact form with info cards
-7. **Footer** - Quick links and company information
+3. **Services Section** - 6 medical service cards with light maroon backgrounds
+4. **Departments Section** - 9 interactive department tabs with dynamic content (Plastic Surgery, Physiotherapy, Orthopedics, etc.)
+5. **Doctors Section** - 21 specialist doctors with specialties
+6. **Health Packages Section** - GSAP horizontal scroll animation with 3 packages
+7. **Connect Section** - 8 social platform icons with official brand logos
+8. **Footer** - Quick links and contact information
 
 ### Interactive Features
-- 📱 **Booking Modal** - 3D ledger-style booking interface
-- 💬 **WhatsApp Integration** - Direct appointment booking via WhatsApp
-- 📝 **Form Validation** - Real-time email and phone validation
-- 🎨 **Animations** - Fade-in animations on scroll with Intersection Observer
-- 📅 **Date Picker** - Prevents past date selection
+- 📱 **Booking Modal** - Professional appointment booking interface
+- 💬 **Multi-Platform Connect** - WhatsApp, Facebook, Instagram, Email, Phone, Maps, JustDial, Website
+- 🎨 **GSAP Animations** - Horizontal scrolling package cards with ScrollTrigger
+- 🎭 **Canvas Animation** - Animated geometric pattern background in hero section
+- 📍 **Dynamic Departments** - Click-to-switch department content with smooth transitions
 - 🍔 **Mobile Menu** - Smooth hamburger menu with close functionality
 
 ## 🎨 Design Features
 
-### Color Palette (Kalparuksha Gold Theme)
-- **Primary Gold**: #D4AF37
-- **Dark Gold**: #B8960C
-- **Light Gold**: #F4E4C1
-- **Amber**: #FFBF00
-- **Cream**: #FFF8DC
-- **Text Dark**: #2C2416
-- **Text Light**: #5C5440
+### Color Palette (Apollo Maroon Theme)
+- **Maroon Primary**: #7A1236 (Main buttons, links, active states)
+- **Maroon Dark**: #5E0F2A (Hover states, footer, heavy headings)
+- **Maroon Classic**: #8B1E3F (Accents, borders, icons)
+- **Maroon Soft**: #A63A5D (Subheadings, hover effects)
+- **Maroon Light**: #E6B3C1 (Decorations, weak borders)
+- **Maroon BG**: #F5D6DF (Light section backgrounds)
+- **Text Main**: #111827
+- **Text Muted**: #6B7280
 
 ### Typography
 - **Font**: System fonts (San Francisco, Segoe UI, Roboto, Helvetica)
@@ -54,10 +56,12 @@ A modern, mobile-first hospital website built with HTML5, CSS3, and vanilla Java
 
 ```
 A_R_HOSPITAL/
-├── index.html          # Main HTML file with all sections
-├── styles.css          # Mobile-first CSS styling
-├── script.js           # JavaScript functionality
-└── README.md          # Project documentation
+├── index.html                              # Main HTML file with all sections
+├── styles.css                              # Mobile-first CSS styling with Apollo Maroon Theme
+├── script.js                               # JavaScript functionality and animations
+├── hospitalData.js                         # Hospital data (21 doctors)
+├── Screenshot_2025-12-16_at_14.50.40...png # Hospital logo (transparent)
+└── README.md                              # Project documentation
 ```
 
 ## 🚀 Quick Start
@@ -70,10 +74,7 @@ cd A_R_HOSPITAL
 
 2. **Open in browser**
 ```bash
-# Simply open index.html in your browser
-open index.html
-
-# Or use a local server
+# Use a local server (recommended)
 python3 -m http.server 8000
 # Then visit http://localhost:8000
 ```
@@ -81,9 +82,11 @@ python3 -m http.server 8000
 ## 💻 Technologies Used
 
 - **HTML5** - Semantic markup
-- **CSS3** - Mobile-first responsive design with Grid and Flexbox
-- **JavaScript (ES6+)** - Vanilla JS, no dependencies
-- **WhatsApp API** - For appointment booking integration
+- **CSS3** - Modern features including CSS Anchor Positioning
+- **JavaScript (ES6+)** - Vanilla JS with dynamic content rendering
+- **GSAP 3.12.2** - ScrollTrigger for horizontal scroll animations
+- **Canvas API** - Animated geometric background patterns
+- **Multi-Platform Integration** - WhatsApp, Facebook, Instagram, Email, Maps
 
 ## 📱 Responsive Breakpoints
 
@@ -95,32 +98,35 @@ python3 -m http.server 8000
 
 ### Update Hospital Information
 Edit these sections in `index.html`:
-- Logo/Hospital name in navbar
-- Contact details in footer and contact section
-- Doctor information in doctors section
-- WhatsApp number in `script.js` (hospitalPhone variable)
+- Logo in navbar: Update image src
+- Contact details: Update phone numbers and email
+- Department information in `script.js`: Modify the `departments` object
+- Doctor information: Edit `hospitalData.js` (21 doctors array)
 
-### Modify Colors
+### Modify Colors (Apollo Maroon Theme)
 Update CSS variables in `styles.css`:
 ```css
 :root {
-    --primary-gold: #D4AF37;  /* Change primary color */
-    --text-dark: #2C2416;      /* Change text color */
-    /* ... other variables */
+    --maroon-primary: #7A1236;  /* Main action color */
+    --maroon-dark: #5E0F2A;     /* Hover states */
+    --maroon-bg: #F5D6DF;       /* Light backgrounds */
+    /* ... other maroon variables */
 }
 ```
 
-### WhatsApp Integration Setup
-1. Open `script.js`
-2. Find the `hospitalPhone` variable in the contact form submission
-3. Replace `919876543210` with your hospital's WhatsApp number
-4. Format: Country code (91 for India) + Phone number without spaces
+### Multi-Platform Integration
+Contact links are configured in the Connect section:
+- **Phone**: 08213501645
+- **WhatsApp**: +919008994827
+- **Email**: arhospitalmysore@gmail.com
+- **Facebook**: facebook.com/Arhospitalmysuru
+- **Instagram**: instagram.com/ar_hospital_mysuru
 
-## 📧 Contact Form
+## 📧 Booking System
 
-The contact form and booking form are integrated with WhatsApp:
-- Collects customer information
-- Sends formatted message to WhatsApp
+The booking modal opens for appointment scheduling:
+- Collects patient information
+- Opens WhatsApp with pre-filled message
 - No backend required - client-side only
 
 ## ♿ Accessibility Features
@@ -140,10 +146,28 @@ The contact form and booking form are integrated with WhatsApp:
 
 ## 📊 Performance
 
-- No external dependencies (vanilla JavaScript)
-- Lazy loading ready for images
+- Minimal external dependencies (only GSAP for animations)
+- Official brand logos loaded from CDN
 - CSS animations using transforms
-- Optimized bundle size
+- Canvas animations with requestAnimationFrame
+- Optimized file structure
+
+## 🎯 Key Features
+
+### Dynamic Departments
+- 9 departments with click-to-switch functionality
+- Smooth transitions between department content
+- CSS Anchor Positioning for active indicator (with fallback)
+
+### GSAP Animations
+- Horizontal scrolling package section
+- ScrollTrigger integration
+- Smooth scrubbing effects
+
+### Canvas Background
+- Animated geometric patterns
+- Maroon-themed color scheme
+- Low opacity for subtle effect
 
 ## 🤝 Contributing
 
@@ -155,14 +179,16 @@ This project is open source and available for personal and commercial use.
 
 ## 📞 Contact
 
-**LifeCare Hospital**
-- 📍 123 Medical Center Road, Healthcare City
-- 📞 +91 1234567890
-- 🚨 Emergency: 108
-- ✉️ info@lifecarehospital.com
+**AR Hospital**
+- 📍 AR Hospital, Mysuru
+- 📞 Emergency: 08213501645
+- 💬 WhatsApp: +919008994827
+- ✉️ arhospitalmysore@gmail.com
+- 🌐 Facebook: Arhospitalmysuru
+- 📸 Instagram: ar_hospital_mysuru
 
 ---
 
-**Made with ❤️ for excellent healthcare services**
+**Made with ❤️ for AR Hospital - Excellence in Healthcare**
 
 Last Updated: December 14, 2025
