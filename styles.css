@@ -354,6 +354,11 @@ body {
         color: var(--maroon-primary);
     }
 
+    /* Force Book Now button text to be white always, even on scroll */
+    .navbar.scrolled .nav-links .btn-primary {
+        color: var(--white);
+    }
+
     .nav-links a:hover,
     .nav-links a.active {
         background: transparent;
@@ -365,6 +370,8 @@ body {
         margin: 0;
         padding: 0.6rem 1.5rem;
         font-size: var(--font-base);
+        white-space: nowrap;
+        /* Force single line */
     }
 }
 
@@ -374,10 +381,11 @@ body {
 
 .hero {
     width: 100%;
+    height: 100vh;
+    /* Force full viewport height */
     min-height: 100vh;
-    /* Fallback */
+    /* Dynamic height adjustment for mobile browsers with address bars */
     min-height: 100dvh;
-    /* Dynamic viewport height for mobile browsers */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -397,6 +405,9 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    /* Ensures video covers area */
+    object-position: center;
+    /* Centers the video content */
     z-index: 0;
 }
 
@@ -425,8 +436,12 @@ body {
     width: 100%;
     max-width: 800px;
     padding: 0 var(--spacing-sm);
-    margin-top: 70px;
-    /* Offset for fixed navbar */
+    margin-top: 0;
+    /* Remove offset to allowing centering */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero h1 {
@@ -451,9 +466,93 @@ body {
 /* Mobile: Stack buttons vertically */
 .hero-buttons {
     display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-xl);
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Base style for both hero buttons */
+.emergency-hero-btn,
+.hero-btn-sized {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    line-height: 1;
+    /* Reset line height */
+    padding: 0;
+    /* Remove padding, use flex centering */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    font-weight: 700;
+    width: 250px;
+    /* EXACT fixed width */
+    height: 56px;
+    /* EXACT fixed height */
+    max-width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    white-space: nowrap;
+    /* Prevent wrapping */
+}
+
+/* Emergency Style - Theme Maroon */
+.emergency-hero-btn {
+    background: var(--maroon-primary);
+    /* Reverted to Theme Maroon */
+    border: 2px solid var(--maroon-primary);
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(122, 18, 54, 0.4);
+    animation: pulse-maroon 2s infinite;
+    /* Updated animation name */
+}
+
+.emergency-hero-btn:hover {
+    background: var(--maroon-dark);
+    border-color: var(--maroon-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(122, 18, 54, 0.6);
+}
+
+/* Book Appointment - Solid White Style */
+.hero-btn-sized {
+    background: var(--white);
+    border: 2px solid var(--white);
+    color: var(--maroon-primary);
+    backdrop-filter: none;
+}
+
+.hero-btn-sized:hover {
+    background: #f0f0f0;
+    color: var(--maroon-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.4);
+}
+
+.btn-subtext {
+    font-size: 0.75rem;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+@keyframes pulse-maroon {
+    0% {
+        box-shadow: 0 0 0 0 rgba(122, 18, 54, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(122, 18, 54, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(122, 18, 54, 0);
+    }
 }
 
 .vibrant-button,

@@ -8,6 +8,7 @@
         content="A R Hospital - Excellence in Healthcare with Compassionate Care and Advanced Treatment">
     <title>A R Hospital | Excellence in Healthcare</title>
     <link rel="stylesheet" href="styles.css?v=18">
+    <link rel="stylesheet" href="clock-styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
 </head>
@@ -37,10 +38,10 @@
                 </div>
 
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#departments">Departments</a></li>
-                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="departments.html">Departments</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#" class="btn-primary" id="navBookBtn">Book Now</a></li>
                 </ul>
@@ -52,7 +53,7 @@
          ============================================ -->
         <section id="home" class="hero">
             <video autoplay loop muted playsinline id="heroVideo">
-                <source src="assets/new%20intro.mp4" type="video/mp4">
+                <source src="assets/hero-video-updated.mp4" type="video/mp4">
             </video>
             <div class="video-overlay"></div>
             <div class="hero-content">
@@ -60,317 +61,198 @@
                 <p>Compassionate Care, Advanced Treatment, Your Health is Our Priority</p>
 
                 <div class="hero-buttons">
-                    <button class="vibrant-button" id="heroBookBtn">📅 Book Appointment</button>
-                    <a href="#services" class="btn-outline">🔍 Explore Services</a>
+                    <a href="tel:+911234567890" class="emergency-hero-btn">
+                        <!-- Custom SVG for Emergency Call (Phone Ringing) -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>
+                        Emergency Call
+                    </a>
+
+                    <button class="hero-btn-sized" id="heroBookBtn">
+                        <!-- Custom SVG for Calendar -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        Book Appointment
+                    </button>
                 </div>
             </div>
         </section>
 
         <!-- ============================================
-         ABOUT SECTION
+         ABOUT SECTION (Removed from homepage view)
          ============================================ -->
-        <section id="about" class="about-section">
+        <!-- <section id="about" class="about-section"> ... </section> -->
+
+        <!-- ============================================
+         DEPARTMENTS SECTION (Removed from homepage view)
+         ============================================ -->
+        <!-- <section id="departments" class="departments-section"> ... </section> -->
+
+        <!-- ============================================
+         DOCTORS SECTION (Removed from homepage view)
+         ============================================ -->
+
+
+        <!-- ============================================
+         SERVICES & NETWORK SECTION (Restored)
+         ============================================ -->
+        <!-- ============================================
+         24x7 SERVICES CLOCK SECTION
+         ============================================ -->
+        <section id="services-clock" class="services-clock-section">
             <div class="container">
-                <h2 class="section-title">About A R Hospital</h2>
-
-                <div class="about-content">
-                    <div class="about-text">
-                        <!-- Medical Director Vision -->
-                        <div class="director-message-box"
-                            style="background: #fff5f8; padding: 25px; border-radius: 12px; margin-bottom: 30px; border-left: 5px solid var(--maroon-primary);">
-                            <div class="message-header"
-                                style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-                                <div class="director-img-circle"
-                                    style="width: 60px; height: 60px; background: #ddd; border-radius: 50%; overflow: hidden;">
-                                    <img src="https://via.placeholder.com/60" alt="Medical Director"
-                                        style="width:100%; height:100%; object-fit: cover;">
-                                </div>
-                                <div>
-                                    <h3 style="margin: 0; font-size: 1.2rem; color: var(--maroon-primary);">Our Vision &
-                                        Mission</h3>
-                                    <span style="font-size: 0.9rem; color: #666;">Message from Medical Director</span>
-                                </div>
-                            </div>
-                            <p style="font-style: italic; color: #444; margin-bottom: 10px;">"To provide World Class
-                                Healthcare at affordable cost with empathy, ethics and excellence."</p>
-                        </div>
-
-                        <h3>Your Trusted Healthcare Partner</h3>
-                        <p>
-                            A R Hospital is a leading medical institution dedicated to providing exceptional healthcare
-                            services with compassion and excellence. With state-of-the-art facilities and a team of 21
-                            experienced specialist doctors, we are committed to delivering the highest standard of care
-                            to
-                            our patients.
-                        </p>
-                        <p>
-                            Our mission is to improve the health and wellness of our community through advanced medical
-                            treatments, preventive care, and patient education. We believe in treating every patient
-                            with
-                            dignity and respect.
-                        </p>
-
-                        <div class="about-features">
-                            <div class="feature">
-                                <span>✓</span>
-                                <span>24/7 Emergency Services</span>
-                            </div>
-                            <div class="feature">
-                                <span>✓</span>
-                                <span>Advanced Medical Technology</span>
-                            </div>
-                            <div class="feature">
-                                <span>✓</span>
-                                <span>Experienced Medical Team</span>
-                            </div>
-                            <div class="feature">
-                                <span>✓</span>
-                                <span>Patient-Centered Care</span>
-                            </div>
-                        </div>
+                <div class="container">
+                    <div class="clock-header-global text-center mb-5" style="margin-bottom: 40px; text-align: center;">
+                        <h2 class="section-title" style="color:white; margin-bottom: 15px;">OUR SERVICES 24×7</h2>
+                        <div class="title-divider mx-auto"
+                            style="margin: 0 auto 20px auto; background: #d4af37; height: 3px; width: 80px;"></div>
+                        <p class="service-subtext"
+                            style="color: #e0e0e0; font-size: 1.2rem; font-weight: 300; margin-bottom: 0;">
+                            Round-the-clock care for every emergency and health need.</p>
                     </div>
 
-                    <div class="about-image">
-                        <img src="https://via.placeholder.com/400x300?text=Hospital+Image" alt="LifeCare Hospital">
+                    <div class="clock-layout">
+                        <!-- Text Column (Left) -->
+                        <div class="clock-text-col">
+                            <div class="active-service-info">
+                                <h3 id="serviceTitle" class="dynamic-service-title">EMERGENCY CARE</h3>
+                                <p id="serviceDesc" class="dynamic-service-desc">Immediate medical attention and trauma
+                                    support whenever you need it most.</p>
+                            </div>
+                        </div>
+
+                        <!-- Clock Column (Right) -->
+                        <div class="clock-visual-col">
+                            <div class="service-clock-container">
+                                <!-- Central Active Service Display -->
+                                <div class="digital-center" id="centerDisplay">
+                                    <div id="centerIcon" class="center-icon">
+                                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                                        </svg>
+                                    </div>
+                                    <div id="centerLabel" class="center-label">EMERGENCY</div>
+                                </div>
+
+                                <!-- Rotating Ring -->
+                                <div class="clock-ring-track"></div>
+                                <div class="clock-active-ring"></div>
+
+                                <!-- Service Segments with Custom SVGs -->
+                                <div class="service-segments" id="serviceSegments">
+
+                                    <!-- 1. Emergency -->
+                                    <div class="service-segment active" data-index="0">
+                                        <div class="segment-icon">
+                                            <!-- Ambulance/Siren Icon -->
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <!-- 2. Pharmacy -->
+                                    <div class="service-segment" data-index="1">
+                                        <div class="segment-icon">
+                                            <!-- Pill Icon -->
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <rect x="3" y="7" width="18" height="10" rx="2"></rect>
+                                                <circle cx="6" cy="12" r="1.5"></circle>
+                                                <circle cx="18" cy="12" r="1.5"></circle>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <!-- 3. Laboratory -->
+                                    <div class="service-segment" data-index="2">
+                                        <div class="segment-icon">
+                                            <!-- Microscope Icon -->
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <path d="M10 2h4"></path>
+                                                <path d="M12 2v6"></path>
+                                                <path d="M12 11v11"></path>
+                                                <path d="M8 22h8"></path>
+                                                <path d="M6 22a6 6 0 0 1 6-6 6 6 0 0 1 6 6"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <!-- 4. X-Ray -->
+                                    <div class="service-segment" data-index="3">
+                                        <div class="segment-icon">
+                                            <!-- Radiology/Bone Icon -->
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                                                <path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 17h5" />
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <!-- 5. ICU -->
+                                    <div class="service-segment" data-index="4">
+                                        <div class="segment-icon">
+                                            <!-- Heartbeat Icon -->
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <!-- 6. In-Patient -->
+                                    <div class="service-segment" data-index="5">
+                                        <div class="segment-icon">
+                                            <!-- Bed Icon -->
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <path d="M2 4v16"></path>
+                                                <path d="M2 8h18a2 2 0 0 1 2 2v10"></path>
+                                                <path d="M2 17h20"></path>
+                                                <path d="M6 8v9"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <!-- 7. Operation Theater -->
+                                    <div class="service-segment" data-index="6">
+                                        <div class="segment-icon">
+                                            <!-- Syringe/Surgery Icon -->
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <line x1="12" y1="8" x2="12" y2="16"></line>
+                                                <line x1="8" y1="12" x2="16" y2="12"></line>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Combined Services Section -->
-                <div id="services" style="padding-top: 60px; margin-top: -60px;"></div> <!-- Anchor correction -->
-                <h2 class="section-title" style="margin-top: 40px; margin-bottom: 30px;">Our Services</h2>
-
-                <div class="services-grid">
-                    <div class="vibrant-card service-card">
-                        <div class="service-icon">🏥</div>
-                        <h3>Emergency Care</h3>
-                        <p>24/7 emergency services with fully equipped trauma centers and experienced emergency medical
-                            team
-                            ready to handle critical situations.</p>
-                    </div>
-
-                    <div class="vibrant-card service-card">
-                        <div class="service-icon">💊</div>
-                        <h3>Pharmacy Services</h3>
-                        <p>Complete pharmacy solutions with a wide range of medications and expert pharmaceutical
-                            guidance
-                            from licensed pharmacists.</p>
-                    </div>
-
-                    <div class="vibrant-card service-card">
-                        <div class="service-icon">🔬</div>
-                        <h3>Laboratory Services</h3>
-                        <p>Advanced diagnostic laboratory with state-of-the-art equipment for accurate and timely test
-                            results and analysis.</p>
-                    </div>
-
-                    <div class="vibrant-card service-card">
-                        <div class="service-icon">🏨</div>
-                        <h3>Inpatient Care</h3>
-                        <p>Comfortable and well-equipped inpatient facilities with round-the-clock nursing care and
-                            specialized medical supervision.</p>
-                    </div>
-
-                    <div class="vibrant-card service-card">
-                        <div class="service-icon">👶</div>
-                        <h3>Maternity Services</h3>
-                        <p>Comprehensive maternity care including prenatal, delivery, and postnatal services with
-                            experienced obstetric team.</p>
-                    </div>
-
-                    <div class="vibrant-card service-card">
-                        <div class="service-icon">🩺</div>
-                        <h3>Outpatient Services</h3>
-                        <p>Comprehensive outpatient consultations and treatments across various specialties for
-                            convenient
-                            medical care.</p>
-                    </div>
-                    <div class="vibrant-card service-card" id="insuranceCard" onclick="openInsuranceModal()"
-                        style="cursor: pointer;">
-                        <div class="service-icon">💳</div>
-                        <h3>Cashless Insurance & Government Schemes</h3>
-                    </div>
-                </div>
-
-                <!-- 3D Partners Triple Grid -->
-                <div class="partners-section" style="margin-top: 60px; text-align: center;">
-                    <h3 style="color: var(--maroon-primary); margin-bottom: 40px; font-size: 1.8rem;">Our Healthcare
-                        Network
-                    </h3>
-
-                    <div class="cube-spotlight-container"
-                        style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-
-                        <!-- COLUMN 1: INSURANCE -->
-                        <div class="cube-wrapper"
-                            style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
-                            <h4 style="color: var(--text-main); font-size: 1.1rem; font-weight: 600;">Cashless Insurance
-                                Partners</h4>
-                            <div class="cube-scene">
-                                <div class="cube" id="insuranceCube">
-                                    <div class="cube-face cube-face-front">
-                                        <div class="cube-icon-box"><img src="assets/tata_aig.png" alt="Tata AIG"></div>
-                                        <div class="cube-text">Tata AIG General Insurance</div>
-                                    </div>
-                                    <div class="cube-face cube-face-top">
-                                        <div class="cube-icon-box"><img src="assets/star_health.png" alt="Star Health">
-                                        </div>
-                                        <div class="cube-text">Star Health Insurance</div>
-                                    </div>
-                                    <div class="cube-face cube-face-back">
-                                        <div class="cube-icon-box"><img src="assets/sbi_general.png" alt="SBI General">
-                                        </div>
-                                        <div class="cube-text">SBI General Insurance</div>
-                                    </div>
-                                    <div class="cube-face cube-face-bottom">
-                                        <div class="cube-icon-box"><img src="assets/shield-3d.png" alt="Insurance">
-                                        </div>
-                                        <div class="cube-text">Niva Bupa / Reliance / Etc.</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- COLUMN 2: TPAs -->
-                        <div class="cube-wrapper"
-                            style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
-                            <h4 style="color: var(--text-main); font-size: 1.1rem; font-weight: 600;">Trusted TPA
-                                Services
-                            </h4>
-                            <div class="cube-scene">
-                                <div class="cube" id="tpaCube">
-                                    <div class="cube-face cube-face-front">
-                                        <div class="cube-icon-box"><img src="assets/tpa_icon.png" alt="TPA"></div>
-                                        <div class="cube-text">VOLO Health (East West)</div>
-                                    </div>
-                                    <div class="cube-face cube-face-top">
-                                        <div class="cube-icon-box"><img src="assets/tpa_icon.png" alt="TPA"></div>
-                                        <div class="cube-text">Medsave Health TPA</div>
-                                    </div>
-                                    <div class="cube-face cube-face-back">
-                                        <div class="cube-icon-box"><img src="assets/tpa_icon.png" alt="TPA"></div>
-                                        <div class="cube-text">FHPL (ACKO)</div>
-                                    </div>
-                                    <div class="cube-face cube-face-bottom">
-                                        <div class="cube-icon-box"><img src="assets/tpa_icon.png" alt="TPA"></div>
-                                        <div class="cube-text">Ericson / HealthIndia</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- COLUMN 3: SCHEMES -->
-                        <div class="cube-wrapper"
-                            style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
-                            <h4 style="color: var(--text-main); font-size: 1.1rem; font-weight: 600;">Government Health
-                                Schemes</h4>
-                            <div class="cube-scene">
-                                <div class="cube" id="schemeCube">
-                                    <div class="cube-face cube-face-front">
-                                        <div class="cube-icon-box"><img src="assets/govt_icon.png" alt="Govt"></div>
-                                        <div class="cube-text">Yeshasvini Scheme</div>
-                                    </div>
-                                    <div class="cube-face cube-face-top">
-                                        <div class="cube-icon-box"><img src="assets/govt_icon.png" alt="Govt"></div>
-                                        <div class="cube-text">S.K.D.R.D.P.</div>
-                                    </div>
-                                    <div class="cube-face cube-face-back">
-                                        <div class="cube-icon-box"><img src="assets/govt_icon.png" alt="Govt"></div>
-                                        <div class="cube-text">State Govt Schemes</div>
-                                    </div>
-                                    <div class="cube-face cube-face-bottom">
-                                        <div class="cube-icon-box"><img src="assets/govt_icon.png" alt="Govt"></div>
-                                        <div class="cube-text">Cashless Facility</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
         </section>
-
-        <!-- ============================================
-         DEPARTMENTS SECTION
-         ============================================ -->
-        <section id="departments" class="departments-section">
-            <div class="container">
-                <h2 class="section-title">Our Departments</h2>
-                <p class="section-subtitle">Comprehensive medical care across all specialties</p>
-
-                <div class="departments-container">
-                    <div class="dept-nav-scroll-wrapper">
-                        <div class="dept-nav-buttons">
-                            <button class="dept-nav-btn active" data-dept="orthopedics">Orthopedics</button>
-                            <button class="dept-nav-btn" data-dept="general_medicine">General Medicine</button>
-                            <button class="dept-nav-btn" data-dept="surgery">General Surgery</button>
-                            <button class="dept-nav-btn" data-dept="gynecology">Gynecology</button>
-                            <button class="dept-nav-btn" data-dept="ent">ENT</button>
-                            <button class="dept-nav-btn" data-dept="neurosurgery">Neuro Surgery</button>
-                            <button class="dept-nav-btn" data-dept="physiotherapy">Physiotherapy</button>
-                            <button class="dept-nav-btn" data-dept="vascular_surgery">Vascular Surgery</button>
-                            <button class="dept-nav-btn" data-dept="plasticsurgery">Plastic Surgery</button>
-                            <button class="dept-nav-btn" data-dept="pulmonology">Pulmonology</button>
-                            <button class="dept-nav-btn" data-dept="pediatrics">Pediatrics</button>
-                            <button class="dept-nav-btn" data-dept="dermatology">Dermatology</button>
-                            <button class="dept-nav-btn" data-dept="neurology">Neurology</button>
-                            <button class="dept-nav-btn" data-dept="psychiatry">Psychiatry</button>
-                            <button class="dept-nav-btn" data-dept="urology">Urology</button>
-                        </div>
-                    </div>
-
-                    <div class="department-display-area">
-                        <!-- Default Content: Orthopedics (First item) -->
-                        <div class="vibrant-card department-card" id="orthopedics" data-dept="orthopedics">
-                            <div class="dept-header">
-                                <div class="dept-icon">🦴</div>
-                                <div class="dept-title-box">
-                                    <h3>Orthopedics Department</h3>
-                                    <p>Comprehensive bone and joint care with advanced surgical and non-surgical
-                                        treatment
-                                        options.</p>
-                                </div>
-                            </div>
-
-                            <div class="dept-body">
-                                <div class="dept-features-box">
-                                    <h4>Key Services</h4>
-                                    <ul class="dept-features">
-                                        <li>Joint Replacement Surgery</li>
-                                        <li>Sports Medicine</li>
-                                        <li>Trauma & Fracture Care</li>
-                                        <li>Arthroscopy Procedures</li>
-                                    </ul>
-                                </div>
-
-                                <div class="dept-doctors-section">
-                                    <h4>Our Specialists</h4>
-                                    <div class="dept-doctors-grid">
-                                        <div class="dept-doctor-mini-card"
-                                            onclick="openDoctorDetails('Dr. Madhuram Chowdary')" role="button"
-                                            tabindex="0">
-                                            <div class="mini-doc-image">👨‍⚕️</div>
-                                            <div class="mini-doc-info">
-                                                <h4>Dr. Madhuram Chowdary</h4>
-                                                <span class="mini-doc-spec">Orthopedic Surgeon</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <button class="vibrant-button dept-book-btn" onclick="openBookingModal()">Book
-                                Consultation</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============================================
-         DOCTORS SECTION
-         ============================================ -->
-
 
         <!-- ============================================
          PACKAGES SECTION
@@ -882,6 +764,7 @@
         </div>
 
         <script src="script.js?v=3"></script>
+        <script src="clock-script.js"></script>
 </body>
 
 </html>
