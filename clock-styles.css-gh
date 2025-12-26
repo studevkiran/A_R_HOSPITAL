@@ -174,8 +174,7 @@
     z-index: 10;
     width: 150px;
     height: 150px;
-    background: white;
-    /* Clean White BG for Center */
+    background: #7a1236;
     border-radius: 50%;
     display: flex;
     flex-direction: column;
@@ -210,8 +209,13 @@
 }
 
 .center-label {
-    display: none;
-    /* Hide text as requested */
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    max-width: 90%;
+    line-height: 1.2;
 }
 
 /* Rings */
@@ -273,9 +277,8 @@
 
 /* Styling for the icon circle */
 .service-segment .segment-icon {
-    width: 60px;
-    /* Increased from 55px */
-    height: 60px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     background: white;
     /* Clean White BG */
@@ -296,12 +299,12 @@
 .service-segment.active .segment-icon,
 .service-segment:hover .segment-icon {
     background: #d4af37;
-    /* Restore Gold Background Fill */
+    /* Gold Background */
     color: white;
+    /* White Icon */
     transform: scale(1.25);
     box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
-    border: 2px solid white;
-    /* White border for contrast against gold */
+    border-color: white;
 }
 
 /* Responsive Styles */
@@ -344,8 +347,6 @@
     .clock-active-ring {
         width: 240px;
         height: 240px;
-        border-width: 4px;
-        /* Thicker ring for mobile visibility */
     }
 
     .digital-center {
@@ -381,64 +382,41 @@
 
     /* Smaller segments on mobile */
     .service-segment {
-        width: 60px;
-        /* Increased touch target */
-        height: 60px;
-        margin-left: -30px;
-        margin-top: -30px;
+        width: 50px;
+        height: 50px;
+        margin-left: -25px;
+        margin-top: -25px;
     }
 
     .service-segment .segment-icon {
-        width: 48px;
-        /* Bigger icon background on mobile */
-        height: 48px;
+        width: 40px;
+        height: 40px;
     }
 
     .service-segment .segment-icon svg {
-        width: 24px;
-        height: 24px;
-        display: block;
-        /* Show SVG on mobile */
-    }
-
-    /* Fix Sticky Hover on Mobile: Reset hover state, rely only on .active class */
-    .service-segment:hover .segment-icon {
-        background: white;
-        border: 2px solid transparent;
-        transform: none;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Ensure Active State Gold Background is Visible on Mobile */
-    .service-segment.active .segment-icon {
-        background: #d4af37 !important;
-        border: 2px solid white;
-        box-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
-        transform: scale(1.1);
-        /* Slight scale for active only */
+        width: 20px;
+        height: 20px;
+        display: none;
+        /* Hide SVG if present */
     }
 
     .service-icon-img {
-        width: 36px;
-        height: 36px;
+        width: 32px;
+        height: 32px;
         object-fit: contain;
     }
 }
 
 /* Global Icon Image Style */
 .service-icon-img {
-    width: 48px;
-    /* Increased from 35px */
-    height: 48px;
+    width: 35px;
+    height: 35px;
     object-fit: contain;
-    /* Ensure full icon is visible (no cropping) */
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .center-icon img {
-    width: 130px;
-    /* Increased to fit container */
-    height: 130px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }

@@ -155,7 +155,7 @@
                                     <!-- 1. Emergency -->
                                     <div class="service-segment active" data-index="0">
                                         <div class="segment-icon">
-                                            <!-- Siren Icon -->
+                                            <!-- Ambulance/Siren Icon -->
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                 stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                                 stroke-linejoin="round">
@@ -164,23 +164,8 @@
                                         </div>
                                     </div>
 
-                                    <!-- 2. Ambulance (Moved Here) -->
+                                    <!-- 2. Pharmacy -->
                                     <div class="service-segment" data-index="1">
-                                        <div class="segment-icon">
-                                            <!-- Ambulance Icon -->
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="round">
-                                                <rect x="1" y="3" width="15" height="13"></rect>
-                                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
-                                                <circle cx="5.5" cy="18.5" r="2.5"></circle>
-                                                <circle cx="18.5" cy="18.5" r="2.5"></circle>
-                                            </svg>
-                                        </div>
-                                    </div>
-
-                                    <!-- 3. Pharmacy -->
-                                    <div class="service-segment" data-index="2">
                                         <div class="segment-icon">
                                             <!-- Pill Icon -->
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -193,8 +178,8 @@
                                         </div>
                                     </div>
 
-                                    <!-- 4. Laboratory -->
-                                    <div class="service-segment" data-index="3">
+                                    <!-- 3. Laboratory -->
+                                    <div class="service-segment" data-index="2">
                                         <div class="segment-icon">
                                             <!-- Microscope Icon -->
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -209,8 +194,8 @@
                                         </div>
                                     </div>
 
-                                    <!-- 5. X-Ray -->
-                                    <div class="service-segment" data-index="4">
+                                    <!-- 4. X-Ray -->
+                                    <div class="service-segment" data-index="3">
                                         <div class="segment-icon">
                                             <!-- Radiology/Bone Icon -->
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -222,8 +207,8 @@
                                         </div>
                                     </div>
 
-                                    <!-- 6. ICU -->
-                                    <div class="service-segment" data-index="5">
+                                    <!-- 5. ICU -->
+                                    <div class="service-segment" data-index="4">
                                         <div class="segment-icon">
                                             <!-- Heartbeat Icon -->
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -234,8 +219,8 @@
                                         </div>
                                     </div>
 
-                                    <!-- 7. In-Patient -->
-                                    <div class="service-segment" data-index="6">
+                                    <!-- 6. In-Patient -->
+                                    <div class="service-segment" data-index="5">
                                         <div class="segment-icon">
                                             <!-- Bed Icon -->
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -249,8 +234,8 @@
                                         </div>
                                     </div>
 
-                                    <!-- 8. Operation Theater -->
-                                    <div class="service-segment" data-index="7">
+                                    <!-- 7. Operation Theater -->
+                                    <div class="service-segment" data-index="6">
                                         <div class="segment-icon">
                                             <!-- Syringe/Surgery Icon -->
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -267,69 +252,6 @@
                         </div>
                     </div>
                 </div>
-        </section>
-
-        <!-- ============================================
-         HEALTHCARE PARTNERS (3D CUBES)
-         ============================================ -->
-        <section class="partners-section">
-            <div class="container">
-                <h2 class="section-title">Healthcare Network</h2>
-                <p class="section-subtitle">Partnering with leading Insurance & TPA providers</p>
-
-                <div class="cubes-grid">
-                    <!-- 1. Insurance Cube -->
-                    <div class="cube-wrapper">
-                        <label>Insurance Partners</label>
-                        <div class="cube-scene">
-                            <div class="cube" id="insuranceCube">
-                                <div class="cube-face cube-face-front"><img src="assets/star_real.jpeg" alt=""><span
-                                        class="cube-text">Star Health</span></div>
-                                <div class="cube-face cube-face-top"><img src="assets/galaxy.jpeg" alt=""><span
-                                        class="cube-text">Galaxy</span></div>
-                                <div class="cube-face cube-face-back"><img src="assets/sbi_real.jpeg" alt=""><span
-                                        class="cube-text">SBI General</span></div>
-                                <div class="cube-face cube-face-bottom"><img src="assets/acko.jpeg" alt=""><span
-                                        class="cube-text">ACKO</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 2. TPA Cube -->
-                    <div class="cube-wrapper">
-                        <label>TPA Network</label>
-                        <div class="cube-scene">
-                            <div class="cube" id="tpaCube">
-                                <div class="cube-face cube-face-front"><img src="assets/volo.jpeg" alt=""><span
-                                        class="cube-text">VOLO Health</span></div>
-                                <div class="cube-face cube-face-top"><img src="assets/medsave.png" alt=""><span
-                                        class="cube-text">Medsave</span></div>
-                                <div class="cube-face cube-face-back"><img src="assets/fhpl.jpeg" alt=""><span
-                                        class="cube-text">FHPL</span></div>
-                                <div class="cube-face cube-face-bottom"><img src="assets/ericson.png" alt=""><span
-                                        class="cube-text">Ericson</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 3. Schemes Cube -->
-                    <div class="cube-wrapper">
-                        <label>Govt Schemes</label>
-                        <div class="cube-scene">
-                            <div class="cube" id="schemeCube">
-                                <div class="cube-face cube-face-front"><img src="assets/yeshasvini.jpeg" alt=""><span
-                                        class="cube-text">Yeshasvini</span></div>
-                                <div class="cube-face cube-face-top"><img src="assets/skdrdp.jpeg" alt=""><span
-                                        class="cube-text">SKDRDP</span></div>
-                                <div class="cube-face cube-face-back"><img src="assets/stategovt.jpeg" alt=""><span
-                                        class="cube-text">State Govt</span></div>
-                                <div class="cube-face cube-face-bottom"><img src="assets/yeshasvini.jpeg" alt=""><span
-                                        class="cube-text">Yeshasvini</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
 
         <!-- ============================================
@@ -510,8 +432,6 @@
                 </div>
             </div>
         </section>
-
-
 
         <!-- ============================================
          CONNECT WITH US SECTION

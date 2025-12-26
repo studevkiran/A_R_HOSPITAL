@@ -9,17 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
             key: 'emergency',
             label: 'Emergency Care',
             desc: 'Immediate medical attention and trauma support whenever you need it most.',
-            next: 'Ambulance Service',
-            shortLabel: 'Emergency',
-            icon: '<img src="assets/siren_icon.png?v=9" alt="Emergency" class="service-icon-img" />'
-        },
-        {
-            key: 'ambulance',
-            label: 'Ambulance Service',
-            desc: 'Rapid response advanced life support ambulances available 24x7.',
             next: 'Pharmacy',
-            shortLabel: 'Ambulance',
-            icon: '<img src="assets/ambulance_icon.png?v=9" alt="Ambulance" class="service-icon-img" />'
+            shortLabel: 'Emergency',
+            icon: '<img src="assets/icon-emergency.png" alt="Emergency" class="service-icon-img" />'
         },
         {
             key: 'pharmacy',
@@ -27,15 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
             desc: '24×7 in-house pharmacy for all essential medicines available day and night.',
             next: 'Laboratory',
             shortLabel: 'Pharmacy',
-            icon: '<img src="assets/pharmacy_icon.png?v=6" alt="Pharmacy" class="service-icon-img" />'
+            icon: '<img src="assets/icon-pharmacy.png" alt="Pharmacy" class="service-icon-img" />'
         },
         {
             key: 'lab',
             label: 'Laboratory',
-            desc: 'High-tech diagnostic labs delivering accurate and timely reports.',
+            desc: 'Round-the-clock lab for urgent blood tests and accurate diagnostics.',
             next: 'X-Ray',
-            shortLabel: 'Lab',
-            icon: '<img src="assets/labarotary_icon.png?v=6" alt="Laboratory" class="service-icon-img" />'
+            shortLabel: 'Laboratory',
+            icon: '<img src="assets/icon-lab.png" alt="Laboratory" class="service-icon-img" />'
         },
         {
             key: 'xray',
@@ -43,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             desc: 'Digital X-Ray and advanced imaging services for timely diagnosis.',
             next: 'ICU',
             shortLabel: 'X-Ray',
-            icon: '<img src="assets/x%20ray.png?v=6" alt="X-Ray" class="service-icon-img" />'
+            icon: '<img src="assets/icon-xray.png" alt="X-Ray" class="service-icon-img" />'
         },
         {
             key: 'icu',
@@ -51,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             desc: 'Advanced intensive care unit with continuous monitoring for critical patients.',
             next: 'In-Patient Care',
             shortLabel: 'ICU',
-            icon: '<img src="assets/icu_icon.png?v=6" alt="ICU" class="service-icon-img" />'
+            icon: '<img src="assets/icon-icu.png" alt="ICU" class="service-icon-img" />'
         },
         {
             key: 'inpatient',
@@ -59,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             desc: 'Comfortable, well-equipped rooms with round-the-clock nursing support.',
             next: 'Operation Theater',
             shortLabel: 'In-Patient',
-            icon: '<img src="assets/in_patient_icon.png?v=6" alt="In-Patient" class="service-icon-img" />'
+            icon: '<img src="assets/icon-inpatient.png" alt="In-Patient" class="service-icon-img" />'
         },
         {
             key: 'ot',
@@ -67,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
             desc: 'Modern, sterile OTs ready for both emergency and planned surgeries.',
             next: 'Emergency Care',
             shortLabel: 'OT',
-            icon: '<img src="assets/ot_icon.png?v=11" alt="OT" class="service-icon-img" />'
+            icon: '<img src="assets/icon-ot.png" alt="OT" class="service-icon-img" />'
         }
     ];
 
@@ -91,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function positionSegments() {
         const isMobile = window.innerWidth <= 992;
         const radius = isMobile ? 110 : 170; // Adjusted: 110 for mobile (tighter), 170 for desktop
-        let resumeTimeout;
 
         segments.forEach((segment, index) => {
             // Position segments in a circle
@@ -101,47 +92,14 @@ document.addEventListener('DOMContentLoaded', () => {
             // Use transforms to position
             segment.style.transform = `rotate(${angle}deg) translate(${radius}px) rotate(${-angle}deg)`;
 
-            // Inject PNG Icon from Data (Replaces SVG)
-            const data = services[index];
-            const iconContainer = segment.querySelector('.segment-icon');
-            if (data && iconContainer) {
-                // Use the string from data.icon which is <img ... class="service-icon-img" />
-                // Use a slightly different class or style if needed, but existing .service-icon-img rule should work.
-                // We might want to remove the specific class 'service-icon-img' from the ring if it conflicts, 
-                // but currently .service-icon-img is sized 48px which fits perfectly in 60px container.
-                iconContainer.innerHTML = data.icon;
-            }
-
-            // Add hover/click listeners
-            // Resume animation automatically after interaction to prevent "stuck" state
-            const handleInteraction = () => {
+            // Add hover listeners
+            segment.onmouseenter = () => {
                 isPaused = true;
                 setActiveService(index);
-
-                // Clear any pending resume
-                if (resumeTimeout) clearTimeout(resumeTimeout);
-
-                // Auto-resume after 4 seconds of inactivity
-                resumeTimeout = setTimeout(() => {
-                    isPaused = false;
-                }, 4000);
             };
 
-            segment.onmouseenter = handleInteraction;
-            segment.onclick = handleInteraction; // For touch devices explicitly
-
             segment.onmouseleave = () => {
-                // Determine behavior on leave: 
-                // fast resume? or keep the 4s buffer? 
-                // Let's keep the buffer to allow reading unless they move out.
-                // Actually, if mouse leaves, we can resume sooner.
-                // But specifically for MOBILE tap, there is no mouseleave.
-                // So the timeout in handleInteraction is key for mobile.
-                // For desktop, mouseleave can resume immediately.
-                if (!isMobile) {
-                    if (resumeTimeout) clearTimeout(resumeTimeout);
-                    isPaused = false;
-                }
+                isPaused = false;
             };
         });
     }

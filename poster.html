@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A R Hospital - Premium Services Poster</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --maroon-dark: #2a0510;
+            --maroon-light: #7a1236;
+            --gold: #d4af37;
+            --gold-glow: #f9e29c;
+            --text-white: #ffffff;
+            --text-dim: #e0e0e0;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            padding: 20px;
+        }
+
+        .poster-container {
+            width: 210mm;
+            /* A4 Width */
+            min-height: 297mm;
+            /* A4 Height */
+            /* Dark Luxury Gradient Background */
+            background: linear-gradient(135deg, var(--maroon-dark) 0%, #150205 100%);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
+            color: var(--text-white);
+        }
+
+        /* Abstract Gold Waves Background */
+        .bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(122, 18, 54, 0.4) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.15) 0%, transparent 40%);
+            z-index: 0;
+        }
+
+        /* Gold Border Frame */
+        .poster-frame {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border: 2px solid rgba(212, 175, 55, 0.4);
+            border-radius: 4px;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .poster-content {
+            position: relative;
+            z-index: 1;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .logo-img {
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.3));
+        }
+
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            background: linear-gradient(to right, #cfc09f, #ffecb3, #c4a962);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .subtitle {
+            color: var(--gold);
+            font-size: 1.1rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        /* Title with Golden Line */
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            font-family: 'Playfair Display', serif;
+            color: var(--text-white);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .section-title::before,
+        .section-title::after {
+            content: '';
+            height: 1px;
+            width: 60px;
+            background: var(--gold);
+        }
+
+        /* Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            flex-grow: 1;
+        }
+
+        /* High Contrast Premium Card */
+        .service-card {
+            background: linear-gradient(145deg, #ffffff 0%, #fff0f5 100%);
+            border: 1px solid var(--gold);
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: var(--maroon-light);
+        }
+
+        .icon-wrapper {
+            width: 70px;
+            height: 70px;
+            background: var(--maroon-dark);
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid var(--gold);
+            margin-right: 20px;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .icon-wrapper img {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+        }
+
+        .text-content h3 {
+            margin: 0;
+            color: var(--maroon-light);
+            font-size: 1.5rem;
+            /* Bigger */
+            font-weight: 800;
+            /* Bolder */
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 0.5px;
+        }
+
+        .text-content p {
+            display: none;
+            /* Hide Description */
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .footer-highlight {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .footer p {
+            color: #aaa;
+            font-size: 0.9rem;
+            margin: 5px 0;
+        }
+
+        /* Print Media */
+        @media print {
+            body {
+                background: none;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .poster-container {
+                margin: 0;
+                width: 100%;
+                height: 100vh;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="poster-container">
+        <div class="bg-pattern"></div>
+        <div class="poster-frame"></div>
+
+        <div class="poster-content">
+            <!-- Header -->
+            <div class="header">
+                <img src="assets/logo.png" alt="A R Hospital Logo" class="logo-img">
+                <h1 class="brand-name">A R Hospital</h1>
+                <div class="subtitle">Experience The Art of Healing</div>
+            </div>
+
+            <!-- Title -->
+            <div class="section-title">Premium 24x7 Services</div>
+
+            <!-- Grid -->
+            <div class="services-grid">
+
+                <div class="service-card">
+                    <div class="icon-wrapper"><img src="assets/siren_icon.png" alt="Emergency"></div>
+                    <div class="text-content">
+                        <h3>Critical Emergency</h3>
+                        <p>Rapid response trauma care with advanced life support systems.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-wrapper"><img src="assets/ambulance_icon.png" alt="Ambulance"></div>
+                    <div class="text-content">
+                        <h3>Advanced Ambulance</h3>
+                        <p>ICU-on-wheels fleet tailored for critical patient transport.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-wrapper"><img src="assets/ot_icon.png" alt="OT"></div>
+                    <div class="text-content">
+                        <h3>Modular OT</h3>
+                        <p>State-of-the-art sterile operation theaters for complex surgeries.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-wrapper"><img src="assets/icu_icon.png" alt="ICU"></div>
+                    <div class="text-content">
+                        <h3>Intensive Care (ICU)</h3>
+                        <p>24/7 dedicated critical care with cutting-edge monitoring.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-wrapper"><img src="assets/pharmacy_icon.png" alt="Pharmacy"></div>
+                    <div class="text-content">
+                        <h3>Pharmacy</h3>
+                        <p>Fully stocked pharmacy delivering essential medicines anytime.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-wrapper"><img src="assets/labarotary_icon.png" alt="Lab"></div>
+                    <div class="text-content">
+                        <h3>Hi-Tech Laboratory</h3>
+                        <p>Automated diagnostics ensuring 100% accurate results.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-wrapper"><img src="assets/x%20ray.png" alt="Radiology"></div>
+                    <div class="text-content">
+                        <h3>Digital Radiology</h3>
+                        <p>Low-radiation Digital X-Ray & Imaging services.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-wrapper"><img src="assets/in_patient_icon.png" alt="In-Patient"></div>
+                    <div class="text-content">
+                        <h3>Luxury In-Patient</h3>
+                        <p>Premium private suites for comfort and faster recovery.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <span class="footer-highlight">Emergency: +91 98455 38555</span>
+                <p>Srirampura 2nd Stage, Mysuru, Karnataka 570023</p>
+                <p>www.arhospital.com</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
