@@ -1,0 +1,9 @@
+This is a temporary file to help reorganize testimonials with all reviews shuffled together:
+
+- 14 Instagram Reels
+- 5 JustDial Reviews
+- 11 Google Maps Reviews
+
+Total: 30 items shuffled together
+
+I'll now update the HTML file with the complete shuffled content.

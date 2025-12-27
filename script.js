@@ -212,6 +212,41 @@ if (closeDoctorModalBtn) {
     closeDoctorModalBtn.addEventListener('click', closeDoctorModal);
 }
 
+// ============================================
+// HEALTH PACKAGE BOOKING VIA WHATSAPP
+// ============================================
+function bookPackage(packageName, packagePrice, packageFeatures) {
+    // WhatsApp number for A R Hospital
+    const whatsappNumber = '919008994827';
+
+    // Create WhatsApp message with package details
+    const message = `🏥 *Health Package Booking Request*
+━━━━━━━━━━━━━━━━━━━━━
+
+📦 *Package:* ${packageName}
+💰 *Price:* ${packagePrice}
+
+✨ *Included Features:*
+${packageFeatures}
+
+━━━━━━━━━━━━━━━━━━━━━
+
+📝 *Submitted from:* A R Hospital Website
+
+I would like to book this health checkup package. Please confirm the appointment date and time.
+
+Thank you! 🙏`;
+
+    // Encode message for URL
+    const encodedMessage = encodeURIComponent(message);
+
+    // Create WhatsApp URL
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    // Open WhatsApp in new tab
+    window.open(whatsappURL, '_blank');
+}
+
 
 const insuranceModal = document.getElementById('insuranceModal');
 const closeInsuranceModalBtn = document.getElementById('closeInsuranceModal');
@@ -381,7 +416,7 @@ if (doctorModal) {
 // ============================================
 const doctorsData = [
     {
-        name: 'Dr. Madhuram Chowdary',
+        name: 'Dr. Madhuram Chowdry',
         specialty: 'Orthopedic Surgeon',
         department: 'Orthopedics',
         experience: '15+ years',
@@ -680,248 +715,119 @@ if (navBookBtn) {
 
 // Department data
 const departments = {
-    plasticsurgery: {
-        icon: '✨',
-        title: 'Plastic Surgery Department',
-        description: 'Expert cosmetic and reconstructive surgery with advanced techniques for aesthetic and functional improvements.',
-        features: [
-            'Cosmetic Surgery',
-            'Reconstructive Surgery',
-            'Burn Treatment',
-            'Hand Surgery'
-        ],
-        doctors: [
-            { name: 'Dr. Vijay Kumar', specialty: 'Plastic Surgeon', image: '👨‍⚕️' },
-            { name: 'Dr. Chethan', specialty: 'Plastic Surgeon', image: '👨‍⚕️' }
-        ]
-    },
     orthopedics: {
-        icon: '🦴',
+        icon: '<i class="fas fa-bone"></i>',
         title: 'Orthopedics Department',
         description: 'Comprehensive bone and joint care with advanced surgical and non-surgical treatment options.',
-        features: [
-            'Joint Replacement Surgery',
-            'Sports Medicine',
-            'Trauma & Fracture Care',
-            'Arthroscopy Procedures'
-        ],
-        doctors: [
-            { name: 'Dr. Madhuram Chowdary', specialty: 'Orthopedic Surgeon', image: '👨‍⚕️' }
-        ]
+        features: ['Joint Replacement Surgery', 'Sports Medicine', 'Trauma & Fracture Care', 'Spine Surgery'],
+        doctors: [{ name: 'Dr. Madhuram Chowdry', specialty: 'Orthopedic Surgeon', image: '👨‍⚕️' }]
     },
-    gynecology: {
-        icon: '👩‍⚕️',
-        title: 'Gynecology Department',
-        description: 'Comprehensive women\'s health services including maternity and reproductive care.',
-        features: [
-            'Prenatal & Postnatal Care',
-            'High-Risk Pregnancy Management',
-            'Gynecological Surgeries',
-            'Fertility Treatments'
-        ],
-        doctors: [
-            { name: 'Dr. Keerthi MS', specialty: 'Gynaecologist', image: '👩‍⚕️' },
-            { name: 'Dr. Geetha', specialty: 'Gynaecologist', image: '👩‍⚕️' }
-        ]
-    },
-    surgery: {
-        icon: '⚕️',
+    general_surgery: {
+        icon: '<i class="fas fa-user-md"></i>',
         title: 'General Surgery Department',
         description: 'Advanced surgical procedures with minimally invasive techniques for faster recovery.',
-        features: [
-            'Laparoscopic Surgery',
-            'Emergency Surgery',
-            'Hernia Repair',
-            'Gastrointestinal Surgery'
-        ],
-        doctors: [
-            { name: 'Dr. Sachin HM', specialty: 'General Surgeon', image: '👨‍⚕️' },
-            { name: 'Dr. Lokesh', specialty: 'General Surgeon', image: '👨‍⚕️' }
-        ]
+        features: ['Laparoscopic Surgery', 'Emergency Surgery', 'Hernia Repair', 'Gastrointestinal Surgery'],
+        doctors: [{ name: 'Dr. Sachin', specialty: 'General Surgery', image: '👨‍⚕️' }]
     },
-    general_medicine: {
-        icon: '💊',
-        title: 'General Medicine',
-        description: 'Comprehensive primary care, chronic disease management, and preventive healthcare.',
-        features: [
-            'Health Checkups',
-            'Fever & Infection Treatment',
-            'Diabetes Management',
-            'Hypertension Care'
-        ],
+    pediatrics: {
+        icon: '<i class="fas fa-baby"></i>',
+        title: 'Pediatrics Department',
+        description: 'Specialized healthcare for infants, children, and adolescents with compassionate care.',
+        features: ['Newborn Care', 'Child Vaccinations', 'Growth Monitoring', 'Pediatric Emergencies'],
         doctors: [
-            { name: 'Dr. Ramya', specialty: 'General Physician', image: '👩‍⚕️' },
-            { name: 'Dr. Arun', specialty: 'Physician', image: '👨‍⚕️' },
-            { name: 'Dr. Abhilash (1st)', specialty: 'Physician', image: '👨‍⚕️' },
-            { name: 'Dr. Yogesh', specialty: 'Physician', image: '👨‍⚕️' }
-        ]
-    },
-    neurology: {
-        icon: '🧠',
-        title: 'Neurology Department',
-        description: 'Expert neurological care for brain, spine, and nervous system disorders.',
-        features: [
-            'Stroke Management',
-            'Epilepsy Treatment',
-            'Movement Disorders',
-            'Neuromuscular Disorders'
-        ],
-        doctors: [
-            { name: 'Dr. Harsha Huliappa', specialty: 'Neurologist', image: '👨‍⚕️' },
-            { name: 'Dr. Punith', specialty: 'Neurologist', image: '👨‍⚕️' }
-        ]
-    },
-    neurosurgery: {
-        icon: '🧠',
-        title: 'Neuro Surgery Department',
-        description: 'Advanced surgical interventions for complex brain and spine conditions.',
-        features: [
-            'Brain Tumor Surgery',
-            'Spine Surgery',
-            'Trauma Surgery',
-            'Minimally Invasive Neurosurgery'
-        ],
-        doctors: [] // Placeholder until we have specific neurosurgeons or move from neurology
-    },
-    dermatology: {
-        icon: '🧴',
-        title: 'Dermatology Department',
-        description: 'Expert skin care treatments for medical and cosmetic dermatological conditions.',
-        features: [
-            'Acne Treatment',
-            'Skin Cancer Screening',
-            'Laser Treatments',
-            'Cosmetic Dermatology'
-        ],
-        doctors: [
-            { name: 'Dr. Madhuri', specialty: 'Dermatologist', image: '👩‍⚕️' }
-        ]
-    },
-    psychiatry: {
-        icon: '🧘',
-        title: 'Psychiatry Department',
-        description: 'Mental health services with compassionate care for psychological and emotional well-being.',
-        features: [
-            'Depression & Anxiety Treatment',
-            'Addiction Counseling',
-            'Child Psychiatry',
-            'Stress Management Programs'
-        ],
-        doctors: [
-            { name: 'Dr. Manjushree', specialty: 'Psychiatrist', image: '👩‍⚕️' }
-        ]
-    },
-    vascular_surgery: {
-        icon: '🩸',
-        title: 'Vascular Surgery',
-        description: 'Specialized care for disorders of the arteries, veins, and lymphatic system.',
-        features: [
-            'Varicose Veins Treatment',
-            'Aortic Aneurysm Repair',
-            'Dialysis Access',
-            'Peripheral Artery Disease'
-        ],
-        doctors: [
-            { name: 'Dr. Chandan', specialty: 'Vascular Surgeon', image: '👨‍⚕️' }
-        ]
-    },
-    pulmonology: {
-        icon: '🫁',
-        title: 'Pulmonology Department',
-        description: 'Diagnosis and treatment of respiratory system diseases and sleep disorders.',
-        features: [
-            'Asthma/COPD Management',
-            'Lung Function Tests',
-            'Bronchoscopy',
-            'Sleep Medicine'
-        ],
-        doctors: [
-            { name: 'Dr. Lakshmi Narayan', specialty: 'Pulmonologist', image: '👨‍⚕️' }
-        ]
-    },
-    ophthalmology: {
-        icon: '👁️',
-        title: 'Ophthalmology Department',
-        description: 'Comprehensive eye care ranging from routine exams to complex surgical procedures.',
-        features: [
-            'Cataract Surgery',
-            'Glaucoma Treatment',
-            'Vision Correction',
-            'Pediatric Ophthalmology'
-        ],
-        doctors: [
-            { name: 'Dr. Pooja', specialty: 'Ophthalmologist', image: '👩‍⚕️' }
-        ]
-    },
-    urology: {
-        icon: '🚽', // Using a generic icon or could use ⚕️
-        title: 'Urology Department',
-        description: 'Surgical and medical diseases of the male and female urinary-tract system.',
-        features: [
-            'Kidney Stone Treatment',
-            'Prostate Care',
-            'Urinary Infections',
-            'Male Infertility'
-        ],
-        doctors: [
-            { name: 'Dr. Mohan', specialty: 'Urologist', image: '👨‍⚕️' }
-        ]
-    },
-    ent: {
-        icon: '👂',
-        title: 'ENT Department',
-        description: 'Medical and surgical management of disorders of the Ear, Nose, and Throat.',
-        features: [
-            'Hearing Loss Treatment',
-            'Sinusitis Management',
-            'Tonsillitis Surgery',
-            'Vertigo Treatment'
-        ],
-        doctors: [
-            { name: 'Dr. Abhilash (2nd)', specialty: 'ENT Specialist', image: '👨‍⚕️' }
+            { name: 'Dr. Banu', specialty: 'Pediatric', image: '👩‍⚕️' },
+            { name: 'Dr. Rajshekhar BK', specialty: 'Pediatric', image: '👨‍⚕️' },
+            { name: 'Dr. Anjana S Mavinahalli', specialty: 'Pediatric', image: '👩‍⚕️' }
         ]
     },
     intensive_care: {
-        icon: '🆘',
+        icon: '<i class="fas fa-heartbeat"></i>',
         title: 'Intensive Care Unit',
-        description: 'Specialized care for patients with life-threatening conditions requiring comprehensive monitoring.',
-        features: [
-            '24/7 Monitoring',
-            'Ventilator Support',
-            'Cardiac Support',
-            'Trauma Care'
-        ],
+        description: '24/7 critical care for patients requiring intensive monitoring and advanced life support.',
+        features: ['Critical Care Management', 'Ventilator Support', 'Post-Surgical Care', 'Emergency Response'],
+        doctors: [{ name: 'Dr. Krupa Subramanya', specialty: 'Intensiveist', image: '👩‍⚕️' }]
+    },
+    anesthesiology: {
+        icon: '<i class="fas fa-syringe"></i>',
+        title: 'Anesthesiology Department',
+        description: 'Expert anesthesia services ensuring safe and pain-free surgical procedures.',
+        features: ['General Anesthesia', 'Regional Anesthesia', 'Pain Management', 'Sedation Services'],
         doctors: [
-            { name: 'Dr. Nitish', specialty: 'Intensivist', image: '👨‍⚕️' }
+            { name: 'Dr. Lingaraju', specialty: 'Anesthetist', image: '👨‍⚕️' },
+            { name: 'Dr. Rathnamala', specialty: 'Anesthetist', image: '👩‍⚕️' },
+            { name: 'Dr. Shivakumar', specialty: 'Anesthetist', image: '👨‍⚕️' }
         ]
     },
-    physiotherapy: {
-        icon: '🏃',
-        title: 'Physiotherapy Department',
-        description: 'Comprehensive rehabilitation and physical therapy services for recovery and pain management.',
-        features: [
-            'Sports Injury Rehabilitation',
-            'Post-Surgery Recovery',
-            'Pain Management',
-            'Mobility Training'
-        ],
-        doctors: [] // No specific doctor listed, handled gracefully
+    omfs_surgery: {
+        icon: '<i class="fas fa-tooth"></i>',
+        title: 'OMFS Surgery Department',
+        description: 'Oral and Maxillofacial Surgery for jaw, face, and dental-related surgical procedures.',
+        features: ['Jaw Surgery', 'Facial Trauma Repair', 'Dental Implants', 'TMJ Disorders'],
+        doctors: [
+            { name: 'Dr. Adarsh Chowdry', specialty: 'OMFS Surgeon', image: '👨‍⚕️' },
+            { name: 'Dr. Lakshith Biddappa', specialty: 'OMFS Surgeon', image: '👨‍⚕️' }
+        ]
     },
-    pediatrics: {
-        icon: '👶',
-        title: 'Pediatrics Department',
-        description: 'Specialized healthcare for infants, children, and adolescents with compassionate care.',
-        features: [
-            'Newborn Care',
-            'Child Immunization',
-            'Growth & Development Monitoring',
-            'Pediatric Emergency Care'
-        ],
-        doctors: [] // Team available
+    neurosurgery: {
+        icon: '<i class="fas fa-brain"></i>',
+        title: 'Neurosurgery Department',
+        description: 'Advanced surgical interventions for complex brain and spine conditions.',
+        features: ['Brain Tumor Surgery', 'Spine Surgery', 'Trauma Surgery', 'Minimally Invasive Neurosurgery'],
+        doctors: [{ name: 'Dr. Punith', specialty: 'Neuro Surgeon', image: '👨‍⚕️' }]
+    },
+    physiotherapy: {
+        icon: '<i class="fas fa-running"></i>',
+        title: 'Physiotherapy Department',
+        description: 'Comprehensive rehabilitation services to restore movement and reduce pain.',
+        features: ['Sports Injury Rehabilitation', 'Post-Surgical Recovery', 'Pain Management', 'Mobility Training'],
+        doctors: [{ name: 'Dr. Vinod Kumar Seervi', specialty: 'Physiotherapist', image: '👨‍⚕️' }]
+    },
+    urology: {
+        icon: '<i class="fas fa-droplet"></i>',
+        title: 'Urology Department',
+        description: 'Surgical and medical diseases of the male and female urinary-tract system.',
+        features: ['Kidney Stone Treatment', 'Prostate Care', 'Urinary Infections', 'Male Infertility'],
+        doctors: [
+            { name: 'Dr. Kiran Shetty', specialty: 'Urology', image: '👨‍⚕️' },
+            { name: 'Dr. Abhijith', specialty: 'Urology', image: '👨‍⚕️' }
+        ]
+    },
+    gynecology: {
+        icon: '<i class="fas fa-venus"></i>',
+        title: 'Gynecology Department',
+        description: 'Comprehensive women\'s health services including maternity and reproductive care.',
+        features: ['Prenatal & Postnatal Care', 'High-Risk Pregnancy Management', 'Gynecological Surgeries', 'Fertility Treatments'],
+        doctors: [{ name: 'Dr. Chandrika', specialty: 'Gynecology', image: '👩‍⚕️' }]
+    },
+    dermatology: {
+        icon: '<i class="fas fa-hand-sparkles"></i>',
+        title: 'Dermatology Department',
+        description: 'Expert skin care treatments for medical and cosmetic dermatological conditions.',
+        features: ['Acne Treatment', 'Skin Cancer Screening', 'Laser Treatments', 'Cosmetic Dermatology'],
+        doctors: [{ name: 'Dr. Pujith', specialty: 'Dermatologist', image: '👨‍⚕️' }]
+    },
+    general_medicine: {
+        icon: '<i class="fas fa-stethoscope"></i>',
+        title: 'General Medicine Department',
+        description: 'Comprehensive primary care, chronic disease management, and preventive healthcare.',
+        features: ['Health Checkups', 'Fever & Infection Treatment', 'Diabetes Management', 'Hypertension Care'],
+        doctors: [{ name: 'Dr. Ramya', specialty: 'General Physician', image: '👩‍⚕️' }]
+    },
+    pulmonology: {
+        icon: '<i class="fas fa-lungs"></i>',
+        title: 'Pulmonology Department',
+        description: 'Diagnosis and treatment of respiratory system diseases and sleep disorders.',
+        features: ['Asthma/COPD Management', 'Lung Function Tests', 'Bronchoscopy', 'Sleep Medicine'],
+        doctors: [{ name: 'Dr. Sushma', specialty: 'Pulmonology', image: '👩‍⚕️' }]
+    },
+    ent: {
+        icon: '<i class="fas fa-ear-listen"></i>',
+        title: 'ENT Department',
+        description: 'Comprehensive ear, nose, and throat care including diagnostics and surgical treatments.',
+        features: ['Hearing Tests', 'Sinus Treatment', 'Tonsillectomy', 'Voice Disorders'],
+        doctors: [{ name: 'Dr. Abhilash', specialty: 'ENT', image: '👨‍⚕️' }]
     }
 };
-
-// Handle department navigation clicks
 // Handle department navigation clicks
 function initDepartmentNav() {
     const deptBtns = document.querySelectorAll('.dept-nav-btn');
@@ -953,6 +859,11 @@ function initDepartmentNav() {
                 btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
             });
         });
+
+        // Auto-load first department (Orthopedics) on page load
+        if (deptBtns.length > 0) {
+            updateDepartmentContent('orthopedics');
+        }
     }
 }
 
@@ -993,7 +904,7 @@ function updateDepartmentContent(deptId) {
         // Generate Features List as Cards
         const featuresHTML = (dept.features || []).map(feature =>
             `<div class="vibrant-card key-service-card">
-                <span>✅</span>
+                <span><i class="fas fa-circle-check" style="color: var(--primary-gold);"></i></span>
                 <span>${feature}</span>
             </div>`
         ).join('');
@@ -1400,27 +1311,8 @@ window.addEventListener('load', function () {
     gsap.registerPlugin(ScrollTrigger);
     console.log('GSAP registered');
 
-    // Package Horizontal Scroll
-    const packagesList = document.querySelector('.packages-list');
-    const packageItems = document.querySelectorAll('.package-item');
-
-    console.log('Found', packageItems.length, 'packages');
-
-    if (packageItems.length > 0 && packagesList) {
-        let scrollTween = gsap.to('.packages-list', {
-            x: () => -(packagesList.scrollWidth - window.innerWidth),
-            ease: 'none',
-            scrollTrigger: {
-                trigger: '.packages-section',
-                pin: true,
-                scrub: 1,
-                start: 'top top+=80', // Pin when section reaches bottom of navbar
-                end: () => `+=${packagesList.scrollWidth - window.innerWidth}`, // Match exact scroll distance
-                invalidateOnRefresh: true
-            }
-        });
-        console.log('Package animation created');
-    }
+    // Package Scroll Disabled (Manual Active)
+    console.log('Package Manual Slider Active');
 
     // Doctor Cards Animation
     const doctorCards = document.querySelectorAll('.doctor-card');
@@ -1451,3 +1343,186 @@ window.addEventListener('load', function () {
 console.log('%c🏥 Welcome to A R Hospital Website', 'color: #bc9f3fff; font-size: 16px; font-weight: bold;');
 console.log('%cExcellence in Healthcare', 'color: #FFBF00; font-size: 14px;');
 console.log('%cFor appointments, click "Book Now" or contact: +91 9008994827', 'color: #2C2416; font-size: 12px;');
+
+// ============================================
+// CAROUSEL SLIDER FUNCTIONALITY
+// ============================================
+const pList = document.querySelector('.packages-list');
+const prevBtns = document.querySelectorAll('.prev-btn, .prev-mobile');
+const nextBtns = document.querySelectorAll('.next-btn, .next-mobile');
+
+function updateButtonState() {
+    if (!pList) return;
+
+    const scrollLeft = pList.scrollLeft;
+    const maxScroll = pList.scrollWidth - pList.clientWidth;
+    const buffer = 10; // Tolerance
+
+    // Dim Prev Button if at start
+    if (scrollLeft <= buffer) {
+        prevBtns.forEach(btn => btn.classList.add('disabled'));
+    } else {
+        prevBtns.forEach(btn => btn.classList.remove('disabled'));
+    }
+
+    // Dim Next Button if at end
+    if (scrollLeft >= maxScroll - buffer) {
+        nextBtns.forEach(btn => btn.classList.add('disabled'));
+    } else {
+        nextBtns.forEach(btn => btn.classList.remove('disabled'));
+    }
+}
+
+if (pList) {
+    pList.addEventListener('scroll', updateButtonState);
+    // Initial check with delay
+    setTimeout(updateButtonState, 500);
+    window.addEventListener('resize', updateButtonState);
+}
+
+window.scrollPackages = function (direction) {
+    if (pList) {
+        const scrollAmount = 380; // Card width (350) + gap (30)
+        pList.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    }
+};
+
+// ============================================
+// TESTIMONIALS PLAY/PAUSE CONTROLS
+// ============================================
+
+const pauseTestimonialsBtn = document.getElementById('pauseTestimonials');
+const playTestimonialsBtn = document.getElementById('playTestimonials');
+const testimonialsTrack = document.getElementById('testimonialsTrack');
+
+// Function to pause testimonials
+function pauseTestimonials() {
+    if (testimonialsTrack) {
+        testimonialsTrack.classList.add('paused');
+        if (pauseTestimonialsBtn) pauseTestimonialsBtn.style.display = 'none';
+        if (playTestimonialsBtn) playTestimonialsBtn.style.display = 'flex';
+    }
+}
+
+// Function to play testimonials
+function playTestimonials() {
+    if (testimonialsTrack) {
+        testimonialsTrack.classList.remove('paused');
+        if (playTestimonialsBtn) playTestimonialsBtn.style.display = 'none';
+        if (pauseTestimonialsBtn) pauseTestimonialsBtn.style.display = 'flex';
+    }
+}
+
+if (pauseTestimonialsBtn && playTestimonialsBtn && testimonialsTrack) {
+    // Pause button click
+    pauseTestimonialsBtn.addEventListener('click', pauseTestimonials);
+
+    // Play button click
+    playTestimonialsBtn.addEventListener('click', playTestimonials);
+
+    // Auto-pause when clicking on any video card
+    const videoCards = document.querySelectorAll('.testimonial-card.video-card');
+    videoCards.forEach(card => {
+        card.addEventListener('click', () => {
+            pauseTestimonials();
+        });
+    });
+}
+
+// ============================================
+// SMART APPOINTMENT BOOKING - DEPARTMENT & DOCTOR SYNC
+// ============================================
+
+const departmentSelect = document.getElementById('department');
+const doctorSelect = document.getElementById('doctor');
+
+if (departmentSelect && doctorSelect) {
+    // Store all doctor options
+    const allDoctorOptions = Array.from(doctorSelect.options);
+
+    // When department is selected, filter doctors
+    departmentSelect.addEventListener('change', function () {
+        const selectedDept = this.value;
+
+        // Reset doctor selection
+        doctorSelect.value = '';
+
+        // Remove all current options except the first placeholder
+        doctorSelect.innerHTML = '<option value="">Select Doctor</option>';
+
+        if (selectedDept === '') {
+            // If no department selected, show all doctors
+            allDoctorOptions.forEach((option, index) => {
+                if (index > 0) { // Skip the placeholder
+                    doctorSelect.appendChild(option.cloneNode(true));
+                }
+            });
+        } else {
+            // Filter doctors for selected department
+            allDoctorOptions.forEach((option, index) => {
+                if (index === 0) return; // Skip placeholder
+
+                const doctorDept = option.getAttribute('data-dept');
+                if (doctorDept === selectedDept) {
+                    doctorSelect.appendChild(option.cloneNode(true));
+                }
+            });
+        }
+
+        // If no doctors found for this department, show message
+        if (doctorSelect.options.length === 1) {
+            const noDocOption = document.createElement('option');
+            noDocOption.value = '';
+            noDocOption.textContent = 'No doctors available in this department';
+            noDocOption.disabled = true;
+            doctorSelect.appendChild(noDocOption);
+        }
+    });
+
+    // When doctor is selected, auto-fill department
+    doctorSelect.addEventListener('change', function () {
+        const selectedOption = this.options[this.selectedIndex];
+        const doctorDept = selectedOption.getAttribute('data-dept');
+
+        if (doctorDept) {
+            // Auto-select the corresponding department
+            departmentSelect.value = doctorDept;
+        }
+    });
+}
+
+// ============================================
+// PHONE NUMBER VALIDATION - ONLY 10 DIGITS
+// ============================================
+
+const phoneInput = document.getElementById('patientPhone');
+
+if (phoneInput) {
+    // Prevent non-numeric input in real-time
+    phoneInput.addEventListener('input', function (e) {
+        // Remove any non-digit characters
+        this.value = this.value.replace(/[^0-9]/g, '');
+
+        // Limit to 10 digits
+        if (this.value.length > 10) {
+            this.value = this.value.slice(0, 10);
+        }
+    });
+
+    // Prevent paste of non-numeric content
+    phoneInput.addEventListener('paste', function (e) {
+        e.preventDefault();
+        const pastedText = (e.clipboardData || window.clipboardData).getData('text');
+        const numericOnly = pastedText.replace(/[^0-9]/g, '').slice(0, 10);
+        this.value = numericOnly;
+    });
+
+    // Validate on blur (when user clicks away)
+    phoneInput.addEventListener('blur', function () {
+        if (this.value.length > 0 && this.value.length !== 10) {
+            this.setCustomValidity('Phone number must be exactly 10 digits');
+        } else {
+            this.setCustomValidity('');
+        }
+    });
+}

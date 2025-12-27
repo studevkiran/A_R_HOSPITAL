@@ -9,7 +9,6 @@
     <title>A R Hospital | Excellence in Healthcare</title>
     <link rel="stylesheet" href="styles.css?v=18">
     <link rel="stylesheet" href="clock-styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
 </head>
@@ -41,8 +40,8 @@
                 <ul class="nav-links" id="navLinks">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="#departments">Departments</a></li>
-                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="departments.html">Departments</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#" class="btn-primary" id="navBookBtn">Book Now</a></li>
                 </ul>
@@ -334,41 +333,6 @@
         </section>
 
         <!-- ============================================
-         DEPARTMENTS SECTION
-         ============================================ -->
-        <section id="departments" class="departments-section">
-            <div class="container">
-                <h2 class="section-title">Our Departments</h2>
-                <p class="section-subtitle">Comprehensive medical care across all specialties</p>
-
-                <div class="departments-container">
-                    <div class="dept-nav-scroll-wrapper">
-                        <div class="dept-nav-buttons">
-                            <button class="dept-nav-btn active" data-dept="orthopedics">Orthopedics</button>
-                            <button class="dept-nav-btn" data-dept="general_surgery">General Surgery</button>
-                            <button class="dept-nav-btn" data-dept="pediatrics">Pediatrics</button>
-                            <button class="dept-nav-btn" data-dept="intensive_care">Intensive Care</button>
-                            <button class="dept-nav-btn" data-dept="anesthesiology">Anesthesiology</button>
-                            <button class="dept-nav-btn" data-dept="omfs_surgery">OMFS Surgery</button>
-                            <button class="dept-nav-btn" data-dept="neurosurgery">Neurosurgery</button>
-                            <button class="dept-nav-btn" data-dept="physiotherapy">Physiotherapy</button>
-                            <button class="dept-nav-btn" data-dept="urology">Urology</button>
-                            <button class="dept-nav-btn" data-dept="gynecology">Gynecology</button>
-                            <button class="dept-nav-btn" data-dept="dermatology">Dermatology</button>
-                            <button class="dept-nav-btn" data-dept="general_medicine">General Medicine</button>
-                            <button class="dept-nav-btn" data-dept="pulmonology">Pulmonology</button>
-                            <button class="dept-nav-btn" data-dept="ent">ENT</button>
-                        </div>
-                    </div>
-
-                    <div class="department-display-area">
-                        <!-- Content will be dynamically loaded by JavaScript -->
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============================================
          PACKAGES SECTION
          ============================================ -->
         <section id="packages" class="packages-section">
@@ -380,46 +344,45 @@
                 <button class="slider-btn prev-btn" onclick="scrollPackages(-1)">❮</button>
                 <div class="packages-carousel">
                     <ul class="packages-list">
-                        <!-- Basic Package (Featured) -->
+                        <!-- Master Checkup (Featured) -->
                         <li class="package-item">
                             <div class="vibrant-card package-card featured">
                                 <div class="package-badge">Best Value</div>
-                                <h3>Basic Package</h3>
+                                <h3>Master Checkup</h3>
                                 <div class="price-container">
-                                    <span class="price-mrp">₹5,499</span>
-                                    <span class="price-offer">₹2,800</span>
+                                    <span class="price-mrp">₹8,900</span>
+                                    <span class="price-offer">₹6,900</span>
                                 </div>
                                 <ul class="package-features">
-                                    <li>Complete Hemogram</li>
-                                    <li>RBS, Blood Urea & Creatinine</li>
-                                    <li>Liver Function Test (LFT)</li>
-                                    <li>Urine Routine</li>
-                                    <li>ESR & Calcium</li>
-                                    <li>X-Ray & BP Checkup</li>
+                                    <li>Complete Blood Count (CBC)</li>
+                                    <li>Liver & Renal Function Tests</li>
+                                    <li>Lipid Profile & HbA1c</li>
+                                    <li>Vitamin D & B12</li>
+                                    <li>ECG, X-Ray & CRP</li>
+                                    <li>Urine Analysis</li>
                                 </ul>
                                 <button class="vibrant-button"
-                                    onclick="bookPackage('Basic Package', '₹2,800', 'Complete Hemogram, RBS, Blood Urea & Creatinine, Liver Function Test, Urine Routine, ESR & Calcium, X-Ray & BP Checkup')">Book
-                                    Now</button>
+                                    onclick="openBookingModal({department:'General Medicine'})">Book Now</button>
                             </div>
                         </li>
 
                         <!-- Cardiac Package -->
                         <li class="package-item">
                             <div class="vibrant-card package-card">
-                                <h3>Cardiac Package</h3>
+                                <h3>Cardiac Checkup</h3>
                                 <div class="price-container">
                                     <span class="price-mrp">₹6,999</span>
-                                    <span class="price-offer">₹4,699</span>
+                                    <span class="price-offer">₹4,700</span>
                                 </div>
                                 <ul class="package-features">
-                                    <li>Complete Blood Count (CBC)</li>
-                                    <li>RBS/FBS & Blood Urea</li>
-                                    <li>Lipid Profile (Full)</li>
+                                    <li>2D Echo & ECG</li>
+                                    <li>Lipid Profile</li>
                                     <li>Troponin I</li>
-                                    <li>ECG & 2D Echo</li>
+                                    <li>Serum Creatinine & FBS</li>
+                                    <li>Complete Blood Count</li>
                                 </ul>
                                 <button class="vibrant-button"
-                                    onclick="bookPackage('Cardiac Package', '₹4,699', 'CBC, RBS/FBS & Blood Urea, Lipid Profile (Full), Troponin I, ECG & 2D Echo')">Book
+                                    onclick="openBookingModal({department:'Cardiology'})">Book
                                     Now</button>
                             </div>
                         </li>
@@ -430,39 +393,33 @@
                                 <h3>Diabetic Package</h3>
                                 <div class="price-container">
                                     <span class="price-mrp">₹4,999</span>
-                                    <span class="price-offer">₹2,499</span>
+                                    <span class="price-offer">₹2,500</span>
                                 </div>
                                 <ul class="package-features">
                                     <li>FBS & PPBS</li>
                                     <li>HbA1c & Urine Sugar</li>
-                                    <li>Lipid Profile (Full)</li>
+                                    <li>Lipid Profile</li>
                                     <li>Renal Function Test (RFT)</li>
-                                    <li>Physician Consultation</li>
+                                    <li>Serum Electrolytes</li>
+                                    <li>Physician Consult</li>
                                 </ul>
                                 <button class="vibrant-button"
-                                    onclick="bookPackage('Diabetic Package', '₹2,499', 'FBS & PPBS, HbA1c & Urine Sugar, Lipid Profile, Renal Function Test, Physician Consultation')">Book
-                                    Now</button>
+                                    onclick="openBookingModal({department:'General Medicine'})">Book Now</button>
                             </div>
                         </li>
 
-                        <!-- Well Women Package -->
-                        <li class="package-item">
-                            <div class="vibrant-card package-card">
-                                <h3>Well Women Package</h3>
-                                <div class="price-container">
-                                    <span class="price-mrp">₹5,999</span>
-                                    <span class="price-offer">₹2,799</span>
-                                </div>
-                                <ul class="package-features">
-                                    <li>Thyroid Profile (T3, T4, TSH)</li>
-                                    <li>Complete Hemogram</li>
-                                    <li>Pap Smear & Peripheral Smear</li>
-                                    <li>Urine Routine</li>
-                                    <li>Gynecologist Consultation</li>
-                                </ul>
-                                <button class="vibrant-button"
-                                    onclick="bookPackage('Well Women Package', '₹2,799', 'Thyroid Profile (T3, T4, TSH), Complete Hemogram, Pap Smear & Peripheral Smear, Urine Routine, Gynecologist Consultation')">Book
-                                    Now</button>
+                        <!-- Explore All Card -->
+                        <li class="package-item explore-item">
+                            <div class="vibrant-card package-card"
+                                style="display: flex; flex-direction: column; justify-content: center; align-items: center; background: #1a1a1a; border: 2px solid var(--primary-gold); box-shadow: 0 0 15px rgba(212, 175, 55, 0.15); height: 100%;">
+                                <h3
+                                    style="margin-bottom: 20px; color: var(--primary-gold); font-family: 'Playfair Display', serif; font-size: 1.8rem;">
+                                    More Packages</h3>
+                                <p style="margin-bottom: 30px; color: #ffffff; text-align: center; font-size: 1rem;">
+                                    Discover our comprehensive range of health checkups.</p>
+                                <a href="packages.html" class="vibrant-button"
+                                    style="text-decoration: none; min-width: auto; padding: 12px 35px;">View All
+                                    Packages</a>
                             </div>
                         </li>
                     </ul>
@@ -472,6 +429,8 @@
 
             <div class="packages-footer">
                 <button class="slider-btn-mobile prev-mobile" onclick="scrollPackages(-1)">❮</button>
+                <a href="packages.html" class="vibrant-button explore-all-btn"
+                    style="text-decoration: none; padding: 12px 20px;">Explore All Packages</a>
                 <button class="slider-btn-mobile next-mobile" onclick="scrollPackages(1)">❯</button>
             </div>
         </section>
@@ -852,338 +811,700 @@
                         </div>
                     </div>
                 </div>
-                <div class="testimonials-controls">
-                    <button class="testimonial-control-btn" id="pauseTestimonials" title="Pause scrolling">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <rect x="6" y="4" width="4" height="16"></rect>
-                            <rect x="14" y="4" width="4" height="16"></rect>
-                        </svg>
-                    </button>
-                    <button class="testimonial-control-btn" id="playTestimonials" style="display: none;"
-                        title="Resume scrolling">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                        </svg>
-                    </button>
+            </div>
+            <div class="testimonials-controls">
+                <button class="testimonial-control-btn" id="pauseTestimonials" title="Pause scrolling">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.instagram.com/reel/DSr_WdFAb0f/embed/" width="100%" height="100%"
+                                frameborder="0" scrolling="no" allowtransparency="true"
+                                style="object-fit: cover;"></iframe>
+                        </div>
+            </div>
+
+            <!-- New Reel 2 -->
+            <div class="testimonial-card video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.instagram.com/reel/DScfI43E5jA/embed/" width="100%" height="100%"
+                        frameborder="0" scrolling="no" allowtransparency="true" style="object-fit: cover;"></iframe>
                 </div>
             </div>
-        </section>
+
+            <!-- JustDial Review 1 - Kusum Seervi -->
+            <div class="testimonial-card text-card">
+                <div class="stars" style="color: #FFD700; margin-bottom: 10px;">⭐⭐⭐⭐⭐</div>
+                <p style="font-style: italic; margin-bottom: 15px;">"I had a wonderful experience at A R
+                    Hospital. The doctor visits were regular and very helpful. The staff was gentle and
+                    caring. Booking an appointment was easy, and the customer service was great. I could see
+                    a doctor right away when I needed help. Excellent place for care!"</p>
+                <h5 style="margin: 0; font-weight: bold;">- Kusum Seervi</h5>
+                <p style="margin: 5px 0 10px 0; font-size: 0.85rem; color: #999;">JustDial Review • August
+                    2025</p>
+                <a href="https://www.justdial.com/Mysore/A-R-Hospital-Opposite-Nivedita-Nagar-Arch-Sharadadevi-Nagar/0821PX821-X821-220629111932-Q8K5_BZDET"
+                    target="_blank"
+                    style="color: var(--primary-gold); text-decoration: none; font-size: 0.9rem; font-weight: 600;">Read
+                    More on JustDial →</a>
+            </div>
+
+            <!-- Google Review 1 - anupdev km -->
+            <div class="testimonial-card text-card">
+                <div class="stars" style="color: #FFD700; margin-bottom: 10px;">⭐⭐⭐⭐⭐</div>
+                <p style="font-style: italic; margin-bottom: 15px;">"I had an ACL injury and underwent
+                    surgery here, and I am doing well now. Dr. Madhuram sir explained the procedure clearly
+                    and gave me confidence throughout the treatment. The care provided was excellent and
+                    very professional. The hospital staff were supportive, polite, and attentive..."</p>
+                <h5 style="margin: 0; font-weight: bold;">- Anupdev KM</h5>
+                <p style="margin: 5px 0 10px 0; font-size: 0.85rem; color: #999;">Google Review • 1 week ago
+                </p>
+                <a href="https://www.google.com/maps/place/A+R+Hospital/@12.295517,76.6081352,17z/" target="_blank"
+                    style="color: var(--primary-gold); text-decoration: none; font-size: 0.9rem; font-weight: 600;">Read
+                    More on Google Maps →</a>
+            </div>
+
+            <!-- New Reel 3 -->
+            <div class="testimonial-card video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.instagram.com/reel/DSU45oHk-dk/embed/" width="100%" height="100%"
+                        frameborder="0" scrolling="no" allowtransparency="true" style="object-fit: cover;"></iframe>
+                </div>
+            </div>
+
+            <!-- New Reel 4 -->
+            <div class="testimonial-card video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.instagram.com/reel/DSASLwJD7J4/embed/" width="100%" height="100%"
+                        frameborder="0" scrolling="no" allowtransparency="true" style="object-fit: cover;"></iframe>
+                </div>
+            </div>
+
+            <!-- New Reel 5 -->
+            <div class="testimonial-card video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.instagram.com/reel/DRuPtfAirVi/embed/" width="100%" height="100%"
+                        frameborder="0" scrolling="no" allowtransparency="true" style="object-fit: cover;"></iframe>
+                </div>
+            </div>
+
+            <!-- Google Review 2 - Mr Mohammed -->
+            <div class="testimonial-card text-card">
+                <div class="stars" style="color: #FFD700; margin-bottom: 10px;">⭐⭐⭐⭐⭐</div>
+                <p style="font-style: italic; margin-bottom: 15px;">"I had a very good experience at this
+                    hospital. The treatment was excellent, and the doctors and staff were friendly,
+                    professional, and caring. They made sure I was comfortable and explained everything
+                    clearly. The hospital was clean and well-organized..."</p>
+                <h5 style="margin: 0; font-weight: bold;">- Mr Mohammed</h5>
+                <p style="margin: 5px 0 10px 0; font-size: 0.85rem; color: #999;">Google Review • 2 months
+                    ago</p>
+                <a href="https://www.google.com/maps/place/A+R+Hospital/@12.295517,76.6081352,17z/" target="_blank"
+                    style="color: var(--primary-gold); text-decoration: none; font-size: 0.9rem; font-weight: 600;">Read
+                    More on Google Maps →</a>
+            </div>
+
+            <!-- Google Review 3 - sumanth r -->
+            <div class="testimonial-card text-card">
+                <div class="stars" style="color: #FFD700; margin-bottom: 10px;">⭐⭐⭐⭐⭐</div>
+                <p style="font-style: italic; margin-bottom: 15px;">"My brother underwent implant removal
+                    right femur nailing and right tibia nailing at A R hospital in Mysore. The medical team
+                    led by Dr. Madhuram Chowdry was compassionate and highly skilled. The facilities were
+                    clean and well equipped, and the surgery was a success..."</p>
+                <h5 style="margin: 0; font-weight: bold;">- Sumanth R</h5>
+                <p style="margin: 5px 0 10px 0; font-size: 0.85rem; color: #999;">Google Review • 1 month
+                    ago</p>
+                <a href="https://www.google.com/maps/place/A+R+Hospital/@12.295517,76.6081352,17z/" target="_blank"
+                    style="color: var(--primary-gold); text-decoration: none; font-size: 0.9rem; font-weight: 600;">Read
+                    More on Google Maps →</a>
+            </div>
+
+            <!-- JustDial Review 2 - Mahadeshwara -->
+            <div class="testimonial-card text-card">
+                <div class="stars" style="color: #FFD700; margin-bottom: 10px;">⭐⭐⭐⭐⭐</div>
+                <p style="font-style: italic; margin-bottom: 15px;">"I had an excellent experience with A R
+                    Hospital. The facilities were top-notch and the staff was very accommodating. I was also
+                    impressed by the immediate availability of their services. It was a great experience and
+                    I would highly recommend A R Hospital to anyone in need of medical care."</p>
+                <h5 style="margin: 0; font-weight: bold;">- Mahadeshwara Mahadeshwara</h5>
+                <p style="margin: 5px 0 10px 0; font-size: 0.85rem; color: #999;">JustDial Review • November
+                    2024</p>
+                <a href="https://www.justdial.com/Mysore/A-R-Hospital-Opposite-Nivedita-Nagar-Arch-Sharadadevi-Nagar/0821PX821-X821-220629111932-Q8K5_BZDET"
+                    target="_blank"
+                    style="color: var(--primary-gold); text-decoration: none; font-size: 0.9rem; font-weight: 600;">Read
+                    More on JustDial →</a>
+            </div>
+
+            <!-- New Reel 6 -->
+            <div class="testimonial-card video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.instagram.com/reel/DRcZpJpDnaG/embed/" width="100%" height="100%"
+                        frameborder="0" scrolling="no" allowtransparency="true" style="object-fit: cover;"></iframe>
+                </div>
+            </div>
+
+            <!-- New Reel 7 -->
+            <div class="testimonial-card video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.instagram.com/reel/DRPWuN8j_ey/embed/" width="100%" height="100%"
+                        frameborder="0" scrolling="no" allowtransparency="true" style="object-fit: cover;"></iframe>
+                </div>
+            </div>
+
+            <!-- Google Review 4 - Harshitha (Girija) -->
+            <div class="testimonial-card text-card">
+                <div class="stars" style="color: #FFD700; margin-bottom: 10px;">⭐⭐⭐⭐⭐</div>
+                <p style="font-style: italic; margin-bottom: 15px;">"My Name Is Girija. I had multiple
+                    injuries in face and was admitted in AR hospital. Excellent medical facilities and
+                    service. Maintained cleanliness and is very hygienic. Good instruction with proper
+                    facility that helps in fast recovery. The staff is very polite..."</p>
+                <h5 style="margin: 0; font-weight: bold;">- Girija (Harshitha)</h5>
+                <p style="margin: 5px 0 10px 0; font-size: 0.85rem; color: #999;">Google Review • 2 months
+                    ago</p>
+                <a href="https://www.google.com/maps/place/A+R+Hospital/@12.295517,76.6081352,17z/" target="_blank"
+                    style="color: var(--primary-gold); text-decoration: none; font-size: 0.9rem; font-weight: 600;">Read
+                    More on Google Maps →</a>
+            </div>
+
+            <!-- Google Review 5 - Sridhar Venkatram -->
+            <div class="testimonial-card text-card">
+                <div class="stars" style="color: #FFD700; margin-bottom: 10px;">⭐⭐⭐⭐⭐</div>
+                <p style="font-style: italic; margin-bottom: 15px;">"A great experience with Dr. Madhuram
+                    Chowdry. He treated me for knee ligament injury and ankle sprain. Extremely practical
+                    and knowledgeable man, putting patients at ease. When I met Dr. Madhuram about ten
+                    months back, he said conservative treatment would be the way to go..."</p>
+                <h5 style="margin: 0; font-weight: bold;">- Sridhar Venkatram</h5>
+                <p style="margin: 5px 0 10px 0; font-size: 0.85rem; color: #999;">Google Review • 1 month
+                    ago</p>
+                <a href="https://www.google.com/maps/place/A+R+Hospital/@12.295517,76.6081352,17z/" target="_blank"
+                    style="color: var(--primary-gold); text-decoration: none; font-size: 0.9rem; font-weight: 600;">Read
+                    More on Google Maps →</a>
+            </div>
+
+            <!-- Google Review 6 - madhav singh -->
+            <div class="testimonial-card text-card">
+                <div class="stars" style="color: #FFD700; margin-bottom: 10px;">⭐⭐⭐⭐⭐</div>
+                <p style="font-style: italic; margin-bottom: 15px;">"Super Orthopedic surgeon Dr. Madhuram
+                    Chowdry sir, really appreciate! My mother admitted for both knee replacement surgery
+                    (TKR) done successfully. A wonderful experience at AR hospital. Good caring and
+                    wonderful treatment. Thank you AR hospital team ❤️"</p>
+                <h5 style="margin: 0; font-weight: bold;">- Madhav Singh</h5>
+                <p style="margin: 5px 0 10px 0; font-size: 0.85rem; color: #999;">Google Review • 5 months
+                    ago</p>
+                <a href="https://www.google.com/maps/place/A+R+Hospital/@12.295517,76.6081352,17z/" target="_blank"
+                    style="color: var(--primary-gold); text-decoration: none; font-size: 0.9rem; font-weight: 600;">Read
+                    More on Google Maps →</a>
+            </div>
+
+            <!-- New Reel 8 -->
+            <div class="testimonial-card video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.instagram.com/reel/DRBo5L6D1fR/embed/" width="100%" height="100%"
+                        frameborder="0" scrolling="no" allowtransparency="true" style="object-fit: cover;"></iframe>
+                </div>
+            </div>
+
+            <!-- JustDial Review 3 - arun -->
+            <div class="testimonial-card text-card">
+                <div class="stars" style="color: #FFD700; margin-bottom: 10px;">⭐⭐⭐⭐⭐</div>
+                <p style="font-style: italic; margin-bottom: 15px;">"I recently visited A R Hospital and
+                    received excellent treatment. The staff was highly attentive and took great care of me.
+                    The doctors were very knowledgeable and addressed all my concerns. I would highly
+                    recommend this hospital to anyone in need of medical care."</p>
+                <h5 style="margin: 0; font-weight: bold;">- Arun</h5>
+                <p style="margin: 5px 0 10px 0; font-size: 0.85rem; color: #999;">JustDial Review • November
+                    2024</p>
+                <a href="https://www.justdial.com/Mysore/A-R-Hospital-Opposite-Nivedita-Nagar-Arch-Sharadadevi-Nagar/0821PX821-X821-220629111932-Q8K5_BZDET"
+                    target="_blank"
+                    style="color: var(--primary-gold); text-decoration: none; font-size: 0.9rem; font-weight: 600;">Read
+                    More on JustDial →</a>
+            </div>
+
+            <!-- New Reel 9 -->
+            <div class="testimonial-card video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.instagram.com/reel/DQ4RyYkiDLM/embed/" width="100%" height="100%"
+                        frameborder="0" scrolling="no" allowtransparency="true" style="object-fit: cover;"></iframe>
+                </div>
+            </div>
+
+            <!-- New Reel 10 -->
+            <div class="testimonial-card video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.instagram.com/reel/DQgJjDrk0OS/embed/" width="100%" height="100%"
+                        frameborder="0" scrolling="no" allowtransparency="true" style="object-fit: cover;"></iframe>
+                </div>
+            </div>
+
+            <!-- New Reel 11 -->
+            <div class="testimonial-card video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.instagram.com/reel/DPYwhHaARou/embed/" width="100%" height="100%"
+                        frameborder="0" scrolling="no" allowtransparency="true" style="object-fit: cover;"></iframe>
+                </div>
+            </div>
+
+            <!-- Google Review 7 - Divi Choudhary -->
+            <div class="testimonial-card text-card">
+                <div class="stars" style="color: #FFD700; margin-bottom: 10px;">⭐⭐⭐⭐⭐</div>
+                <p style="font-style: italic; margin-bottom: 15px;">"Thank you Dr. Madhuram sir! My mother
+                    recently had knee surgery, and it was completely successful. The doctor and the hospital
+                    staff were very caring and professional. We are truly thankful for their support
+                    throughout her recovery."</p>
+                <h5 style="margin: 0; font-weight: bold;">- Divi Choudhary</h5>
+                <p style="margin: 5px 0 10px 0; font-size: 0.85rem; color: #999;">Google Review • 1 month
+                    ago</p>
+                <a href="https://www.google.com/maps/place/A+R+Hospital/@12.295517,76.6081352,17z/" target="_blank"
+                    style="color: var(--primary-gold); text-decoration: none; font-size: 0.9rem; font-weight: 600;">Read
+                    More on Google Maps →</a>
+            </div>
+
+            <!-- Google Review 8 - Reshma Banu -->
+            <div class="testimonial-card text-card">
+                <div class="stars" style="color: #FFD700; margin-bottom: 10px;">⭐⭐⭐⭐⭐</div>
+                <p style="font-style: italic; margin-bottom: 15px;">"I am Reshma Bhanu. I was suffering
+                    severe pain from low back ache. Surgery done by Dr. Madhuram sir in AR Hospital. Service
+                    was excellent! Nurses are very cooperative and helpful. Hospital atmosphere feeling like
+                    my home. He's God to me 🙏🏻"</p>
+                <h5 style="margin: 0; font-weight: bold;">- Reshma Banu</h5>
+                <p style="margin: 5px 0 10px 0; font-size: 0.85rem; color: #999;">Google Review • 2 months
+                    ago</p>
+                <a href="https://www.google.com/maps/place/A+R+Hospital/@12.295517,76.6081352,17z/" target="_blank"
+                    style="color: var(--primary-gold); text-decoration: none; font-size: 0.9rem; font-weight: 600;">Read
+                    More on Google Maps →</a>
+            </div>
+
+            <!-- Google Review 9 - Prakash p (champalal) -->
+            <div class="testimonial-card text-card">
+                <div class="stars" style="color: #FFD700; margin-bottom: 10px;">⭐⭐⭐⭐⭐</div>
+                <p style="font-style: italic; margin-bottom: 15px;">"My Name is Champalal. I was admitted in
+                    AR hospital. Hospital atmosphere and cleanliness is too good and Nursing staff is also
+                    Good. Treatment was excellent and speedy recovery. Thank You Dr. Madhuram Chowdhury Sir
+                    🙏🙏"</p>
+                <h5 style="margin: 0; font-weight: bold;">- Prakash P (Champalal)</h5>
+                <p style="margin: 5px 0 10px 0; font-size: 0.85rem; color: #999;">Google Review • 1 month
+                    ago</p>
+                <a href="https://www.google.com/maps/place/A+R+Hospital/@12.295517,76.6081352,17z/" target="_blank"
+                    style="color: var(--primary-gold); text-decoration: none; font-size: 0.9rem; font-weight: 600;">Read
+                    More on Google Maps →</a>
+            </div>
+
+            <!-- Google Review 10 - Ranjith kumar c s -->
+            <div class="testimonial-card text-card">
+                <div class="stars" style="color: #FFD700; margin-bottom: 10px;">⭐⭐⭐⭐⭐</div>
+                <p style="font-style: italic; margin-bottom: 15px;">"Excellent Care! I had a great
+                    experience at AR Hospital Mysore. The doctors and staff were friendly and courteous. The
+                    facilities were clean and well maintained. Highly recommend!"</p>
+                <h5 style="margin: 0; font-weight: bold;">- Ranjith Kumar C S</h5>
+                <p style="margin: 5px 0 10px 0; font-size: 0.85rem; color: #999;">Google Review • 1 month
+                    ago</p>
+                <a href="https://www.google.com/maps/place/A+R+Hospital/@12.295517,76.6081352,17z/" target="_blank"
+                    style="color: var(--primary-gold); text-decoration: none; font-size: 0.9rem; font-weight: 600;">Read
+                    More on Google Maps →</a>
+            </div>
+
+            <!-- JustDial Review 4 - Bharath Kumar -->
+            <div class="testimonial-card text-card">
+                <div class="stars" style="color: #FFD700; margin-bottom: 10px;">⭐⭐⭐⭐⭐</div>
+                <p style="font-style: italic; margin-bottom: 15px;">"A R Hospital is excellent! Well
+                    equipped with experienced professionals and sterilised equipment. The staff was very
+                    attentive and caring, ensuring great customer service. They have an organised system,
+                    well priced with subsidies available. Made sure I was comfortable during my visit.
+                    Speedy recovery in a well-connected location. Highly recommend!"</p>
+                <h5 style="margin: 0; font-weight: bold;">- Bharath Kumar</h5>
+                <p style="margin: 5px 0 10px 0; font-size: 0.85rem; color: #999;">JustDial Review • April
+                    2024</p>
+                <a href="https://www.justdial.com/Mysore/A-R-Hospital-Opposite-Nivedita-Nagar-Arch-Sharadadevi-Nagar/0821PX821-X821-220629111932-Q8K5_BZDET"
+                    target="_blank"
+                    style="color: var(--primary-gold); text-decoration: none; font-size: 0.9rem; font-weight: 600;">Read
+                    More on JustDial →</a>
+            </div>
+
+            <!-- New Reel 12 -->
+            <div class="testimonial-card video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.instagram.com/reel/DOzuRHfgRPl/embed/" width="100%" height="100%"
+                        frameborder="0" scrolling="no" allowtransparency="true" style="object-fit: cover;"></iframe>
+                </div>
+            </div>
+
+            <!-- New Reel 13 -->
+            <div class="testimonial-card video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.instagram.com/reel/DOjYld_AVya/embed/" width="100%" height="100%"
+                        frameborder="0" scrolling="no" allowtransparency="true" style="object-fit: cover;"></iframe>
+                </div>
+            </div>
+
+            <!-- New Reel 14 -->
+            <div class="testimonial-card video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.instagram.com/reel/DONJqTsASXD/embed/" width="100%" height="100%"
+                        frameborder="0" scrolling="no" allowtransparency="true" style="object-fit: cover;"></iframe>
+                </div>
+            </div>
+
+            <!-- JustDial Review 5 - pushpa -->
+            <div class="testimonial-card text-card">
+                <div class="stars" style="color: #FFD700; margin-bottom: 10px;">⭐⭐⭐⭐⭐</div>
+                <p style="font-style: italic; margin-bottom: 15px;">"Good service! Dr. Madhuram Chowdry sir
+                    is giving very well treatment and also affordable. Thank you Madhuram sir! 😊"</p>
+                <h5 style="margin: 0; font-weight: bold;">- Pushpa</h5>
+                <p style="margin: 5px 0 10px 0; font-size: 0.85rem; color: #999;">JustDial Review • November
+                    2025</p>
+                <a href="https://www.justdial.com/Mysore/A-R-Hospital-Opposite-Nivedita-Nagar-Arch-Sharadadevi-Nagar/0821PX821-X821-220629111932-Q8K5_BZDET"
+                    target="_blank"
+                    style="color: var(--primary-gold); text-decoration: none; font-size: 0.9rem; font-weight: 600;">Read
+                    More on JustDial →</a>
+            </div>
+    </div>
+    </div>
+    <div class="testimonials-controls">
+        <button class="testimonial-control-btn" id="pauseTestimonials" title="Pause scrolling">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <rect x="6" y="4" width="4" height="16"></rect>
+                <rect x="14" y="4" width="4" height="16"></rect>
+            </svg>
+        </button>
+        <button class="testimonial-control-btn" id="playTestimonials" style="display: none;" title="Resume scrolling">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+        </button>
+    </div>
+    </div>
+    </section>
 
 
-        <!-- ============================================
-         COMPREHENSIVE FOOTER
+
+    <!-- ============================================
+         CONNECT WITH US SECTION
          ============================================ -->
-        <footer id="contact" class="footer"
-            style="background: linear-gradient(135deg, #1a1a1a 0%, #2d1810 100%); padding: 60px 0 0 0; margin-top: 80px;">
-            <div class="container">
-                <!-- Footer Main Content -->
-                <div class="footer-content"
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-top: 20px; padding: 40px 0;">
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Reach Us</h2>
+            <p class="section-subtitle">Reach out through your preferred channel</p>
 
-                    <!-- Hospital Info with Logo -->
-                    <div class="footer-section">
-                        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
-                            <img src="assets/logo.png" alt="A R Hospital Logo"
-                                style="width: 60px; height: 60px; object-fit: contain;">
-                            <div>
-                                <h4 style="color: var(--primary-gold); margin: 0 0 5px 0; font-size: 1.4rem;">A R
-                                    Hospital</h4>
-                                <p style="color: #ccc; margin: 0; font-size: 0.9rem; font-style: italic;">Healing Hands
-                                </p>
-                            </div>
-                        </div>
-                        <p style="color: #aaa; line-height: 1.6; margin-bottom: 15px;">Dedicated to providing
-                            exceptional healthcare with compassion and excellence.</p>
-                        <p style="color: #fff; margin: 8px 0; font-size: 0.95rem;"><strong
-                                style="color: var(--primary-gold);">Emergency:</strong> <a href="tel:08213501645"
-                                style="color: #fff; text-decoration: none;">08213501645</a></p>
-                        <p style="color: #fff; margin: 8px 0; font-size: 0.95rem;"><strong
-                                style="color: var(--primary-gold);">Email:</strong> <a
-                                href="mailto:arhospitalmysore@gmail.com"
-                                style="color: #fff; text-decoration: none; font-size: 0.85rem;">arhospitalmysore@gmail.com</a>
-                        </p>
-
-                        <!-- Social Media Icons - Official Logos -->
-                        <div style="margin-top: 18px; display: flex; gap: 12px; align-items: center;">
-                            <a href="https://wa.me/919008994827" target="_blank" title="WhatsApp"
-                                style="display: inline-block; transition: transform 0.3s; opacity: 0.9;">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-                                    alt="WhatsApp" style="width: 28px; height: 28px;">
-                            </a>
-                            <a href="https://facebook.com/Arhospitalmysuru" target="_blank" title="Facebook"
-                                style="display: inline-block; transition: transform 0.3s; opacity: 0.9;">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg"
-                                    alt="Facebook" style="width: 28px; height: 28px;">
-                            </a>
-                            <a href="https://instagram.com/ar_hospital_mysuru" target="_blank" title="Instagram"
-                                style="display: inline-block; transition: transform 0.3s; opacity: 0.9;">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-                                    alt="Instagram" style="width: 28px; height: 28px;">
-                            </a>
-                        </div>
+            <div class="connect-icons-grid" style="margin-top: 40px;">
+                <!-- Emergency (Mobile Phone Style) -->
+                <a href="tel:08213501645" class="connect-icon-link" title="Emergency Contact">
+                    <div class="icon-circle phone-icon emergency-beacon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/564/564619.png" alt="Emergency Beacon"
+                            width="40" height="40">
                     </div>
+                    <span class="icon-label">Emergency</span>
+                </a>
 
-                    <!-- Quick Links -->
-                    <div class="footer-section">
-                        <h4 style="color: var(--primary-gold); margin-bottom: 20px;">Quick Links</h4>
-                        <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="margin-bottom: 12px;"><a href="#home"
-                                    style="color: #ccc; text-decoration: none; transition: color 0.3s;">Home</a></li>
-                            <li style="margin-bottom: 12px;"><a href="about.html"
-                                    style="color: #ccc; text-decoration: none; transition: color 0.3s;">About Us</a>
-                            </li>
-                            <li style="margin-bottom: 12px;"><a href="#departments"
-                                    style="color: #ccc; text-decoration: none; transition: color 0.3s;">Departments</a>
-                            </li>
-                            <li style="margin-bottom: 12px;"><a href="#packages"
-                                    style="color: #ccc; text-decoration: none; transition: color 0.3s;">Health
-                                    Packages</a></li>
-                            <li style="margin-bottom: 12px;"><a href="#testimonials"
-                                    style="color: #ccc; text-decoration: none; transition: color 0.3s;">Patient
-                                    Reviews</a></li>
-                        </ul>
+                <!-- WhatsApp -->
+                <a href="https://wa.me/919008994827?text=Hello%20A%20R%20Hospital" target="_blank"
+                    class="connect-icon-link" title="WhatsApp">
+                    <div class="icon-circle whatsapp-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
+                            width="40" height="40">
                     </div>
+                    <span class="icon-label">WhatsApp</span>
+                </a>
 
-                    <!-- Google Maps / Find Us -->
-                    <div class="footer-section">
-                        <h4 style="color: var(--primary-gold); margin-bottom: 20px;">Find Us</h4>
-                        <div style="margin-bottom: 15px;">
-                            <p style="color: #ccc; margin-bottom: 10px; font-size: 0.9rem;">📍 <strong>Address:</strong>
-                            </p>
-                            <p style="color: #aaa; font-size: 0.85rem; line-height: 1.5;">A R Hospital, Opposite
-                                Nivedita Nagar Arch, Sharadadevi Nagar, Mysuru, Karnataka 570008</p>
-                        </div>
-                        <!-- Google Maps Embed -->
-                        <div
-                            style="border-radius: 10px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.3); margin-top: 15px;">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.987623!2d76.6081352!3d12.295517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf7b4efeac7085%3A0x36d66538722173d9!2sA%20R%20Hospital!5e1!3m2!1sen!2sin!4v1735319593000!5m2!1sen!2sin&t=k"
-                                width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
-                        </div>
+                <!-- Phone (Mobile) -->
+                <a href="tel:+919008994827" class="connect-icon-link" title="Mobile Number">
+                    <div class="icon-circle phone-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Mobile" width="40"
+                            height="40">
                     </div>
+                    <span class="icon-label">Phone</span>
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:arhospitalmysore@gmail.com" class="connect-icon-link" title="Email">
+                    <div class="icon-circle email-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" width="40"
+                            height="40">
+                    </div>
+                    <span class="icon-label">Email</span>
+                </a>
+
+                <!-- Location -->
+                <a href="https://maps.google.com/?q=A+R+Hospital+Mysuru" target="_blank" class="connect-icon-link"
+                    title="Location">
+                    <div class="icon-circle maps-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/355/355980.png" alt="Location" width="40"
+                            height="40">
+                    </div>
+                    <span class="icon-label">Location</span>
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://facebook.com/Arhospitalmysuru" target="_blank" class="connect-icon-link"
+                    title="Facebook">
+                    <div class="icon-circle facebook-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg"
+                            alt="Facebook" width="40" height="40">
+                    </div>
+                    <span class="icon-label">Facebook</span>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com/ar_hospital_mysuru" target="_blank" class="connect-icon-link"
+                    title="Instagram">
+                    <div class="icon-circle instagram-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                            alt="Instagram" width="40" height="40">
+                    </div>
+                    <span class="icon-label">Instagram</span>
+                </a>
+
+                <!-- YouTube -->
+                <a href="#" class="connect-icon-link" title="YouTube">
+                    <div class="icon-circle youtube-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" width="40"
+                            height="40">
+                    </div>
+                    <span class="icon-label">YouTube</span>
+                </a>
+
+                <!-- JustDial -->
+                <a href="https://www.justdial.com/Mysore/A-R-Hospital-Opposite-Nivedita-Nagar-Arch-Sharadadevi-Nagar/0821PX821-X821-220629111932-Q8K5_BZDET?trkid=&term=&ncatid=10547585&area=&search=Showing%20Results%20for%20%22A%20R%20Hospital%22%20in%20Mysore&mncatname=A%20R%20Hospital&ftterm=A%20R%20Hospital&abd_btn=&abd_heading=&isFreetxt=1&bd=2&cat_b2b_flag=&searchfrom=lst&thumbnail="
+                    target="_blank" class="connect-icon-link" title="JustDial">
+                    <div class="icon-circle justdial-icon">
+                        <img src="assets/jd.png" alt="JustDial" width="40" height="40" style="border-radius: 50%;">
+                    </div>
+                    <span class="icon-label">JustDial</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>A R Hospital</h4>
+                    <p>Dedicated to providing exceptional healthcare with compassion and excellence.</p>
+                    <p><strong>Emergency Contact:</strong> 08213501645</p>
                 </div>
 
-                <!-- Footer Bottom -->
-                <div class="footer-bottom"
-                    style="text-align: center; padding: 30px 0; border-top: 1px solid rgba(212, 175, 55, 0.2); margin-top: 20px;">
-                    <p style="color: #aaa; margin: 0 0 10px 0;">© 2025 A R Hospital. All rights reserved.</p>
-                    <p style="color: #888; font-size: 0.9rem; margin: 0;">Designed for Excellence in Healthcare |
-                        Healing Hands 🙏</p>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Emergency Care</a></li>
+                        <li><a href="#services">Pharmacy</a></li>
+                        <li><a href="#services">Laboratory</a></li>
+                        <li><a href="#services">Maternity</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📍 A R Hospital, Mysuru</p>
+                    <p>📞 08213501645</p>
+                    <p>✉️ arhospitalmysore@gmail.com</p>
                 </div>
             </div>
-        </footer>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 A R Hospital. All rights reserved. | Designed for Excellence in Healthcare</p>
+            </div>
+        </div>
+    </footer>
 
 
-
-        <!-- ============================================
+    <!-- ============================================
          DOCTOR DETAILS MODAL
          ============================================ -->
-        <div id="doctorModal" class="modal">
-            <div class="modal-content doctor-modal-content">
-                <span class="close-modal">&times;</span>
-                <div class="doctor-profile-header">
-                    <div class="doctor-profile-image" id="docModalImage">👨‍⚕️</div>
-                    <div class="doctor-profile-info">
-                        <h2 id="docModalName">Dr. Name</h2>
-                        <p class="specialty-badge" id="docModalSpecialty">Specialty</p>
-                        <p class="qualification" id="docModalQual">Qualification</p>
-                    </div>
-                </div>
-
-                <div class="doctor-profile-body">
-                    <div class="profile-section">
-                        <h4>About</h4>
-                        <p id="docModalBio">Bio goes here...</p>
-                    </div>
-
-                    <div class="profile-details-grid">
-                        <div class="detail-item">
-                            <span class="detail-label">Experience</span>
-                            <span class="detail-value" id="docModalExp">10+ Years</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Department</span>
-                            <span class="detail-value" id="docModalDept">General</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Timings</span>
-                            <span class="detail-value" id="docModalTime">Mon-Sat</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Consultation</span>
-                            <span class="detail-value" id="docModalFee">₹500</span>
-                        </div>
-                    </div>
-
-                    <button class="vibrant-button full-width" onclick="closeDoctorModal(); openBookingModal()">📅
-                        Book
-                        Appointment</button>
+    <div id="doctorModal" class="modal">
+        <div class="modal-content doctor-modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="doctor-profile-header">
+                <div class="doctor-profile-image" id="docModalImage">👨‍⚕️</div>
+                <div class="doctor-profile-info">
+                    <h2 id="docModalName">Dr. Name</h2>
+                    <p class="specialty-badge" id="docModalSpecialty">Specialty</p>
+                    <p class="qualification" id="docModalQual">Qualification</p>
                 </div>
             </div>
-        </div>
 
-        <!-- ============================================
+            <div class="doctor-profile-body">
+                <div class="profile-section">
+                    <h4>About</h4>
+                    <p id="docModalBio">Bio goes here...</p>
+                </div>
+
+                <div class="profile-details-grid">
+                    <div class="detail-item">
+                        <span class="detail-label">Experience</span>
+                        <span class="detail-value" id="docModalExp">10+ Years</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Department</span>
+                        <span class="detail-value" id="docModalDept">General</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Timings</span>
+                        <span class="detail-value" id="docModalTime">Mon-Sat</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Consultation</span>
+                        <span class="detail-value" id="docModalFee">₹500</span>
+                    </div>
+                </div>
+
+                <button class="vibrant-button full-width" onclick="closeDoctorModal(); openBookingModal()">📅 Book
+                    Appointment</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
          BOOKING MODAL POPUP
          ============================================ -->
-        <div id="bookingModal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <h2>Book Your Appointment</h2>
-                <p class="booking-subtitle">Fill in your details to schedule an appointment with our specialists
-                </p>
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Book Your Appointment</h2>
+            <p class="booking-subtitle">Fill in your details to schedule an appointment with our specialists</p>
 
-                <form id="bookingForm" class="booking-form">
-                    <div class="form-group">
-                        <label for="patientName">Patient Name *</label>
-                        <input type="text" id="patientName" name="patientName" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="patientPhone">Phone Number (10 digits) *</label>
-                        <input type="tel" id="patientPhone" name="patientPhone" pattern="[0-9]{10}" maxlength="10"
-                            placeholder="9876543210" title="Please enter exactly 10 digits" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="department">Department *</label>
-                        <select id="department" name="department" required>
-                            <option value="">Select Department</option>
-                            <option value="Orthopedics">Orthopedics</option>
-                            <option value="General Surgery">General Surgery</option>
-                            <option value="Pediatrics">Pediatrics</option>
-                            <option value="Intensive Care">Intensive Care</option>
-                            <option value="Anesthesiology">Anesthesiology</option>
-                            <option value="OMFS Surgery">OMFS Surgery</option>
-                            <option value="Neurosurgery">Neurosurgery</option>
-                            <option value="Physiotherapy">Physiotherapy</option>
-                            <option value="Urology">Urology</option>
-                            <option value="Gynecology">Gynecology</option>
-                            <option value="Dermatology">Dermatology</option>
-                            <option value="General Medicine">General Medicine</option>
-                            <option value="Pulmonology">Pulmonology</option>
-                            <option value="ENT">ENT</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="doctor">Select Doctor *</label>
-                        <select id="doctor" name="doctor" required>
-                            <option value="">Select Doctor</option>
-                            <option value="Dr. Madhuram Chowdry" data-dept="Orthopedics">Dr. Madhuram Chowdry
-                                (Orthopedic Surgeon)</option>
-                            <option value="Dr. Sachin" data-dept="General Surgery">Dr. Sachin (General Surgery)
-                            </option>
-                            <option value="Dr. Banu" data-dept="Pediatrics">Dr. Banu (Pediatric)</option>
-                            <option value="Dr. Rajshekhar BK" data-dept="Pediatrics">Dr. Rajshekhar BK
-                                (Pediatric)</option>
-                            <option value="Dr. Anjana S Mavinahalli" data-dept="Pediatrics">Dr. Anjana S
-                                Mavinahalli (Pediatric)</option>
-                            <option value="Dr. Krupa Subramanya" data-dept="Intensive Care">Dr. Krupa Subramanya
-                                (Intensiveist)</option>
-                            <option value="Dr. Lingaraju" data-dept="Anesthesiology">Dr. Lingaraju (Anesthetist)
-                            </option>
-                            <option value="Dr. Rathnamala" data-dept="Anesthesiology">Dr. Rathnamala
-                                (Anesthetist)</option>
-                            <option value="Dr. Shivakumar" data-dept="Anesthesiology">Dr. Shivakumar
-                                (Anesthetist)</option>
-                            <option value="Dr. Adarsh Chowdry" data-dept="OMFS Surgery">Dr. Adarsh Chowdry (OMFS
-                                Surgeon)</option>
-                            <option value="Dr. Lakshith Biddappa" data-dept="OMFS Surgery">Dr. Lakshith Biddappa
-                                (OMFS Surgeon)</option>
-                            <option value="Dr. Punith" data-dept="Neurosurgery">Dr. Punith (Neuro Surgeon)
-                            </option>
-                            <option value="Dr. Vinod Kumar Seervi" data-dept="Physiotherapy">Dr. Vinod Kumar
-                                Seervi (Physiotherapist)</option>
-                            <option value="Dr. Kiran Shetty" data-dept="Urology">Dr. Kiran Shetty (Urology)
-                            </option>
-                            <option value="Dr. Abhijith" data-dept="Urology">Dr. Abhijith (Urology)</option>
-                            <option value="Dr. Chandrika" data-dept="Gynecology">Dr. Chandrika (Gynecology)
-                            </option>
-                            <option value="Dr. Pujith" data-dept="Dermatology">Dr. Pujith (Dermatologist)
-                            </option>
-                            <option value="Dr. Ramya" data-dept="General Medicine">Dr. Ramya (General Physician)
-                            </option>
-                            <option value="Dr. Sushma" data-dept="Pulmonology">Dr. Sushma (Pulmonology)</option>
-                            <option value="Dr. Abhilash" data-dept="ENT">Dr. Abhilash (ENT)</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="appointmentDate">Preferred Date *</label>
-                        <input type="date" id="appointmentDate" name="appointmentDate" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="notes">Additional Notes</label>
-                        <textarea id="notes" name="notes" rows="2" placeholder="Any special requirements..."></textarea>
-                    </div>
-
-                    <button type="submit" class="vibrant-button full-width">💬 Request Appointment</button>
-                </form>
-            </div>
-        </div>
-
-        <!-- ============================================
-         SCRIPTS
-         ============================================ -->
-        <!-- ============================================
-         INSURANCE MODAL
-         ============================================ -->
-        <div class="modal" id="insuranceModal">
-            <div class="modal-content insurance-modal-content">
-                <span class="close-modal" id="closeInsuranceModal">&times;</span>
-                <div class="modal-header">
-                    <h2>Insurance & Cashless Facilities</h2>
-                    <p>We are empanelled with major insurance providers and government schemes.</p>
+            <form id="bookingForm" class="booking-form">
+                <div class="form-group">
+                    <label for="patientName">Patient Name *</label>
+                    <input type="text" id="patientName" name="patientName" required>
                 </div>
 
-                <div class="insurance-lists-container">
+                <div class="form-group">
+                    <label for="patientPhone">Phone Number *</label>
+                    <input type="tel" id="patientPhone" name="patientPhone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="department">Department *</label>
+                    <select id="department" name="department" required>
+                        <option value="">Select Department</option>
+                        <option value="Orthopedic">Orthopedic</option>
+                        <option value="Gynaecology">Gynaecology</option>
+                        <option value="General Surgery">General Surgery</option>
+                        <option value="Plastic Surgery">Plastic Surgery</option>
+                        <option value="General Physician">General Physician</option>
+                        <option value="Vascular Surgery">Vascular Surgery</option>
+                        <option value="Neurology">Neurology</option>
+                        <option value="Dermatology">Dermatology</option>
+                        <option value="Psychiatry">Psychiatry</option>
+                        <option value="Pulmonology">Pulmonology</option>
+                        <option value="Ophthalmology">Ophthalmology</option>
+                        <option value="Intensive Care">Intensive Care</option>
+                        <option value="Urology">Urology</option>
+                        <option value="ENT">ENT</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="doctor">Select Doctor *</label>
+                    <select id="doctor" name="doctor" required>
+                        <option value="">Select Doctor</option>
+                        <option value="Dr. Madhuram Chowdry">Dr. Madhuram Chowdry (Orthopedic)</option>
+                        <option value="Dr. Keerthi MS">Dr. Keerthi MS (Gynaecologist)</option>
+                        <option value="Dr. Sachin HM">Dr. Sachin HM (General Surgeon)</option>
+                        <option value="Dr. Lokesh">Dr. Lokesh (General Surgeon)</option>
+                        <option value="Dr. Geetha">Dr. Geetha (Gynaecologist)</option>
+                        <option value="Dr. Vijay Kumar">Dr. Vijay Kumar (Plastic Surgeon)</option>
+                        <option value="Dr. Chethan">Dr. Chethan (Plastic Surgeon)</option>
+                        <option value="Dr. Ramya">Dr. Ramya (General Physician)</option>
+                        <option value="Dr. Arun">Dr. Arun (Physician)</option>
+                        <option value="Dr. Chandan">Dr. Chandan (Vascular Surgeon)</option>
+                        <option value="Dr. Harsha Huliappa">Dr. Harsha Huliappa (Neurologist)</option>
+                        <option value="Dr. Punith">Dr. Punith (Neurologist)</option>
+                        <option value="Dr. Madhuri">Dr. Madhuri (Dermatologist)</option>
+                        <option value="Dr. Manjushree">Dr. Manjushree (Psychiatrist)</option>
+                        <option value="Dr. Lakshmi Narayan">Dr. Lakshmi Narayan (Pulmonologist)</option>
+                        <option value="Dr. Abhilash (1st)">Dr. Abhilash (1st) (Physician)</option>
+                        <option value="Dr. Pooja">Dr. Pooja (Ophthalmologist)</option>
+                        <option value="Dr. Nitish">Dr. Nitish (Intensivist)</option>
+                        <option value="Dr. Mohan">Dr. Mohan (Urologist)</option>
+                        <option value="Dr. Abhilash (2nd)">Dr. Abhilash (2nd) (ENT Specialist)</option>
+                        <option value="Dr. Yogesh">Dr. Yogesh (Physician)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="appointmentDate">Preferred Date *</label>
+                    <input type="date" id="appointmentDate" name="appointmentDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Additional Notes</label>
+                    <textarea id="notes" name="notes" rows="2" placeholder="Any special requirements..."></textarea>
+                </div>
+
+                <button type="submit" class="vibrant-button full-width">💬 Request Appointment</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ============================================
+         SCRIPTS
+         ============================================ -->
+    <!-- ============================================
+         INSURANCE MODAL
+         ============================================ -->
+    <div class="modal" id="insuranceModal">
+        <div class="modal-content insurance-modal-content">
+            <span class="close-modal" id="closeInsuranceModal">&times;</span>
+            <div class="modal-header">
+                <h2>Insurance & Cashless Facilities</h2>
+                <p>We are empanelled with major insurance providers and government schemes.</p>
+            </div>
+
+            <div class="insurance-lists-container">
+                <div class="insurance-group">
+                    <h3><span class="icon">🛡️</span> Insurance Companies</h3>
+                    <ul class="insurance-list">
+                        <li>Tata Aig General Insurance</li>
+                        <li>Universal Sompoo</li>
+                        <li>Galaxy Health Insurance Co.Ltd.</li>
+                        <li>ACKO GENERAL INSURANCE LTD.</li>
+                        <li>Cholamandalam MS General Insurance</li>
+                        <li>Aditya Birla Health Insurance</li>
+                        <li>Iffco Tokio</li>
+                        <li>Niva Bupa Health insurance</li>
+                        <li>GODIGIT INSURANCE</li>
+                        <li>Navi General Insurance</li>
+                        <li>Star Health Allied Insurance</li>
+                        <li>SBI General Insurance</li>
+                    </ul>
+                </div>
+
+                <div class="insurance-group-row">
                     <div class="insurance-group">
-                        <h3><span class="icon">🛡️</span> Insurance Companies</h3>
+                        <h3><span class="icon">📋</span> TPA's</h3>
                         <ul class="insurance-list">
-                            <li>Tata Aig General Insurance</li>
-                            <li>Universal Sompoo</li>
-                            <li>Galaxy Health Insurance Co.Ltd.</li>
-                            <li>ACKO GENERAL INSURANCE LTD.</li>
-                            <li>Cholamandalam MS General Insurance</li>
-                            <li>Aditya Birla Health Insurance</li>
-                            <li>Iffco Tokio</li>
-                            <li>Niva Bupa Health insurance</li>
-                            <li>GODIGIT INSURANCE</li>
-                            <li>Navi General Insurance</li>
-                            <li>Star Health Allied Insurance</li>
-                            <li>SBI General Insurance</li>
+                            <li>VOLO Health Insurance TPA (EAST WEST)</li>
+                            <li>Medsave Health Insurance TPA Ltd.</li>
+                            <li>F H P L (ACKO)</li>
+                            <li>Ericson Insurance TPA</li>
+                            <li>HealthIndia Insurance TPA</li>
                         </ul>
                     </div>
 
-                    <div class="insurance-group-row">
-                        <div class="insurance-group">
-                            <h3><span class="icon">📋</span> TPA's</h3>
-                            <ul class="insurance-list">
-                                <li>VOLO Health Insurance TPA (EAST WEST)</li>
-                                <li>Medsave Health Insurance TPA Ltd.</li>
-                                <li>F H P L (ACKO)</li>
-                                <li>Ericson Insurance TPA</li>
-                                <li>HealthIndia Insurance TPA</li>
-                            </ul>
-                        </div>
-
-                        <div class="insurance-group">
-                            <h3><span class="icon">📜</span> Government Schemes</h3>
-                            <ul class="insurance-list">
-                                <li>Yeshasvini</li>
-                                <li>S K D R D P</li>
-                            </ul>
-                        </div>
+                    <div class="insurance-group">
+                        <h3><span class="icon">📜</span> Government Schemes</h3>
+                        <ul class="insurance-list">
+                            <li>Yeshasvini</li>
+                            <li>S K D R D P</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <script src="script.js?v=3"></script>
-        <script src="clock-script.js"></script>
+    <script src="script.js?v=3"></script>
+    <script src="clock-script.js"></script>
 </body>
 
 </html>
