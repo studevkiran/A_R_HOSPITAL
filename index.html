@@ -4,14 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="A R Hospital - Excellence in Healthcare with Compassionate Care and Advanced Treatment">
-    <title>A R Hospital | Excellence in Healthcare</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="A R Hospital - 24/7 multispecialty hospital in Karnataka offering advanced medical care, emergency services, and expert doctors across 14 departments. Excellence in Healthcare with Compassionate Care.">
+    <meta name="keywords" content="A R Hospital, hospital Karnataka, emergency hospital, multispecialty hospital, orthopedic surgeon, pediatric care, ICU facility, 24/7 healthcare, medical services, Dr Madhuram Chowdry">
+    <meta name="author" content="A R Hospital">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph Meta Tags (Facebook, LinkedIn) -->
+    <meta property="og:title" content="A R Hospital | Excellence in Healthcare">
+    <meta property="og:description" content="24/7 multispecialty hospital with expert doctors, advanced facilities, and compassionate care. 14 specialized departments including Orthopedics, Pediatrics, ICU, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arhospital.com">
+    <meta property="og:image" content="https://arhospital.com/assets/logo.png">
+    <meta property="og:site_name" content="A R Hospital">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="A R Hospital | Excellence in Healthcare">
+    <meta name="twitter:description" content="24/7 multispecialty hospital with expert doctors and advanced medical facilities.">
+    <meta name="twitter:image" content="https://arhospital.com/assets/logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="apple-touch-icon" href="assets/logo.png">
+    <link rel="shortcut icon" href="assets/logo.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://arhospital.com">
+    
+    <title>A R Hospital | 24/7 Multispecialty Hospital in Karnataka | Expert Medical Care</title>
+    
     <link rel="stylesheet" href="styles.css?v=18">
     <link rel="stylesheet" href="clock-styles.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Hospital",
+      "name": "A R Hospital",
+      "description": "24/7 multispecialty hospital offering advanced medical care and emergency services",
+      "url": "https://arhospital.com",
+      "logo": "https://arhospital.com/assets/logo.png",
+      "image": "https://arhospital.com/assets/logo.png",
+      "telephone": "+91-XXXXXXXXXX",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Karnataka",
+        "addressCountry": "IN"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "medicalSpecialty": [
+        "Orthopedics",
+        "General Surgery",
+        "Pediatrics",
+        "Intensive Care",
+        "Anesthesiology",
+        "OMFS Surgery",
+        "Neurosurgery",
+        "Physiotherapy",
+        "Urology",
+        "Gynecology",
+        "Dermatology",
+        "General Medicine",
+        "Pulmonology",
+        "ENT"
+      ],
+      "priceRange": "$$"
+    }
+    </script>
 </head>
 
 <body>
@@ -62,7 +136,7 @@
                 <p>Compassionate Care, Advanced Treatment, Your Health is Our Priority</p>
 
                 <div class="hero-buttons">
-                    <a href="tel:+911234567890" class="emergency-hero-btn">
+                    <a href="tel:08213501645" class="emergency-hero-btn">
                         <!-- Custom SVG for Emergency Call (Phone Ringing) -->
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
@@ -984,7 +1058,26 @@
             <div class="modal-content doctor-modal-content">
                 <span class="close-modal">&times;</span>
                 <div class="doctor-profile-header">
-                    <div class="doctor-profile-image" id="docModalImage">👨‍⚕️</div>
+                    <div class="doctor-profile-image" id="docModalImage">
+                        <svg viewBox="0 0 64 64" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Head -->
+                            <circle cx="32" cy="20" r="12" fill="#ffd4a3"/>
+                            <!-- Body -->
+                            <path d="M 20 32 Q 20 28 24 28 L 40 28 Q 44 28 44 32 L 44 50 Q 44 54 40 54 L 24 54 Q 20 54 20 50 Z" fill="#ffffff"/>
+                            <!-- Lab coat collar -->
+                            <path d="M 24 28 L 20 35 L 24 35 Z" fill="#e0e0e0"/>
+                            <path d="M 40 28 L 44 35 L 40 35 Z" fill="#e0e0e0"/>
+                            <!-- Stethoscope -->
+                            <circle cx="28" cy="38" r="3" fill="#4a90e2" fill-opacity="0.8"/>
+                            <path d="M 28 38 Q 28 32 32 30" stroke="#4a90e2" stroke-width="2" fill="none"/>
+                            <circle cx="32" cy="30" r="1.5" fill="#4a90e2"/>
+                            <path d="M 32 30 Q 36 32 36 38" stroke="#4a90e2" stroke-width="2" fill="none"/>
+                            <circle cx="36" cy="38" r="3" fill="#4a90e2" fill-opacity="0.8"/>
+                            <!-- Medical cross on coat -->
+                            <rect x="30" y="42" width="4" height="8" fill="#e74c3c" rx="0.5"/>
+                            <rect x="28" y="44" width="8" height="4" fill="#e74c3c" rx="0.5"/>
+                        </svg>
+                    </div>
                     <div class="doctor-profile-info">
                         <h2 id="docModalName">Dr. Name</h2>
                         <p class="specialty-badge" id="docModalSpecialty">Specialty</p>
@@ -1068,8 +1161,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="doctor">Select Doctor *</label>
-                        <select id="doctor" name="doctor" required>
+                        <label for="doctor">Select Doctor</label>
+                        <select id="doctor" name="doctor">
                             <option value="">Select Doctor</option>
                             <option value="Dr. Madhuram Chowdry" data-dept="Orthopedics">Dr. Madhuram Chowdry
                                 (Orthopedic Surgeon)</option>
@@ -1181,6 +1274,8 @@
                 </div>
             </div>
         </div>
+
+
 
         <script src="script.js?v=3"></script>
         <script src="clock-script.js"></script>

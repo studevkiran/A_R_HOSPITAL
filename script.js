@@ -424,7 +424,7 @@ const doctorsData = [
         consultationFee: '₹500',
         timings: 'Mon-Sat: 10:00 AM - 2:00 PM',
         bio: 'Senior Orthopedic Surgeon specializing in joint replacements and trauma care.',
-        image: '👨‍⚕️'
+        image: 'assets/Screenshot 2026-01-02 at 21.33.16.png'
     },
     {
         name: 'Dr. Keerthi MS',
@@ -435,7 +435,7 @@ const doctorsData = [
         consultationFee: '₹400',
         timings: 'Mon-Sat: 10:30 AM - 1:30 PM, 5:00 PM - 8:00 PM',
         bio: 'Compassionate care for women’s health, maternity, and infertility issues.',
-        image: '👩‍⚕️'
+        image: 'assets/Screenshot 2026-01-02 at 21.33.16.png'
     },
     {
         name: 'Dr. Sachin HM',
@@ -446,7 +446,7 @@ const doctorsData = [
         consultationFee: '₹400',
         timings: 'Mon-Sat: 11:00 AM - 3:00 PM',
         bio: 'Expert in laparoscopic and general surgical procedures.',
-        image: '👨‍⚕️'
+        image: 'assets/Screenshot 2026-01-02 at 21.33.16.png'
     },
     {
         name: 'Dr. Lokesh',
@@ -457,7 +457,7 @@ const doctorsData = [
         consultationFee: '₹400',
         timings: 'Mon, Wed, Fri: 11 AM - 2 PM, 6 PM - 8 PM',
         bio: 'Specialist in emergency and trauma surgery',
-        image: '👨‍⚕️'
+        image: 'assets/Screenshot 2026-01-02 at 21.33.16.png'
     },
     {
         name: 'Dr. Geetha',
@@ -468,7 +468,7 @@ const doctorsData = [
         consultationFee: '₹350',
         timings: 'Mon-Thu: 9 AM - 1 PM, 4 PM - 6 PM',
         bio: 'Expert in family planning and reproductive health',
-        image: '👩‍⚕️'
+        image: 'assets/Screenshot 2026-01-02 at 21.33.16.png'
     },
     {
         name: 'Dr. Vijay Kumar',
@@ -479,7 +479,7 @@ const doctorsData = [
         consultationFee: '₹600',
         timings: 'Wed-Sat: 10 AM - 1 PM, 4 PM - 7 PM',
         bio: 'Specialist in aesthetic and reconstructive surgery',
-        image: '👨‍⚕️'
+        image: 'assets/Screenshot 2026-01-02 at 21.33.16.png'
     },
     {
         name: 'Dr. Chethan',
@@ -490,7 +490,7 @@ const doctorsData = [
         consultationFee: '₹500',
         timings: 'Mon-Thu: 2 PM - 6 PM, Fri-Sat: 10 AM - 2 PM',
         bio: 'Experienced in burn management and hand surgery',
-        image: '👨‍⚕️'
+        image: 'assets/Screenshot 2026-01-02 at 21.33.16.png'
     },
     {
         name: 'Dr. Ramya',
@@ -501,7 +501,7 @@ const doctorsData = [
         consultationFee: '₹300',
         timings: 'Mon-Sat: 9 AM - 12 PM, 4 PM - 7 PM',
         bio: 'Specialist in chronic disease management and preventive healthcare',
-        image: '👩‍⚕️'
+        image: 'assets/Screenshot 2026-01-02 at 21.33.16.png'
     },
     {
         name: 'Dr. Arun',
@@ -512,7 +512,7 @@ const doctorsData = [
         consultationFee: '₹250',
         timings: 'Tue-Sat: 10 AM - 1 PM, 5 PM - 8 PM',
         bio: 'Expert in respiratory and infectious diseases',
-        image: '👨‍⚕️'
+        image: 'assets/Screenshot 2026-01-02 at 21.33.16.png'
     },
     {
         name: 'Dr. Chandan',
@@ -523,7 +523,7 @@ const doctorsData = [
         consultationFee: '₹700',
         timings: 'Mon, Wed, Fri: 10 AM - 1 PM, 4 PM - 6 PM',
         bio: 'Leading specialist in vascular and endovascular surgery',
-        image: '👨‍⚕️'
+        image: 'assets/Screenshot 2026-01-02 at 21.33.16.png'
     },
     {
         name: 'Dr. Harsha Huliappa',
@@ -534,7 +534,7 @@ const doctorsData = [
         consultationFee: '₹500',
         timings: 'Thu-Sat: 10 AM - 1 PM, 4 PM - 7 PM',
         bio: 'Specialist in epilepsy, stroke, and movement disorders',
-        image: '👨‍⚕️'
+        image: 'assets/Screenshot 2026-01-02 at 21.33.16.png'
     },
     {
         name: 'Dr. Punith',
@@ -545,7 +545,7 @@ const doctorsData = [
         consultationFee: '₹400',
         timings: 'Mon-Wed: 2 PM - 6 PM, Fri-Sat: 10 AM - 1 PM',
         bio: 'Expert in headache management and neurological emergencies',
-        image: '👨‍⚕️'
+        image: 'assets/Screenshot 2026-01-02 at 21.33.16.png'
     },
     {
         name: 'Dr. Madhuri',
@@ -556,7 +556,7 @@ const doctorsData = [
         consultationFee: '₹350',
         timings: 'Tue-Sat: 11 AM - 2 PM, 5 PM - 8 PM',
         bio: 'Specialist in skin diseases and cosmetic dermatology',
-        image: '👩‍⚕️'
+        image: 'assets/Screenshot 2026-01-02 at 21.33.16.png'
     },
     {
         name: 'Dr. Manjushree',
@@ -567,7 +567,7 @@ const doctorsData = [
         consultationFee: '₹400',
         timings: 'Mon-Fri: 10 AM - 1 PM, 4 PM - 6 PM',
         bio: 'Expert in depression, anxiety, and behavioral disorders',
-        image: '👩‍⚕️'
+        image: 'assets/Screenshot 2026-01-02 at 21.33.16.png'
     },
     {
         name: 'Dr. Lakshmi Narayan',
@@ -578,7 +578,7 @@ const doctorsData = [
         consultationFee: '₹450',
         timings: 'Wed-Sat: 10 AM - 1 PM, 3 PM - 6 PM',
         bio: 'Specialist in asthma, COPD, and lung cancer',
-        image: '👨‍⚕️'
+        image: 'assets/Screenshot 2026-01-02 at 21.33.16.png'
     },
     {
         name: 'Dr. Abhilash (1st)',
@@ -589,7 +589,7 @@ const doctorsData = [
         consultationFee: '₹250',
         timings: 'Mon-Sat: 9 AM - 12 PM, 6 PM - 8 PM',
         bio: 'Focused on preventive medicine and health counseling',
-        image: '👨‍⚕️'
+        image: 'assets/Screenshot 2026-01-02 at 21.33.16.png'
     },
     {
         name: 'Dr. Pooja',
@@ -600,7 +600,7 @@ const doctorsData = [
         consultationFee: '₹300',
         timings: 'Mon-Fri: 10 AM - 1 PM, 4 PM - 7 PM',
         bio: 'Expert in cataract surgery and refractive procedures',
-        image: '👩‍⚕️'
+        image: 'assets/Screenshot 2026-01-02 at 21.33.16.png'
     },
     {
         name: 'Dr. Nitish',
@@ -611,7 +611,7 @@ const doctorsData = [
         consultationFee: '₹600',
         timings: '24/7 Available - ICU Specialist',
         bio: 'Expert in critical care management and emergency medicine',
-        image: '👨‍⚕️'
+        image: 'assets/Screenshot 2026-01-02 at 21.33.16.png'
     },
     {
         name: 'Dr. Mohan',
@@ -622,7 +622,7 @@ const doctorsData = [
         consultationFee: '₹450',
         timings: 'Tue-Fri: 10 AM - 1 PM, 5 PM - 7 PM',
         bio: 'Specialist in kidney stones, prostate, and urological cancer',
-        image: '👨‍⚕️'
+        image: 'assets/Screenshot 2026-01-02 at 21.33.16.png'
     },
     {
         name: 'Dr. Abhilash (2nd)',
@@ -633,7 +633,7 @@ const doctorsData = [
         consultationFee: '₹350',
         timings: 'Mon-Sat: 11:00 AM - 4:00 PM',
         bio: 'Expert in ear, nose, and throat disorders and surgeries.',
-        image: '👨‍⚕️'
+        image: 'assets/Screenshot 2026-01-02 at 21.33.16.png'
     },
     {
         name: 'Dr. Yogesh',
@@ -644,7 +644,7 @@ const doctorsData = [
         consultationFee: '₹250',
         timings: 'Mon-Sat: 2:00 PM - 6:00 PM',
         bio: 'Dedicated physician focusing on general health and wellness.',
-        image: '👨‍⚕️'
+        image: 'assets/Screenshot 2026-01-02 at 21.33.16.png'
     }
 ];
 
@@ -681,7 +681,11 @@ function openDoctorDetails(doctorName) {
     document.getElementById('docModalFee').textContent = safeText(doctor.consultationFee);
 
     const imgContainer = document.getElementById('docModalImage');
-    imgContainer.innerHTML = doctor.image || '👨‍⚕️'; // Simplified as we handled logic before
+    if (doctor.image && doctor.image.includes('.')) {
+        imgContainer.innerHTML = `<img src="${doctor.image}" alt="${doctor.name}" style="width:100%;height:100%;object-fit:contain;">`;
+    } else {
+        imgContainer.innerHTML = doctor.image || '👨‍⚕️';
+    }
 
     // Update Book Button to pre-fill data
     const bookBtn = document.querySelector('#doctorModal .vibrant-button');
@@ -720,14 +724,14 @@ const departments = {
         title: 'Orthopedics Department',
         description: 'Comprehensive bone and joint care with advanced surgical and non-surgical treatment options.',
         features: ['Joint Replacement Surgery', 'Sports Medicine', 'Trauma & Fracture Care', 'Spine Surgery'],
-        doctors: [{ name: 'Dr. Madhuram Chowdry', specialty: 'Orthopedic Surgeon', image: '👨‍⚕️' }]
+        doctors: [{ name: 'Dr. Madhuram Chowdry', specialty: 'Orthopedic Surgeon', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }]
     },
     general_surgery: {
         icon: '<i class="fas fa-user-md"></i>',
         title: 'General Surgery Department',
         description: 'Advanced surgical procedures with minimally invasive techniques for faster recovery.',
         features: ['Laparoscopic Surgery', 'Emergency Surgery', 'Hernia Repair', 'Gastrointestinal Surgery'],
-        doctors: [{ name: 'Dr. Sachin', specialty: 'General Surgery', image: '👨‍⚕️' }]
+        doctors: [{ name: 'Dr. Sachin', specialty: 'General Surgery', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }]
     },
     pediatrics: {
         icon: '<i class="fas fa-baby"></i>',
@@ -735,9 +739,9 @@ const departments = {
         description: 'Specialized healthcare for infants, children, and adolescents with compassionate care.',
         features: ['Newborn Care', 'Child Vaccinations', 'Growth Monitoring', 'Pediatric Emergencies'],
         doctors: [
-            { name: 'Dr. Banu', specialty: 'Pediatric', image: '👩‍⚕️' },
-            { name: 'Dr. Rajshekhar BK', specialty: 'Pediatric', image: '👨‍⚕️' },
-            { name: 'Dr. Anjana S Mavinahalli', specialty: 'Pediatric', image: '👩‍⚕️' }
+            { name: 'Dr. Banu', specialty: 'Pediatric', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' },
+            { name: 'Dr. Rajshekhar BK', specialty: 'Pediatric', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' },
+            { name: 'Dr. Anjana S Mavinahalli', specialty: 'Pediatric', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }
         ]
     },
     intensive_care: {
@@ -745,7 +749,7 @@ const departments = {
         title: 'Intensive Care Unit',
         description: '24/7 critical care for patients requiring intensive monitoring and advanced life support.',
         features: ['Critical Care Management', 'Ventilator Support', 'Post-Surgical Care', 'Emergency Response'],
-        doctors: [{ name: 'Dr. Krupa Subramanya', specialty: 'Intensiveist', image: '👩‍⚕️' }]
+        doctors: [{ name: 'Dr. Krupa Subramanya', specialty: 'Intensiveist', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }]
     },
     anesthesiology: {
         icon: '<i class="fas fa-syringe"></i>',
@@ -753,9 +757,9 @@ const departments = {
         description: 'Expert anesthesia services ensuring safe and pain-free surgical procedures.',
         features: ['General Anesthesia', 'Regional Anesthesia', 'Pain Management', 'Sedation Services'],
         doctors: [
-            { name: 'Dr. Lingaraju', specialty: 'Anesthetist', image: '👨‍⚕️' },
-            { name: 'Dr. Rathnamala', specialty: 'Anesthetist', image: '👩‍⚕️' },
-            { name: 'Dr. Shivakumar', specialty: 'Anesthetist', image: '👨‍⚕️' }
+            { name: 'Dr. Lingaraju', specialty: 'Anesthetist', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' },
+            { name: 'Dr. Rathnamala', specialty: 'Anesthetist', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' },
+            { name: 'Dr. Shivakumar', specialty: 'Anesthetist', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }
         ]
     },
     omfs_surgery: {
@@ -764,8 +768,8 @@ const departments = {
         description: 'Oral and Maxillofacial Surgery for jaw, face, and dental-related surgical procedures.',
         features: ['Jaw Surgery', 'Facial Trauma Repair', 'Dental Implants', 'TMJ Disorders'],
         doctors: [
-            { name: 'Dr. Adarsh Chowdry', specialty: 'OMFS Surgeon', image: '👨‍⚕️' },
-            { name: 'Dr. Lakshith Biddappa', specialty: 'OMFS Surgeon', image: '👨‍⚕️' }
+            { name: 'Dr. Adarsh Chowdry', specialty: 'OMFS Surgeon', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' },
+            { name: 'Dr. Lakshith Biddappa', specialty: 'OMFS Surgeon', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }
         ]
     },
     neurosurgery: {
@@ -773,14 +777,14 @@ const departments = {
         title: 'Neurosurgery Department',
         description: 'Advanced surgical interventions for complex brain and spine conditions.',
         features: ['Brain Tumor Surgery', 'Spine Surgery', 'Trauma Surgery', 'Minimally Invasive Neurosurgery'],
-        doctors: [{ name: 'Dr. Punith', specialty: 'Neuro Surgeon', image: '👨‍⚕️' }]
+        doctors: [{ name: 'Dr. Punith', specialty: 'Neuro Surgeon', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }]
     },
     physiotherapy: {
         icon: '<i class="fas fa-running"></i>',
         title: 'Physiotherapy Department',
         description: 'Comprehensive rehabilitation services to restore movement and reduce pain.',
         features: ['Sports Injury Rehabilitation', 'Post-Surgical Recovery', 'Pain Management', 'Mobility Training'],
-        doctors: [{ name: 'Dr. Vinod Kumar Seervi', specialty: 'Physiotherapist', image: '👨‍⚕️' }]
+        doctors: [{ name: 'Dr. Vinod Kumar Seervi', specialty: 'Physiotherapist', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }]
     },
     urology: {
         icon: '<i class="fas fa-droplet"></i>',
@@ -788,8 +792,8 @@ const departments = {
         description: 'Surgical and medical diseases of the male and female urinary-tract system.',
         features: ['Kidney Stone Treatment', 'Prostate Care', 'Urinary Infections', 'Male Infertility'],
         doctors: [
-            { name: 'Dr. Kiran Shetty', specialty: 'Urology', image: '👨‍⚕️' },
-            { name: 'Dr. Abhijith', specialty: 'Urology', image: '👨‍⚕️' }
+            { name: 'Dr. Kiran Shetty', specialty: 'Urology', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' },
+            { name: 'Dr. Abhijith', specialty: 'Urology', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }
         ]
     },
     gynecology: {
@@ -797,35 +801,35 @@ const departments = {
         title: 'Gynecology Department',
         description: 'Comprehensive women\'s health services including maternity and reproductive care.',
         features: ['Prenatal & Postnatal Care', 'High-Risk Pregnancy Management', 'Gynecological Surgeries', 'Fertility Treatments'],
-        doctors: [{ name: 'Dr. Chandrika', specialty: 'Gynecology', image: '👩‍⚕️' }]
+        doctors: [{ name: 'Dr. Chandrika', specialty: 'Gynecology', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }]
     },
     dermatology: {
         icon: '<i class="fas fa-hand-sparkles"></i>',
         title: 'Dermatology Department',
         description: 'Expert skin care treatments for medical and cosmetic dermatological conditions.',
         features: ['Acne Treatment', 'Skin Cancer Screening', 'Laser Treatments', 'Cosmetic Dermatology'],
-        doctors: [{ name: 'Dr. Pujith', specialty: 'Dermatologist', image: '👨‍⚕️' }]
+        doctors: [{ name: 'Dr. Pujith', specialty: 'Dermatologist', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }]
     },
     general_medicine: {
         icon: '<i class="fas fa-stethoscope"></i>',
         title: 'General Medicine Department',
         description: 'Comprehensive primary care, chronic disease management, and preventive healthcare.',
         features: ['Health Checkups', 'Fever & Infection Treatment', 'Diabetes Management', 'Hypertension Care'],
-        doctors: [{ name: 'Dr. Ramya', specialty: 'General Physician', image: '👩‍⚕️' }]
+        doctors: [{ name: 'Dr. Ramya', specialty: 'General Physician', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }]
     },
     pulmonology: {
         icon: '<i class="fas fa-lungs"></i>',
         title: 'Pulmonology Department',
         description: 'Diagnosis and treatment of respiratory system diseases and sleep disorders.',
         features: ['Asthma/COPD Management', 'Lung Function Tests', 'Bronchoscopy', 'Sleep Medicine'],
-        doctors: [{ name: 'Dr. Sushma', specialty: 'Pulmonology', image: '👩‍⚕️' }]
+        doctors: [{ name: 'Dr. Sushma', specialty: 'Pulmonology', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }]
     },
     ent: {
         icon: '<i class="fas fa-ear-listen"></i>',
         title: 'ENT Department',
         description: 'Comprehensive ear, nose, and throat care including diagnostics and surgical treatments.',
         features: ['Hearing Tests', 'Sinus Treatment', 'Tonsillectomy', 'Voice Disorders'],
-        doctors: [{ name: 'Dr. Abhilash', specialty: 'ENT', image: '👨‍⚕️' }]
+        doctors: [{ name: 'Dr. Abhilash', specialty: 'ENT', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }]
     }
 };
 // Handle department navigation clicks
@@ -915,10 +919,12 @@ function updateDepartmentContent(deptId) {
             const doctorsList = dept.doctors.map(doc => {
                 const safeName = doc.name ? doc.name.replace(/'/g, "\\'") : '';
                 // Fix potential image path issues or empty images
-                const imageDisplay = doc.image || '👨‍⚕️';
+                const imageDisplay = doc.image && doc.image.includes('.') 
+                    ? `<img src="${doc.image}" alt="${doc.name}" style="width:60px;height:60px;">` 
+                    : (doc.image || '👨‍⚕️');
 
                 return `
-                <div class="dept-doctor-mini-card" onclick="openDoctorDetails('${safeName}')" role="button" tabindex="0">
+                <div class="dept-doctor-mini-card">
                     <div class="mini-doc-image">${imageDisplay}</div>
                     <div class="mini-doc-info">
                         <h4>${doc.name}</h4>
@@ -1526,3 +1532,5 @@ if (phoneInput) {
         }
     });
 }
+
+

@@ -1,0 +1,151 @@
+/* Floating Action Button (FAB) Styles - V2 */
+.fab-container {
+    position: fixed !important;
+    bottom: 30px !important;
+    right: 30px !important;
+    top: auto !important;
+    left: auto !important;
+    z-index: 2147483647 !important;
+    /* Max z-index */
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 12px;
+    width: auto;
+    height: auto;
+    background: transparent;
+    pointer-events: none;
+    /* Container doesn't block clicks */
+}
+
+.fab-toggle,
+.fab-item,
+.fab-menu {
+    pointer-events: auto;
+}
+
+.fab-toggle {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #7A1236, #A8144F);
+    /* Maroon Gradient */
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    position: relative;
+    outline: none;
+}
+
+.fab-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Icons in toggle */
+.fab-toggle i {
+    position: absolute;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.fab-toggle .fa-question {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+.fab-toggle .fa-times {
+    opacity: 0;
+    transform: rotate(-180deg) scale(0);
+}
+
+/* Active State */
+.fab-toggle.active .fa-question {
+    opacity: 0;
+    transform: rotate(180deg) scale(0);
+}
+
+.fab-toggle.active .fa-times {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+/* Menu */
+.fab-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin-bottom: 5px;
+    align-items: center;
+}
+
+.fab-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Menu Items */
+.fab-item {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.fab-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Colors */
+.fab-map {
+    background: linear-gradient(135deg, #4285F4, #34A853);
+}
+
+.fab-whatsapp {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+.fab-instagram {
+    background: linear-gradient(135deg, #E1306C, #C13584);
+}
+
+/* Tooltip on hover */
+.fab-item::before {
+    content: attr(title);
+    position: absolute;
+    right: 60px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+    pointer-events: none;
+}
+
+.fab-item:hover::before {
+    opacity: 1;
+    visibility: visible;
+}

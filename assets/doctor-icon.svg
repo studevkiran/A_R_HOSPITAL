@@ -1,0 +1,47 @@
+<svg viewBox="0 0 100 100" width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="coat-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f0f0f0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="head-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4d4d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b8b8b8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Shadow -->
+  <ellipse cx="50" cy="92" rx="30" ry="4" fill="#00000020"/>
+  
+  <!-- Lab Coat Body -->
+  <path d="M 30 45 L 28 85 Q 28 90 33 90 L 67 90 Q 72 90 72 85 L 70 45 Z" 
+        fill="url(#coat-grad)" stroke="#d0d0d0" stroke-width="1.5"/>
+  
+  <!-- Coat Lapels -->
+  <path d="M 40 45 L 30 45 L 30 60" fill="#fafafa" stroke="#c0c0c0" stroke-width="1"/>
+  <path d="M 60 45 L 70 45 L 70 60" fill="#fafafa" stroke="#c0c0c0" stroke-width="1"/>
+  <line x1="40" y1="45" x2="45" y2="55" stroke="#c0c0c0" stroke-width="1"/>
+  <line x1="60" y1="45" x2="55" y2="55" stroke="#c0c0c0" stroke-width="1"/>
+  
+  <!-- Buttons -->
+  <circle cx="50" cy="58" r="1.5" fill="#4a90e2"/>
+  <circle cx="50" cy="65" r="1.5" fill="#4a90e2"/>
+  <circle cx="50" cy="72" r="1.5" fill="#4a90e2"/>
+  
+  <!-- Stethoscope -->
+  <path d="M 42 60 Q 42 48 50 45 Q 58 48 58 60" 
+        stroke="#2c5aa0" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <circle cx="50" cy="45" r="2.5" fill="#2c5aa0"/>
+  <circle cx="42" cy="60" r="3.5" fill="#4a90e2" stroke="#2c5aa0" stroke-width="1.5"/>
+  <circle cx="58" cy="60" r="3.5" fill="#4a90e2" stroke="#2c5aa0" stroke-width="1.5"/>
+  
+  <!-- Neck -->
+  <rect x="45" y="40" width="10" height="6" rx="1" fill="url(#head-grad)"/>
+  
+  <!-- Head (Faceless Silhouette) -->
+  <circle cx="50" cy="30" r="12" fill="url(#head-grad)" stroke="#a0a0a0" stroke-width="1"/>
+  
+  <!-- Medical Badge -->
+  <rect x="43" y="78" width="14" height="6" rx="1" fill="#e74c3c"/>
+  <path d="M 48 80 L 52 80 M 50 78.5 L 50 81.5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

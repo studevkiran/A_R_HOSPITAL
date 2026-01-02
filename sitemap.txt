@@ -1,0 +1,28 @@
+# A R Hospital - Sitemap
+
+## Main Pages
+- Home: https://arhospital.com/
+- About Us: https://arhospital.com/about.html
+- Departments: https://arhospital.com/#departments
+- Services: https://arhospital.com/#services
+- Doctors: https://arhospital.com/#specialists
+- Book Appointment: https://arhospital.com/#booking
+- Contact: https://arhospital.com/#contact
+
+## Departments
+- Orthopedics
+- General Surgery
+- Pediatrics
+- Intensive Care Unit
+- Anesthesiology
+- OMFS Surgery
+- Neurosurgery
+- Physiotherapy
+- Urology
+- Gynecology
+- Dermatology
+- General Medicine
+- Pulmonology
+- ENT
+
+Last Updated: January 2026

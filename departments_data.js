@@ -11,7 +11,7 @@ const departmentsData = {
             'Spine Surgery'
         ],
         doctors: [
-            { name: 'Dr. Madhuram Chowdry', specialty: 'Orthopedic Surgeon', image: '👨‍⚕️' }
+            { name: 'Dr. Madhuram Chowdry', specialty: 'Orthopedic Surgeon', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }
         ]
     },
     general_surgery: {
@@ -25,7 +25,7 @@ const departmentsData = {
             'Gastrointestinal Surgery'
         ],
         doctors: [
-            { name: 'Dr. Sachin', specialty: 'General Surgery', image: '👨‍⚕️' }
+            { name: 'Dr. Sachin', specialty: 'General Surgery', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }
         ]
     },
     pediatrics: {
@@ -39,9 +39,9 @@ const departmentsData = {
             'Pediatric Emergencies'
         ],
         doctors: [
-            { name: 'Dr. Banu', specialty: 'Pediatric', image: '👩‍⚕️' },
-            { name: 'Dr. Rajshekhar BK', specialty: 'Pediatric', image: '👨‍⚕️' },
-            { name: 'Dr. Anjana S Mavinahalli', specialty: 'Pediatric', image: '👩‍⚕️' }
+            { name: 'Dr. Banu', specialty: 'Pediatric', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' },
+            { name: 'Dr. Rajshekhar BK', specialty: 'Pediatric', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' },
+            { name: 'Dr. Anjana S Mavinahalli', specialty: 'Pediatric', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }
         ]
     },
     intensive_care: {
@@ -55,7 +55,7 @@ const departmentsData = {
             'Emergency Response'
         ],
         doctors: [
-            { name: 'Dr. Krupa Subramanya', specialty: 'Intensiveist', image: '👩‍⚕️' }
+            { name: 'Dr. Krupa Subramanya', specialty: 'Intensiveist', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }
         ]
     },
     anesthesiology: {
@@ -69,9 +69,9 @@ const departmentsData = {
             'Sedation Services'
         ],
         doctors: [
-            { name: 'Dr. Lingaraju', specialty: 'Anesthetist', image: '👨‍⚕️' },
-            { name: 'Dr. Rathnamala', specialty: 'Anesthetist', image: '👩‍⚕️' },
-            { name: 'Dr. Shivakumar', specialty: 'Anesthetist', image: '👨‍⚕️' }
+            { name: 'Dr. Lingaraju', specialty: 'Anesthetist', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' },
+            { name: 'Dr. Rathnamala', specialty: 'Anesthetist', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' },
+            { name: 'Dr. Shivakumar', specialty: 'Anesthetist', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }
         ]
     },
     omfs_surgery: {
@@ -85,8 +85,8 @@ const departmentsData = {
             'TMJ Disorders'
         ],
         doctors: [
-            { name: 'Dr. Adarsh Chowdry', specialty: 'OMFS Surgeon', image: '👨‍⚕️' },
-            { name: 'Dr. Lakshith Biddappa', specialty: 'OMFS Surgeon', image: '👨‍⚕️' }
+            { name: 'Dr. Adarsh Chowdry', specialty: 'OMFS Surgeon', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' },
+            { name: 'Dr. Lakshith Biddappa', specialty: 'OMFS Surgeon', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }
         ]
     },
     neurosurgery: {
@@ -100,7 +100,7 @@ const departmentsData = {
             'Minimally Invasive Neurosurgery'
         ],
         doctors: [
-            { name: 'Dr. Punith', specialty: 'Neuro Surgeon', image: '👨‍⚕️' }
+            { name: 'Dr. Punith', specialty: 'Neuro Surgeon', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }
         ]
     },
     physiotherapy: {
@@ -114,7 +114,7 @@ const departmentsData = {
             'Mobility Training'
         ],
         doctors: [
-            { name: 'Dr. Vinod Kumar Seervi', specialty: 'Physiotherapist', image: '👨‍⚕️' }
+            { name: 'Dr. Vinod Kumar Seervi', specialty: 'Physiotherapist', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }
         ]
     },
     urology: {
@@ -128,8 +128,8 @@ const departmentsData = {
             'Male Infertility'
         ],
         doctors: [
-            { name: 'Dr. Kiran Shetty', specialty: 'Urology', image: '👨‍⚕️' },
-            { name: 'Dr. Abhijith', specialty: 'Urology', image: '👨‍⚕️' }
+            { name: 'Dr. Kiran Shetty', specialty: 'Urology', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' },
+            { name: 'Dr. Abhijith', specialty: 'Urology', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }
         ]
     },
     gynecology: {
@@ -143,7 +143,7 @@ const departmentsData = {
             'Fertility Treatments'
         ],
         doctors: [
-            { name: 'Dr. Chandrika', specialty: 'Gynecology', image: '👩‍⚕️' }
+            { name: 'Dr. Chandrika', specialty: 'Gynecology', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }
         ]
     },
     dermatology: {
@@ -157,7 +157,7 @@ const departmentsData = {
             'Cosmetic Dermatology'
         ],
         doctors: [
-            { name: 'Dr. Pujith', specialty: 'Dermatologist', image: '👨‍⚕️' }
+            { name: 'Dr. Pujith', specialty: 'Dermatologist', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }
         ]
     },
     general_medicine: {
@@ -171,7 +171,7 @@ const departmentsData = {
             'Hypertension Care'
         ],
         doctors: [
-            { name: 'Dr. Ramya', specialty: 'General Physician', image: '👩‍⚕️' }
+            { name: 'Dr. Ramya', specialty: 'General Physician', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }
         ]
     },
     pulmonology: {
@@ -185,7 +185,7 @@ const departmentsData = {
             'Sleep Medicine'
         ],
         doctors: [
-            { name: 'Dr. Sushma', specialty: 'Pulmonology', image: '👩‍⚕️' }
+            { name: 'Dr. Sushma', specialty: 'Pulmonology', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }
         ]
     },
     ent: {
@@ -199,7 +199,7 @@ const departmentsData = {
             'Voice Disorders'
         ],
         doctors: [
-            { name: 'Dr. Abhilash', specialty: 'ENT', image: '👨‍⚕️' }
+            { name: 'Dr. Abhilash', specialty: 'ENT', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }
         ]
     }
 };

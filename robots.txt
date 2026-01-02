@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /*.bak$
+Disallow: /*.old$
+
+Sitemap: https://arhospital.com/sitemap.txt

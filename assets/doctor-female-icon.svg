@@ -1,0 +1,54 @@
+<svg viewBox="0 0 120 120" width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fcoat" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5f5f5;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="fskin" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffdbac;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f4c89c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Shadow -->
+  <ellipse cx="60" cy="110" rx="35" ry="5" fill="#00000015"/>
+  
+  <!-- Lab Coat Body -->
+  <path d="M 35 50 L 35 105 Q 35 110 40 110 L 80 110 Q 85 110 85 105 L 85 50 Z" fill="url(#fcoat)" stroke="#e0e0e0" stroke-width="1.5"/>
+  
+  <!-- Coat Collar & Lapels -->
+  <path d="M 45 50 L 35 50 L 35 70" fill="#ffffff" stroke="#d0d0d0" stroke-width="1"/>
+  <path d="M 75 50 L 85 50 L 85 70" fill="#ffffff" stroke="#d0d0d0" stroke-width="1"/>
+  <path d="M 45 50 L 50 60 L 45 65" fill="#f8f8f8" stroke="#d0d0d0" stroke-width="1"/>
+  <path d="M 75 50 L 70 60 L 75 65" fill="#f8f8f8" stroke="#d0d0d0" stroke-width="1"/>
+  
+  <!-- Buttons -->
+  <circle cx="60" cy="65" r="2" fill="#e91e63"/>
+  <circle cx="60" cy="75" r="2" fill="#e91e63"/>
+  <circle cx="60" cy="85" r="2" fill="#e91e63"/>
+  
+  <!-- Stethoscope (Pink) -->
+  <path d="M 50 70 Q 50 55 60 52 Q 70 55 70 70" stroke="#c2185b" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <circle cx="60" cy="52" r="3.5" fill="#c2185b"/>
+  <circle cx="50" cy="70" r="4.5" fill="#e91e63" stroke="#c2185b" stroke-width="1.5"/>
+  <circle cx="70" cy="70" r="4.5" fill="#e91e63" stroke="#c2185b" stroke-width="1.5"/>
+  
+  <!-- Head & Neck -->
+  <ellipse cx="60" cy="50" rx="6" ry="4" fill="url(#fskin)"/>
+  <circle cx="60" cy="35" r="18" fill="url(#fskin)" stroke="#e0b88c" stroke-width="1"/>
+  
+  <!-- Hair (Longer style) -->
+  <path d="M 44 28 Q 40 20 48 18 Q 60 15 72 18 Q 80 20 76 28 L 76 38 Q 78 42 74 44 L 72 40 Q 70 36 60 38 Q 50 36 48 40 L 46 44 Q 42 42 44 38 Z" fill="#3d2817" stroke="#2d1f12" stroke-width="1"/>
+  
+  <!-- Face Features -->
+  <ellipse cx="53" cy="35" rx="2" ry="3" fill="#3d3d3d"/>
+  <ellipse cx="67" cy="35" rx="2" ry="3" fill="#3d3d3d"/>
+  <path d="M 51 32 Q 48 30 50 28" stroke="#3d3d3d" stroke-width="1" fill="none"/>
+  <path d="M 69 32 Q 72 30 70 28" stroke="#3d3d3d" stroke-width="1" fill="none"/>
+  <path d="M 56 42 Q 60 44 64 42" stroke="#d09070" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Medical Badge/ID -->
+  <rect x="50" y="95" width="20" height="8" rx="1" fill="#e74c3c"/>
+  <line x1="52" y1="97" x2="68" y2="97" stroke="#ffffff" stroke-width="2"/>
+  <line x1="60" y1="97" x2="60" y2="103" stroke="#ffffff" stroke-width="2"/>
+</svg>
