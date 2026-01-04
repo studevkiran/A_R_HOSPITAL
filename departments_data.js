@@ -58,22 +58,6 @@ const departmentsData = {
             { name: 'Dr. Krupa Subramanya', specialty: 'Intensiveist', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }
         ]
     },
-    anesthesiology: {
-        icon: '💉',
-        title: 'Anesthesiology Department',
-        description: 'Expert anesthesia services ensuring safe and pain-free surgical procedures.',
-        features: [
-            'General Anesthesia',
-            'Regional Anesthesia',
-            'Pain Management',
-            'Sedation Services'
-        ],
-        doctors: [
-            { name: 'Dr. Lingaraju', specialty: 'Anesthetist', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' },
-            { name: 'Dr. Rathnamala', specialty: 'Anesthetist', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' },
-            { name: 'Dr. Shivakumar', specialty: 'Anesthetist', image: 'assets/Screenshot 2026-01-02 at 21.33.16.png' }
-        ]
-    },
     omfs_surgery: {
         icon: '🦷',
         title: 'OMFS Surgery Department',

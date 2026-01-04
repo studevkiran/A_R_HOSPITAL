@@ -14,7 +14,6 @@
 - General Surgery
 - Pediatrics
 - Intensive Care Unit
-- Anesthesiology
 - OMFS Surgery
 - Neurosurgery
 - Physiotherapy

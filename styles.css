@@ -1502,14 +1502,18 @@ section.contact-section {
     flex-direction: column;
     gap: 0;
     overflow: hidden;
-    background: linear-gradient(135deg, #FFFFFF 0%, #F8F8F8 100%);
+    background:
+        radial-gradient(circle at 50% 50%, rgba(122, 18, 54, 1) 0%, rgba(74, 13, 33, 1) 70%),
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 30px 30px, 30px 30px;
 }
 
 .dept-header {
     display: flex;
     align-items: center;
     gap: 30px;
-    background: linear-gradient(135deg, #7A1236 0%, #A8144F 50%, #D4AF37 100%);
+    background: transparent;
     padding: 40px;
     position: relative;
     overflow: hidden;
@@ -1605,6 +1609,7 @@ section.contact-section {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     padding: 40px;
+    background: rgba(255, 255, 255, 0.95);
 }
 
 .dept-features-box h4,
