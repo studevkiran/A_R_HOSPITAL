@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             key: 'pharmacy',
             label: 'Pharmacy',
-            desc: '24×7 in-house pharmacy for all essential medicines available day and night.',
+            desc: 'In-house pharmacy with essential medicines available for patient needs.',
             next: 'Laboratory',
             shortLabel: 'Pharmacy',
             icon: '<img src="assets/pharmacy_icon.png?v=6" alt="Pharmacy" class="service-icon-img" />'
