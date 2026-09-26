@@ -116,7 +116,6 @@ Update CSS variables in `styles.css`:
 
 ### Multi-Platform Integration
 Contact links are configured in the Connect section:
-- **Phone**: 08213501645
 - **WhatsApp**: +919008994827
 - **Email**: arhospitalmysore@gmail.com
 - **Facebook**: facebook.com/Arhospitalmysuru
@@ -181,8 +180,7 @@ This project is open source and available for personal and commercial use.
 
 **AR Hospital**
 - 📍 AR Hospital, Mysuru
-- 📞 Emergency: 08213501645
-- 💬 WhatsApp: +919008994827
+-  WhatsApp: +919008994827
 - ✉️ arhospitalmysore@gmail.com
 - 🌐 Facebook: Arhospitalmysuru
 - 📸 Instagram: ar_hospital_mysuru
